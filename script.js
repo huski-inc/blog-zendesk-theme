@@ -9,6 +9,7 @@ const getFirstImage = function(str){
 document.addEventListener('DOMContentLoaded', function() {
   // 将文章body第一章图片显示出来
   const articleBody=document.querySelectorAll('.article-cover-init')
+  if(articleBody){
   for(let i=0;i<articleBody.length;i++){
     const body=articleBody[i]
     const bodyHtml= body.innerHTML
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       body.setAttribute("class", "article-cover");
 
     }
+  }
   }
 
   // Key map
