@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="{{asset 'bootstrap-grid.min'}}">
-
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
 <div class="container">
@@ -36,12 +34,13 @@
 
 
 <!-- MEDIA 类别 -->
-{{#each categories}}
+<div class="container">
+  {{#each categories}}
   {{#each (filter sections on="description" equals="media")}}
-    <h3 class="home-category">{{name}}</h3>
+    <h3 class="home-category f-28">{{name}}</h3>
     <div class="row">
-    {{#each articles }}
-      <div class="col-lg-4 col-sm-12">
+    {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
+      <div class="col-lg-4 col-sm-12 hide">
         <div class="home-media-image">
           <div class="article-cover-init">{{body}}</div>
         </div>
@@ -52,6 +51,7 @@
     </div>
   {{/each}}
 {{/each}}
+</div>
 
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
