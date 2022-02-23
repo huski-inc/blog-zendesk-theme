@@ -34,12 +34,18 @@
        <div class="article-previous">
           {{#each section.articles}}
           <span class="{{#is id ../article.id}}current-article{{/is}} hide">
-            <a href="{{url}}">← Previous</a>
+            <a href="{{url}}" class="color-black">← Previous</a>
           </span>
          {{/each}}
        </div>
-        <a href="/hc">All Blogs</a>
-        <span>Next →</span>
+        <a href="/hc" class="color-black">All Blogs</a>
+       <div class="article-next">
+         {{#each section.articles}}
+          <span class="{{#is id ../article.id}}current-article{{/is}} hide">
+            <a href="{{url}}" class="color-black">Next →</a>
+          </span>
+         {{/each}}
+       </div>
       </div>
 </div>
 <script>
@@ -48,6 +54,13 @@
     const currentArticle=articlePrevious.querySelector('.current-article')
     if(currentArticle){
       articlePrevious.innerHTML=currentArticle.previousElementSibling.innerHTML
+    }
+  }
+  const articleNext = document.querySelector('.article-next')
+  if(articleNext){
+    const currentArticle=articleNext.querySelector('.current-article')
+    if(currentArticle){
+      articleNext.innerHTML=currentArticle.nextElementSibling.innerHTML
     }
   }
 </script>
