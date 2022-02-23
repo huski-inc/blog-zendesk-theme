@@ -11,9 +11,8 @@
       <span class="color-text-light">{{date updated_at format='short'}}</span>
     </div>
     <h3 class="f-28"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
-    <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
+    <p class="f-14" class="color-text-light">{{excerpt body characters=140}}</p>
   {{/each}}
-  <hr>
   {{!-- {{#each (filter categories on="description" equals="blog")}}
     {{#each (filter sections on="description" equals="product-introduction")}}
       {{#each (filter articles on="promoted" equals=true)}}
@@ -29,7 +28,7 @@
       {{/each}}
     {{/each}}
   {{/each}} --}}
-   <div class="divider mt-30 mb-30"></div>
+   <div class="divider mt-30"></div>
 </div>
 
 
@@ -38,14 +37,14 @@
   {{#each categories}}
   {{#each (filter sections on="description" equals="media")}}
     <h3 class="home-category f-28">{{name}}</h3>
-    <div class="row">
+    <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
-      <div class="col-lg-4 col-sm-12 hide">
+      <div class="col-lg-4 col-sm-12">
         <div class="home-media-image">
           <div class="article-cover-init">{{body}}</div>
         </div>
-        <h3 class="f-28">{{title}}</h3>
-        <div class="color-text-light f-12">{{date updated_at format='short'}}</div>
+        <h3 class="f-24 mt-15 mb-15">{{title}}</h3>
+        <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
       </div>
     {{/each}}
     </div>

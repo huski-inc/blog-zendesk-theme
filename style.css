@@ -4923,7 +4923,6 @@ html[dir="rtl"] .notification-left-aligned {
   display: none;
 }
 .article-cover{
-  display: inline-block;
 }
 .article-cover img{
   width: 100%;
@@ -4937,7 +4936,7 @@ html[dir="rtl"] .notification-left-aligned {
 .home-category {
   color: #28B470;
   font-size: 28px;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 .home-media-image {
   width: 100%;
@@ -4983,8 +4982,22 @@ html[dir="rtl"] .notification-left-aligned {
   padding-top: 15px;
 }
 
+.mt-15{
+  margin-top: 30px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
 .mt-30{
   margin-top: 30px;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+.mb-20{
+  margin-bottom: 20px;
 }
 .mb-30{
   margin-bottom: 30px;
@@ -4995,6 +5008,9 @@ html[dir="rtl"] .notification-left-aligned {
 }
 .f-14 {
   font-size: 14px;
+}
+.f-24 {
+  font-size: 24px;
 }
 .f-28 {
   font-size: 28px;
