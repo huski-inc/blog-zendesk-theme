@@ -15,8 +15,12 @@
     <h4>{{id}}</h4>
     <div class="article-cover-init">{{ body }}</div>
   {{/each}}
-  {{#each (filter promoted_articles on="labels" equals="hero")}}
+  {{#each (filter promoted_articles on="title" starts_with="What is")}}
     <h4>{{id}}</h4>
+    <div class="article-cover-init">{{ body }}</div>
+  {{/each}}
+  {{#each (filter promoted_articles on="id" equals=4483678577945)}}
+    <h4 class="aad3">{{id}}</h4>
     <div class="article-cover-init">{{ body }}</div>
   {{/each}}
 </div>
