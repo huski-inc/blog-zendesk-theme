@@ -13,11 +13,11 @@
   <div class="divider mt-30 mb-30"></div>
   {{#each promoted_articles}}
     <h4>{{id}}</h4>
-    <div class="article-cover-init">{{slice body 0 400}}</div>
+    <div class="article-cover-init">{{excerpt body characters=400}}</div>
   {{/each}}
   {{#each (filter promoted_articles on="id" equals="4483678577945")}}
     <h4>{{id}}</h4>
-    <div class="article-cover-init">{{slice body 0 400}}</div>
+    <div class="article-cover-init">{{ body}}</div>
   {{/each}}
 </div>
 {{!-- <section id="main-content" class="section hero">
