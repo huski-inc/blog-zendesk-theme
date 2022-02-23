@@ -1,28 +1,19 @@
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
 <div class="container">
-  <div class="home-hero">
-    <img src="{{asset 'hero_image.png'}}" alt="Hero Image" />
-  </div>
-  <div class="fx-between f-14 pt-5">
-    <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
-    <span class="color-text-light">2022-02-17</span>
-  </div>
-  <h3 class="f-28">What is Huski.ai?</h3>
-  <p class="f-12" class="color-text-light">Huski.ai exists to make brand protection & growth easy with cutting-edge AI.  Here is why and how.Huski.ai exists to make brand protection & growth easy with cutting-edge AI.  Here is why and how.</p>
-  <div class="divider mt-30 mb-30"></div>
-  {{#each promoted_articles}}
-    <h4>{{id}}</h4>
-    <div class="article-cover-init">{{ body }}</div>
-  {{/each}}
-  {{#each (filter promoted_articles on="title" starts_with="What is")}}
-    <h4>{{id}}</h4>
-    <div class="article-cover-init">{{ body }}</div>
-  {{/each}}
+
   {{#each (filter promoted_articles on="id" equals=4483678577945)}}
-    <h4 class="aad3">{{id}}</h4>
-    <div class="article-cover-init">{{ body }}</div>
+    <div class="home-hero">
+      <div class="article-cover-init" title="{{title}}">{{ body }}</div>
+    </div>
+    <div class="fx-between f-14 pt-5">
+      <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
+      <span class="color-text-light">{{updated_at}}</span>
+    </div>
+    <h3 class="f-28">{{title}}</h3>
+    <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
   {{/each}}
+   <div class="divider mt-30 mb-30"></div>
 </div>
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
