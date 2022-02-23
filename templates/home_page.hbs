@@ -14,15 +14,16 @@
           {{#each promoted_articles}}
           <h4>{{id}}</h4>
             <div class="article-cover-init">{{body}}</div>
+               {{#if attachments}}
+                <div>
+                    {{#each attachments}}
+                      <img src="{{url}}">
+                    {{/each}}
+                </div>
+              {{/if}}
           {{/each}}
 
-          {{#if attachments}}
-            <div class="article-attachments">
-                {{#each attachments}}
-                  <img src="{{url}}">
-                {{/each}}
-            </div>
-          {{/if}}
+       
 </div>
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
