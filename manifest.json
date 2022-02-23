@@ -368,6 +368,15 @@
         "label": "follow_topic_label",
         "value": true
       }]
+    },
+    {
+      "label": "huski_group_label",
+      "variables": [{
+        "identifier": "hero_image",
+        "type": "file",
+        "description": "logo_description",
+        "label": "logo_label"
+      }]
     }
   ]
 }
