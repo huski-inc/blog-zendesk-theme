@@ -158,7 +158,7 @@
   }
   function onShare(options) {
     const link = shareLink(options)
-    window.open('{{setting.domain}}' + link, '_blank')
+    window.open('{{settings.domain}}' + link, '_blank')
   }
 
 
@@ -178,7 +178,7 @@
     document.body.removeChild(input)
   }
   function onCopy(url) {
-    copyText('{{setting.domain}}' + url)
+    copyText('{{settings.domain}}' + url)
   }
 </script>
 {{!-- <div class="container">
