@@ -27,6 +27,25 @@ document.addEventListener('DOMContentLoaded', function() {
     iframe.remove();
   }
 
+
+  /**
+   * 文章详情页上下切换文章
+   */
+  const articlePrevious = document.querySelector('.article-previous')
+  if (articlePrevious) {
+    const currentArticle = articlePrevious.querySelector('.current-article')
+    if (currentArticle) {
+      articlePrevious.innerHTML = currentArticle.previousElementSibling.innerHTML
+    }
+  }
+  const articleNext = document.querySelector('.article-next')
+  if (articleNext) {
+    const currentArticle = articleNext.querySelector('.current-article')
+    if (currentArticle) {
+      articleNext.innerHTML = currentArticle.nextElementSibling.innerHTML
+    }
+  }
+
   // // Key map
   // var ENTER = 13;
   // var ESCAPE = 27;

@@ -53,22 +53,7 @@
   {{/if}}
 </div>
 <div class="divider mb-30" style="margin-top: 80px;"></div>
-<script>
-  const articlePrevious = document.querySelector('.article-previous')
-  if (articlePrevious) {
-    const currentArticle = articlePrevious.querySelector('.current-article')
-    if (currentArticle) {
-      articlePrevious.innerHTML = currentArticle.previousElementSibling.innerHTML
-    }
-  }
-  const articleNext = document.querySelector('.article-next')
-  if (articleNext) {
-    const currentArticle = articleNext.querySelector('.current-article')
-    if (currentArticle) {
-      articleNext.innerHTML = currentArticle.nextElementSibling.innerHTML
-    }
-  }
-</script>
+
 {{!--
 <div class="container">
   <nav class="sub-nav">
