@@ -13,10 +13,7 @@
   <div class="divider mt-30 mb-30"></div>
           {{#each promoted_articles}}
           <h4>{{id}}</h4>
-            <div>
-               {{body}}
-             </div>
-             <div>{{json_stringify body}}</div>
+            <div class="article-cover">{{body}}</div>
           {{/each}}
 </div>
 {{!-- <section id="main-content" class="section hero">
@@ -100,3 +97,22 @@
     {{/if}}
   </section>
 </div>
+
+<script>
+  const getFirstImage = function(str){
+        var data = '';
+            str.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/, function (match, capture) {
+                  data =  capture;
+            });
+        return data
+    }
+  const articleBody=document.querySelectorAll('.article-cover')
+  for(let i=0;i<articleBody.length;i++){
+    const body=articleBody[i]
+    const bodyHtml= body.innerHTML
+    if(bodyHtml){
+      const imageUrl= getFirstImage(bodyHtml)
+      articleBody.innerHTML=`<img src="${imageUrl}"`/>
+    }
+  }
+</script>
