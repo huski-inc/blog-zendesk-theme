@@ -15,7 +15,9 @@
   {{/each}}
   <hr>
   {{#each filter(categories on="description" equals="blog")}}
-    {{#each filter(sections on="description" equals="PRODUCT INTRODUCTION")}}
+   <b>{{name}}</b>
+    {{#each filter(sections on="description" equals="product-introduction")}}
+    <b>{{name}}</b>
       {{#each filter(articles on="promoted" equals=true)}}
          <div class="home-hero">
           <div class="article-cover-init" title="{{title}}">{{ body }}</div>
