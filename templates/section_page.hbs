@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="current-section-key">{{section.description}}</div>
+  <div class="current-section-key hide">{{section.description}}</div>
   <h3 class="home-category f-28">{{section.name}}</h3>
 
    {{#if section.articles}}
@@ -55,7 +55,7 @@
        navList.forEach((p)=>{
          p.setAttribute('class','')
        })
-       nav..setAttribute('class',currentClassName+' active')
+       nav.setAttribute('class',currentClassName+' active')
      }
     }
   }
