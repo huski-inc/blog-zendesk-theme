@@ -15,6 +15,29 @@
   {{/each}}
    <div class="divider mt-30 mb-30"></div>
 </div>
+
+
+
+{{#each categories}}
+<div>
+  {{#each sections}}
+    <div class="blocks-item">
+                <a href='{{url}}' class="blocks-item-link">
+                  <span class="blocks-item-title">
+                    {{name}}
+                  </span>
+                  <span class="blocks-item-description">{{excerpt description}}</span>
+                </a>
+    </div>
+
+    <ul>
+    {{#each articles}}
+      <li>{{title}}</li>
+    {{/each}}
+    </ul>
+  {{/each}}
+  </div>
+{{/each}}
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
