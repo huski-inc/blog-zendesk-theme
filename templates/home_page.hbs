@@ -13,6 +13,22 @@
     <h3 class="f-28"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
     <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
   {{/each}}
+  <hr>
+  {{#each filter(categories on="name" equals="BLOG")}}
+    {{#each filter(sections on="name" equals="PRODUCT INTRODUCTION")}}
+      {{#each filter(articles on="promoted" equals=true)}}
+         <div class="home-hero">
+          <div class="article-cover-init" title="{{title}}">{{ body }}</div>
+        </div>
+        <div class="fx-between f-14 pt-5">
+          <span class="color-text-light-1">{{section.name}}</span>
+          <span class="color-text-light">{{date updated_at format='short'}}</span>
+        </div>
+        <h3 class="f-28"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
+        <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
+      {{/each}}
+    {{/each}}
+  {{/each}}
    <div class="divider mt-30 mb-30"></div>
 </div>
 
