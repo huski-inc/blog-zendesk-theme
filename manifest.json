@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.13.66",
+  "version": "2.13.67",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -367,6 +367,16 @@
         "description": "follow_topic_description",
         "label": "follow_topic_label",
         "value": true
+      }]
+    },
+    {
+      "label": "huski_group_label",
+      "variables": [{
+        "identifier": "menu_1",
+        "type": "string",
+        "description": "",
+        "label": "",
+        "value": "/hc/sections/4483660662297"
       }]
     }
   ]
