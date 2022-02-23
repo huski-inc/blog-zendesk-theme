@@ -5115,3 +5115,21 @@ a{
   line-height: 60px;
   background: #232555;
 }
+
+/** header **/
+.header-nav-list li{
+  padding-left: 20px;
+}
+.header-nav-list li a{
+  color:#373459;
+  display:inline-block;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.header-nav-list li a.active{
+  color:#3B7FF8;
+  border-bottom: 2px solid #3B7FF8;
+}
+.header-nav-list li a:hover{
+  color:#3B7FF8
+}
