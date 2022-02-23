@@ -4945,15 +4945,6 @@ html[dir="rtl"] .notification-left-aligned {
   position: relative;
   overflow: hidden;
 }
-.home-media-image::before{
-  content: 'Image';
-  color: #66739F;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 100%;
-}
 
 .home-hero {
   width: 100%;
@@ -4983,7 +4974,7 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 .mt-15{
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .mt-20{
