@@ -15,6 +15,14 @@
           <h4>{{id}}</h4>
             <div class="article-cover-init">{{body}}</div>
           {{/each}}
+
+          {{#if attachments}}
+            <div class="article-attachments">
+                {{#each attachments}}
+                  <img src="{{url}}">
+                {{/each}}
+            </div>
+          {{/if}}
 </div>
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
@@ -100,12 +108,13 @@
 
 <script>
   const getFirstImage = function(str){
-        let data = '';
-            str.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/, function (match, capture) {
+      let data = '';
+      str.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/, function (match, capture) {
                   data =  capture;
             });
-        return data
+      return data
   }
+  // 将文章body第一章图片显示出来
   const articleBody=document.querySelectorAll('.article-cover-init')
   for(let i=0;i<articleBody.length;i++){
     const body=articleBody[i]

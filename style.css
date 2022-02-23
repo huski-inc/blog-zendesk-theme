@@ -4860,6 +4860,12 @@ html[dir="rtl"] .notification-left-aligned {
 .article-cover-init{
   display: none;
 }
+.article-cover{
+  display: inline-block;
+}
+.article-cover img{
+  width: 100%;
+}
 
 .home-hero {
   width: 100%;
