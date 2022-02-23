@@ -4917,6 +4917,90 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 
+
+
+/** scss **/
+.hide {
+  display: none;
+}
+.divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.normal {
+  font-weight: normal;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+.pt-15 {
+  padding-top: 15px;
+}
+
+.mt-15{
+  margin-top: 15px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.mt-30{
+  margin-top: 30px;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+.f-14 {
+  font-size: 14px;
+}
+.f-20 {
+  font-size: 20px;
+}
+.f-24 {
+  font-size: 24px;
+}
+.f-28 {
+  font-size: 28px;
+}
+
+.color-text{
+  color: #373459;
+}
+
+.color-text-light{
+  color: #5A5875;
+}
+.color-text-light-1{
+  color: #66739F;
+}
+
+.fx-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fx-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /** 自定义样式 **/
 
 .article-cover-init{
@@ -4958,76 +5042,10 @@ html[dir="rtl"] .notification-left-aligned {
 .home-hero img{
   max-width: 100%;
 }
-
-
-/** scss **/
-.hide {
-  display: none;
+.home-article-list-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #DDDDDD;
 }
-.divider {
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.08);
-}
-
-.pt-5 {
-  padding-top: 5px;
-}
-.pt-10 {
-  padding-top: 10px;
-}
-.pt-15 {
-  padding-top: 15px;
-}
-
-.mt-15{
-  margin-top: 15px;
-}
-
-.mt-20{
-  margin-top: 20px;
-}
-
-.mt-30{
-  margin-top: 30px;
-}
-.mb-15{
-  margin-bottom: 15px;
-}
-.mb-20{
-  margin-bottom: 20px;
-}
-.mb-30{
-  margin-bottom: 30px;
-}
-
-.f-12 {
-  font-size: 12px;
-}
-.f-14 {
-  font-size: 14px;
-}
-.f-24 {
-  font-size: 24px;
-}
-.f-28 {
-  font-size: 28px;
-}
-
-.color-text-light{
-  color: #5A5875;
-}
-.color-text-light-1{
-  color: #66739F;
-}
-
-.fx-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.fx-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.home-article-list-item:last-child {
+  border-bottom: 0;
 }

@@ -10,7 +10,7 @@
       <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
       <span class="color-text-light">{{date updated_at format='short'}}</span>
     </div>
-    <h3 class="f-28"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
+    <h3 class="f-28 normal"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
     <p class="f-14" class="color-text-light">{{excerpt body characters=140}}</p>
   {{/each}}
   {{!-- {{#each (filter categories on="description" equals="blog")}}
@@ -28,8 +28,8 @@
       {{/each}}
     {{/each}}
   {{/each}} --}}
-   <div class="divider mt-30"></div>
 </div>
+<div class="divider mt-30"></div>
 
 
 <!-- MEDIA 类别 -->
@@ -39,13 +39,32 @@
     <h3 class="home-category f-28">{{name}}</h3>
     <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
+      {{#if article.promoted}}
       <div class="col-lg-4 col-sm-12">
         <div class="home-media-image">
           <div class="article-cover-init">{{body}}</div>
         </div>
-        <h3 class="f-24 mt-15 mb-15">{{title}}</h3>
+        <h3 class="f-24 mt-15 mb-15 normal">{{title}}</h3>
         <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
       </div>
+      {{/if}}
+    {{/each}}
+    </div>
+  {{/each}}
+{{/each}}
+</div>
+<div class="divider mt-30"></div>
+<div class="container">
+  {{#each categories}}
+  {{#each (filter sections on="description" equals="media")}}
+    <div class="home-article-list">
+    {{#each articles}}
+      {{#if article.promoted}}
+        <div class="home-article-list-item fx-between">
+          <h3 class="f-20 normal color-text">{{title}}</h3>
+          <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+        </div>
+      {{/if}}
     {{/each}}
     </div>
   {{/each}}
