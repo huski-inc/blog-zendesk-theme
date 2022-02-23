@@ -5038,6 +5038,7 @@ a{
   background: #E8EBF1;
   color: #7e89ae;
   font-size: 20px;
+  min-height: 100px;
 }
 .pointer {
   cursor: pointer;

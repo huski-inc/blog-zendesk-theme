@@ -2,7 +2,7 @@
 
 <div class="container">
 
-  {{#each (filter promoted_articles on="id" equals=4483678577945)}}
+  {{#each (filter promoted_articles on="id" equals=settings.first_article_id)}}
     <div class="home-hero">
       <div class="article-cover-init" title="{{title}}">{{ body }}</div>
     </div>
