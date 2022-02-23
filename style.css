@@ -4855,6 +4855,12 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 
+/** 自定义样式 **/
+
+.article-cover-init{
+  display: none;
+}
+
 .home-hero {
   width: 100%;
 }
