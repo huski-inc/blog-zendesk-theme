@@ -1,10 +1,10 @@
 <div class="container-divider"></div>
 
 <div class="container">
-{{breadcrumbs}}
-<div class="article-section-name color-text-light-1 f-18">{{section.name}}</div>
-<h3 class="f-24 color-black">{{article.title}}</h3>
-<div class="color-text-light f-14">{{date article.updated_at format='short'}}</div>
+<div onclick="history.back()"> ← Back</div>
+<div class="article-section-name color-text-light-1 f-16 mt-30">{{section.name}}</div>
+<h3 class="f-24 color-black pt-10">{{article.title}}</h3>
+<div class="color-text-light f-14 pt-10">{{date article.updated_at format='short'}}</div>
       <section class="article-info">
         <div class="article-content">
           <div class="article-body">{{article.body}}</div>
@@ -28,12 +28,12 @@
           {{/if}}
         </div>
       </section>
-      <div class="divider mt-30 mb-30"></div>
+      <div class="divider mt-30 mb-10"></div>
 
       <div class="fx-between">
-        <span>Previous</span>
+        <span>← Previous</span>
         <span>All Blogs</span>
-        <span>Next</span>
+        <span>Next →</span>
       </div>
 </div>
 {{!-- 
