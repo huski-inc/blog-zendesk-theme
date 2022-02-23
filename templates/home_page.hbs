@@ -112,8 +112,8 @@
     const bodyHtml= body.innerHTML
     if(bodyHtml){
       const imageUrl= getFirstImage(bodyHtml)
-      articleBody.innerHTML=`<img src="${imageUrl}"/>`
-      articleBody.setAttribute("class", "article-cover");
+      body.innerHTML=`<img src="${imageUrl}"/>`
+      body.setAttribute("class", "article-cover");
 
     }
   }
