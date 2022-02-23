@@ -5129,7 +5129,7 @@ a{
 
 /** header **/
 .header-nav-list li{
-  padding-left: 15px;
+  padding-left: 20px;
 }
 .header-nav-list li a{
   color:#373459;
@@ -5145,13 +5145,17 @@ a{
   color:#3B7FF8
 }
 .huski-header{
-  padding: 16px 0;
+  padding: 20px 0;
   background: #232555;
   box-shadow: 0px 2px 2px rgba(55, 52, 89, 0.2);
 }
 .huski-nav-bar li{
-  padding-left: 15px;
+  padding-left: 20px;
 }
 .huski-nav-bar li a{
   color: #fff;
+}
+
+.huski-logo img {
+  width: 120px;
 }
