@@ -5067,8 +5067,8 @@ a{
   height: 100%;
 }
 .article-cover img{
-  height: 100%;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .article-title {

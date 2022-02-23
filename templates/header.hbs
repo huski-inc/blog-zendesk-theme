@@ -1,9 +1,7 @@
-
-
 <div class="huski-header fx-center">
   <div class="container fx-between huski-nav-bar">
     <div class="huski-logo">
-      <img src="{{asset 'logo.png'}}"/>
+      <a href="https://huski.ai"><img src="{{asset 'logo.png'}}" /></a>
     </div>
     <ul class="huski-nav-list fx-start">
       <li>
@@ -13,32 +11,38 @@
         <a href="https://huski.ai/about">About</a>
       </li>
       <li class="fx-center">
-         {{#if alternative_locales}}
+        {{#if alternative_locales}}
         <div class="dropdown language-selector">
           <button class="dropdown-toggle color-white fx-start" aria-haspopup="true">
             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.5 8.02105C15.5 12.1761 12.1409 15.5421 8 15.5421C3.8591 15.5421 0.5 12.1761 0.5 8.02105C0.5 3.86605 3.8591 0.5 8 0.5C12.1409 0.5 15.5 3.86605 15.5 8.02105Z" stroke="white"/>
-              <mask id="mask0_768_74" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="17">
-              <ellipse cx="8" cy="8.02105" rx="8" ry="8.02105" fill="#24CE85"/>
+              <path
+                d="M15.5 8.02105C15.5 12.1761 12.1409 15.5421 8 15.5421C3.8591 15.5421 0.5 12.1761 0.5 8.02105C0.5 3.86605 3.8591 0.5 8 0.5C12.1409 0.5 15.5 3.86605 15.5 8.02105Z"
+                stroke="white" />
+              <mask id="mask0_768_74" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16"
+                height="17">
+                <ellipse cx="8" cy="8.02105" rx="8" ry="8.02105" fill="#24CE85" />
               </mask>
               <g mask="url(#mask0_768_74)">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3459 11.1534C11.0172 12.8588 10.377 14.5851 9.32718 16.2502L8.48127 15.7169C9.43494 14.2043 10.0266 12.6337 10.3401 11.0774C8.5476 10.9604 6.9758 10.957 5.61434 11.0209C5.85185 12.6074 6.34379 14.2891 7.20397 16.0333L6.30711 16.4756C5.3809 14.5975 4.85888 12.7863 4.61277 11.0822C3.02851 11.2023 1.77533 11.4108 0.832371 11.6141L0.621582 10.6366C1.60146 10.4253 2.88708 10.212 4.49847 10.088C4.39759 8.91177 4.42248 7.79318 4.52752 6.74645C2.8987 6.59415 1.6034 6.3464 0.621582 6.13469L0.832371 5.15716C1.78733 5.36308 3.05364 5.606 4.65306 5.75382C5.00655 3.43307 5.7132 1.52511 6.2009 0.208329L6.20113 0.207704C6.24942 0.0773069 6.29557 -0.0472909 6.33901 -0.165916L7.27803 0.177977C7.23604 0.292632 7.19184 0.412166 7.14588 0.536449L7.14584 0.536536L7.14566 0.537043C6.66606 1.83398 5.99528 3.64789 5.65336 5.83007C7.0296 5.913 8.61851 5.91934 10.431 5.78297C10.0936 3.63302 9.34565 1.70828 8.47542 0.257148L9.33303 -0.257141C10.2661 1.29886 11.0726 3.37346 11.4286 5.69538C12.5932 5.57867 13.8431 5.40346 15.1809 5.15437L15.364 6.13748C14.0064 6.39024 12.7362 6.56868 11.551 6.6881C11.6558 7.80963 11.651 8.97738 11.5029 10.1632C12.6975 10.2669 13.9787 10.4192 15.3489 10.6312L15.196 11.6195C13.8207 11.4067 12.5383 11.2553 11.3459 11.1534ZM10.5033 10.0861C10.6483 8.95776 10.6547 7.84521 10.5552 6.77642C8.64342 6.92259 6.97029 6.9142 5.52471 6.82406C5.4224 7.82863 5.39834 8.89994 5.49654 10.0254C6.93629 9.9551 8.60144 9.95815 10.5033 10.0861Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.3459 11.1534C11.0172 12.8588 10.377 14.5851 9.32718 16.2502L8.48127 15.7169C9.43494 14.2043 10.0266 12.6337 10.3401 11.0774C8.5476 10.9604 6.9758 10.957 5.61434 11.0209C5.85185 12.6074 6.34379 14.2891 7.20397 16.0333L6.30711 16.4756C5.3809 14.5975 4.85888 12.7863 4.61277 11.0822C3.02851 11.2023 1.77533 11.4108 0.832371 11.6141L0.621582 10.6366C1.60146 10.4253 2.88708 10.212 4.49847 10.088C4.39759 8.91177 4.42248 7.79318 4.52752 6.74645C2.8987 6.59415 1.6034 6.3464 0.621582 6.13469L0.832371 5.15716C1.78733 5.36308 3.05364 5.606 4.65306 5.75382C5.00655 3.43307 5.7132 1.52511 6.2009 0.208329L6.20113 0.207704C6.24942 0.0773069 6.29557 -0.0472909 6.33901 -0.165916L7.27803 0.177977C7.23604 0.292632 7.19184 0.412166 7.14588 0.536449L7.14584 0.536536L7.14566 0.537043C6.66606 1.83398 5.99528 3.64789 5.65336 5.83007C7.0296 5.913 8.61851 5.91934 10.431 5.78297C10.0936 3.63302 9.34565 1.70828 8.47542 0.257148L9.33303 -0.257141C10.2661 1.29886 11.0726 3.37346 11.4286 5.69538C12.5932 5.57867 13.8431 5.40346 15.1809 5.15437L15.364 6.13748C14.0064 6.39024 12.7362 6.56868 11.551 6.6881C11.6558 7.80963 11.651 8.97738 11.5029 10.1632C12.6975 10.2669 13.9787 10.4192 15.3489 10.6312L15.196 11.6195C13.8207 11.4067 12.5383 11.2553 11.3459 11.1534ZM10.5033 10.0861C10.6483 8.95776 10.6547 7.84521 10.5552 6.77642C8.64342 6.92259 6.97029 6.9142 5.52471 6.82406C5.4224 7.82863 5.39834 8.89994 5.49654 10.0254C6.93629 9.9551 8.60144 9.95815 10.5033 10.0861Z"
+                  fill="white" />
               </g>
             </svg>&nbsp;
             {{current_locale.name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+              class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5" />
             </svg>
           </button>
           <span class="dropdown-menu dropdown-menu-end" role="menu">
             {{#each alternative_locales}}
-              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                {{name}}
-              </a>
+            <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+              {{name}}
+            </a>
             {{/each}}
           </span>
         </div>
-      {{/if}}
+        {{/if}}
       </li>
     </ul>
   </div>
@@ -54,7 +58,7 @@
       <a href="{{settings.menu_2}}">MEDIA</a>
     </li>
     <li class="header-nav-item-news">
-      <a  href="{{settings.menu_3}}">NEWS</a>
+      <a href="{{settings.menu_3}}">NEWS</a>
     </li>
     <li class="header-nav-item-customer-stories">
       <a href="{{settings.menu_4}}">CUSTOMER STORIES</a>
@@ -71,10 +75,10 @@
 <header class="header">
   <div class="logo">
     {{#link 'help_center'}}
-      <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
-      {{#if settings.show_brand_name}}
-        <span aria-hidden="true">{{help_center.name}}</span>
-      {{/if}}
+    <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
+    {{#if settings.show_brand_name}}
+    <span aria-hidden="true">{{help_center.name}}</span>
+    {{/if}}
     {{/link}}
   </div>
 
@@ -84,79 +88,82 @@
         <li>{{link 'community'}}</li>
         <li>{{link 'new_request' class='submit-a-request'}}</li>
         {{#unless signed_in}}
-          <li>
-            {{#link "sign_in" class="sign-in"}}
-              {{t 'sign_in'}}
-            {{/link}}
-          </li>
+        <li>
+          {{#link "sign_in" class="sign-in"}}
+          {{t 'sign_in'}}
+          {{/link}}
+        </li>
         {{/unless}}
       </ul>
     </nav>
     {{#if signed_in}}
-      <div class="user-info dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true">
-          {{user_avatar class="user-avatar"}}
-          <span>
-            {{user_name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </span>
-        </button>
-        <div class="dropdown-menu" role="menu">
-          {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}
-          {{link "requests" role="menuitem"}}
-          {{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}
-          {{contact_details role="menuitem"}}
-          {{change_password role="menuitem"}}
-          <div class="separator" role="separator"></div>
-          {{link "sign_out" role="menuitem"}}
-        </div>
+    <div class="user-info dropdown">
+      <button class="dropdown-toggle" aria-haspopup="true">
+        {{user_avatar class="user-avatar"}}
+        <span>
+          {{user_name}}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+            class="dropdown-chevron-icon" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5" />
+          </svg>
+        </span>
+      </button>
+      <div class="dropdown-menu" role="menu">
+        {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}
+        {{link "requests" role="menuitem"}}
+        {{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}
+        {{contact_details role="menuitem"}}
+        {{change_password role="menuitem"}}
+        <div class="separator" role="separator"></div>
+        {{link "sign_out" role="menuitem"}}
       </div>
+    </div>
     {{/if}}
   </div>
 
   <div class="nav-wrapper-mobile">
-    <button class="menu-button-mobile" aria-controls="user-nav-mobile" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+    <button class="menu-button-mobile" aria-controls="user-nav-mobile" aria-expanded="false"
+      aria-label="{{t 'toggle_navigation'}}">
       {{#if signed_in}}
-        {{user_avatar class="user-avatar"}}
+      {{user_avatar class="user-avatar"}}
       {{/if}}
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
-        <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
+        class="icon-menu">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13" />
       </svg>
     </button>
     <nav class="menu-list-mobile" id="user-nav-mobile" aria-expanded="false">
       <ul class="menu-list-mobile-items">
         {{#if signed_in}}
-          <li class="user-avatar-item item">
-            {{#my_profile role="menuitem" class="my-profile"}}
-              {{user_avatar class="menu-profile-avatar"}}
-              <div class="menu-profile-name">
-                <div>{{user_name}}</div>
-                <div class="my-profile-tooltip">{{t 'profile'}}</div>
-              </div>
-            {{/my_profile}}
-          </li>
-          <li class="item">{{link "requests" role="menuitem"}}</li>
-          <li class="item">{{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}</li>
-          <li class="item">{{contact_details role="menuitem"}}</li>
-          <li class="item">{{change_password role="menuitem" class='change-password'}}</li>
-          <li class="nav-divider"></li>
+        <li class="user-avatar-item item">
+          {{#my_profile role="menuitem" class="my-profile"}}
+          {{user_avatar class="menu-profile-avatar"}}
+          <div class="menu-profile-name">
+            <div>{{user_name}}</div>
+            <div class="my-profile-tooltip">{{t 'profile'}}</div>
+          </div>
+          {{/my_profile}}
+        </li>
+        <li class="item">{{link "requests" role="menuitem"}}</li>
+        <li class="item">{{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}</li>
+        <li class="item">{{contact_details role="menuitem"}}</li>
+        <li class="item">{{change_password role="menuitem" class='change-password'}}</li>
+        <li class="nav-divider"></li>
         {{else}}
-          <li class="item">
-            {{#link "sign_in" role="menuitem"}}
-              {{t 'sign_in'}}
-            {{/link}}
-          </li>
-          <li class="nav-divider"></li>
+        <li class="item">
+          {{#link "sign_in" role="menuitem"}}
+          {{t 'sign_in'}}
+          {{/link}}
+        </li>
+        <li class="nav-divider"></li>
         {{/if}}
         <li class="item">{{link 'community' role="menuitem"}}</li>
         <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
         <li class="nav-divider"></li>
         {{#if signed_in}}
-          <li class="item">
-            {{link "sign_out" role="menuitem"}}
-          </li>
+        <li class="item">
+          {{link "sign_out" role="menuitem"}}
+        </li>
         {{/if}}
         </li>
       </ul>
