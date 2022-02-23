@@ -59,12 +59,12 @@
   {{#each (filter sections on="description" equals="media")}}
     <div class="home-article-list">
     {{#each articles}}
-      {{#if !promoted}}
+      {{#unless promoted}}
         <div class="home-article-list-item fx-between">
           <h3 class="f-20 normal color-text">{{title}}</h3>
           <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
         </div>
-      {{/if}}
+      {{/unless}}
     {{/each}}
     </div>
   {{/each}}
