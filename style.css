@@ -4861,3 +4861,34 @@ html[dir="rtl"] .notification-left-aligned {
 .home-hero img{
   max-width: 100%;
 }
+
+
+
+.f-12 {
+  font-size: 12px;
+}
+.f-14 {
+  font-size: 14px;
+}
+.f-28 {
+  font-size: 28px;
+}
+
+.color-text-light{
+  color: #5A5875;
+}
+.color-text-light-1{
+  color: #66739F;
+}
+
+.fx-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fx-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
