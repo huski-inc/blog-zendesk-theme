@@ -184,18 +184,23 @@ document.addEventListener('DOMContentLoaded', function() {
   var menuButton = document.querySelector('.header .menu-button-mobile');
   var menuList = document.querySelector('#user-nav-mobile');
 
-  menuButton.addEventListener('click', function(e) {
-    e.stopPropagation();
-    toggleNavigation(this, menuList);
-  });
-
-
-  menuList.addEventListener('keyup', function(e) {
-    if (e.keyCode === ESCAPE) {
+  if(menuButton){
+    menuButton.addEventListener('click', function(e) {
       e.stopPropagation();
-      closeNavigation(menuButton, this);
-    }
-  });
+      toggleNavigation(this, menuList);
+    });
+  
+  }
+ 
+
+  if(menuList){
+    menuList.addEventListener('keyup', function(e) {
+      if (e.keyCode === ESCAPE) {
+        e.stopPropagation();
+        closeNavigation(menuButton, this);
+      }
+    });
+  }
 
   // Toggles expanded aria to collapsible elements
   var collapsible = document.querySelectorAll('.collapsible-nav, .collapsible-sidebar');
