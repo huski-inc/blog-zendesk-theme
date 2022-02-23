@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   }
 
+  const iframe = document.querySelector('iframe')
+  if(iframe){
+    iframe.remove();
+  }
+
   // // Key map
   // var ENTER = 13;
   // var ESCAPE = 27;
