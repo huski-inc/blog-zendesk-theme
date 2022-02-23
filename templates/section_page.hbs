@@ -162,7 +162,7 @@
   }
 
 
-  function copyText(text, callback: Function = () => { }) {
+  function copyText(text, callback) {
     const input = document.createElement('input')
     input.setAttribute('readonly', 'readonly')
     input.setAttribute('value', text)
