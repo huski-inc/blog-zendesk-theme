@@ -4946,6 +4946,12 @@ html[dir="rtl"] .notification-left-aligned {
   overflow: hidden;
 }
 
+@media screen and (max-width: 1440px) {
+  .home-media-image {
+    height: 200px;
+  }
+}
+
 .home-hero {
   width: 100%;
 }
