@@ -196,7 +196,9 @@ body {
   /* line-height: 1.5; */
   -webkit-font-smoothing: antialiased;
 }
-
+body > main {
+  min-height: 80vh;
+}
 @media (min-width: 1024px) {
   body > main {
     min-height: 80vh;
