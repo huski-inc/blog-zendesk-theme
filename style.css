@@ -4853,3 +4853,11 @@ html[dir="rtl"] .notification-left-aligned {
 .dropdown-chevron-icon {
   vertical-align: middle;
 }
+
+
+.home-hero {
+  width: 100%;
+}
+.home-hero img{
+  max-width: 100%;
+}
