@@ -4863,6 +4863,12 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 
+.pt-10 {
+  padding-top: 10px;
+}
+.pt-15 {
+  padding-top: 15px;
+}
 
 .f-12 {
   font-size: 12px;
