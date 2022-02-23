@@ -203,7 +203,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading_font;
-  margin-top: 0;
+  margin: 0;
 }
 
 h1 {
@@ -4863,6 +4863,9 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 
+.pt-5 {
+  padding-top: 5px;
+}
 .pt-10 {
   padding-top: 10px;
 }
