@@ -1,7 +1,7 @@
 <div class="container-divider"></div>
 
 <div class="container">
-<div onclick="history.back()"> ← Back</div>
+<div onclick="document.referrer === '' ? window.location.href = '/hc' : window.history.go(-1);" class="pointer"> ← Back</div>
 <div class="article-section-name color-text-light-1 f-16 mt-30">{{section.name}}</div>
 <h3 class="f-24 color-black pt-10">{{article.title}}</h3>
 <div class="color-text-light f-14 pt-10">{{date article.updated_at format='short'}}</div>
@@ -31,11 +31,27 @@
       <div class="divider mt-30 mb-10"></div>
 
       <div class="fx-between">
-        <span>← Previous</span>
-        <span>All Blogs</span>
+       <div class="article-previous">
+          {{#each section.articles}}
+          <span class="{{#is id ../article.id}}current-article{{/is}} hide">
+            <a href="{{url}}">← Previous</a>
+          </span>
+         {{/each}}
+       </div>
+        <a href="/hc">All Blogs</span>
         <span>Next →</span>
       </div>
 </div>
+<script>
+  const articlePrevious = document.querySelector('.article-previous')
+  if(articlePrevious){
+    const currentArticle=articlePrevious.querySelector('.current-article')
+    if(currentArticle){
+       body.setAttribute("class", "");
+      articlePrevious.innerHTML=currentArticle.previousElementSibling.outerHTML
+    }
+  }
+</script>
 {{!-- 
 <div class="container">
   <nav class="sub-nav">
