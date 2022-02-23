@@ -4854,3 +4854,10 @@ html[dir="rtl"] .notification-left-aligned {
   vertical-align: middle;
 }
 
+
+.home-hero {
+  width: 100%;
+}
+.home-hero img{
+  max-width: 100%;
+}
