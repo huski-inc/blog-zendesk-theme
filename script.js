@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
   if (articlePrevious) {
     const currentArticle = articlePrevious.querySelector('.current-article')
     if (currentArticle) {
-      articlePrevious.innerHTML = currentArticle.previousElementSibling?currentArticle.previousElementSibling.innerHTML:''
+      articlePrevious.innerHTML =  currentArticle.nextElementSibling?currentArticle.nextElementSibling.innerHTML:''
     }
   }
   const articleNext = document.querySelector('.article-next')
   if (articleNext) {
     const currentArticle = articleNext.querySelector('.current-article')
     if (currentArticle) {
-      articleNext.innerHTML = currentArticle.nextElementSibling?currentArticle.nextElementSibling.innerHTML:''
+      articleNext.innerHTML = currentArticle.previousElementSibling?currentArticle.previousElementSibling.innerHTML:''
     }
   }
 
