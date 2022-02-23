@@ -41,11 +41,13 @@
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
       {{#if promoted}}
       <div class="col-lg-4 col-sm-12">
-        <div class="home-media-image">
-          <div class="article-cover-init">{{body}}</div>
-        </div>
-        <h3 class="f-24 mt-15 mb-15 normal">{{title}}</h3>
-        <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+        <a href="{{url}}" class="block">
+          <div class="home-media-image">
+            <div class="article-cover-init">{{body}}</div>
+          </div>
+          <h3 class="f-24 mt-15 mb-15 normal">{{title}}</h3>
+          <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+        </a>
       </div>
       {{/if}}
     {{/each}}
@@ -57,20 +59,65 @@
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="media")}}
-    <div class="home-article-list">
+    <ul class="home-article-list">
     {{#each articles}}
       {{#unless promoted}}
-        <div class="home-article-list-item fx-between">
-          <h3 class="f-20 normal color-text">{{title}}</h3>
-          <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
-        </div>
+        <li class="home-article-list-item">
+          <a href="{{url}}" class="fx-between">
+            <h3 class="f-20 normal color-text">{{title}}</h3>
+            <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+          </a>
+        </li>
       {{/unless}}
+    {{/each}}
+    </ul>
+  {{/each}}
+{{/each}}
+</div>
+<div class="divider mt-30"></div>
+<!-- CUSTOMER STORIES 类别 -->
+<div class="container">
+  {{#each categories}}
+  {{#each (filter sections on="description" equals="customer-stories")}}
+    <h3 class="home-category f-28">{{name}}</h3>
+    <div class="row mb-20">
+    {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
+      {{#if promoted}}
+      <div class="col-lg-6 col-sm-12">
+        <a href="{{url}}" class="block">
+          <div class="home-media-image">
+            <div class="article-cover-init">{{body}}</div>
+          </div>
+          <h3 class="f-24 mt-15 mb-15 normal">{{title}}</h3>
+          <p class="f-14">{{excerpt body characters=140}}</p>
+          <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+        </a>
+      </div>
+      {{/if}}
     {{/each}}
     </div>
   {{/each}}
 {{/each}}
 </div>
-
+<div class="divider mt-30"></div>
+<div class="container">
+  {{#each categories}}
+  {{#each (filter sections on="description" equals="customer-stories")}}
+    <ul class="home-article-list">
+    {{#each articles}}
+      {{#unless promoted}}
+        <li class="home-article-list-item">
+          <a href="{{url}}" class="fx-between">
+            <h3 class="f-20 normal color-text">{{title}}</h3>
+            <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+          </a>
+        </li>
+      {{/unless}}
+    {{/each}}
+    </ul>
+  {{/each}}
+{{/each}}
+</div>
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
@@ -80,7 +127,7 @@
     </svg>
     {{search submit=false instant=settings.instant_search class='search search-full'}}
   </div>
-</section> --}}
+</section>
 
 <div class="container">
   <section class="section knowledge-base">
@@ -151,7 +198,7 @@
       {{recent_activity}}
     {{/if}}
   </section>
-</div>
+</div> --}}
 
 <script>
   const getFirstImage = function(str){

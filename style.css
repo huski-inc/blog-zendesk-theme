@@ -4920,6 +4920,12 @@ html[dir="rtl"] .notification-left-aligned {
 
 
 /** scss **/
+a{
+  text-decoration: none;
+}
+.block {
+  display: block;
+}
 .hide {
   display: none;
 }
@@ -5048,4 +5054,7 @@ html[dir="rtl"] .notification-left-aligned {
 }
 .home-article-list-item:last-child {
   border-bottom: 0;
+}
+.home-article-list-item a:hover {
+  opacity: .8;
 }
