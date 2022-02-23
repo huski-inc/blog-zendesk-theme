@@ -10,8 +10,13 @@
   </div>
   <h3 class="f-28">What is Huski.ai?</h3>
   <p class="f-12" class="color-text-light">Huski.ai exists to make brand protection & growth easy with cutting-edge AI.  Here is why and how.Huski.ai exists to make brand protection & growth easy with cutting-edge AI.  Here is why and how.</p>
+  <div class="divider mt-30 mb-30"></div>
+          {{#each (filter articles on="id" equals="4483678577945")}}
+             {{body}}
+             {{json_stringify body}}
+          {{/each}}
 </div>
-<section id="main-content" class="section hero">
+{{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
@@ -20,7 +25,7 @@
     </svg>
     {{search submit=false instant=settings.instant_search class='search search-full'}}
   </div>
-</section>
+</section> --}}
 
 <div class="container">
   <section class="section knowledge-base">

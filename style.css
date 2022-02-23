@@ -4863,6 +4863,11 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 
+.divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
 .pt-5 {
   padding-top: 5px;
 }
@@ -4871,6 +4876,13 @@ html[dir="rtl"] .notification-left-aligned {
 }
 .pt-15 {
   padding-top: 15px;
+}
+
+.mt-30{
+  margin-top: 30px;
+}
+.mb-30{
+  margin-bottom: 30px;
 }
 
 .f-12 {
