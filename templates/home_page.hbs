@@ -39,7 +39,7 @@
     <h3 class="home-category f-28">{{name}}</h3>
     <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
-      {{#if article.promoted}}
+      {{#if promoted}}
       <div class="col-lg-4 col-sm-12">
         <div class="home-media-image">
           <div class="article-cover-init">{{body}}</div>
@@ -59,7 +59,7 @@
   {{#each (filter sections on="description" equals="media")}}
     <div class="home-article-list">
     {{#each articles}}
-      {{#if article.promoted}}
+      {{#if promoted}}
         <div class="home-article-list-item fx-between">
           <h3 class="f-20 normal color-text">{{title}}</h3>
           <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
