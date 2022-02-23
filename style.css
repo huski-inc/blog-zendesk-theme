@@ -5020,6 +5020,7 @@ a{
 }
 .article-cover img{
   height: 100%;
+  max-width: 100%;
 }
 
 .article-title {
@@ -5028,9 +5029,11 @@ a{
 }
 
 .home-category {
+  margin: 30px 0;
+}
+.home-category a{
   color: #28B470;
   font-size: 28px;
-  margin: 30px 0;
 }
 .home-media-image {
   width: 100%;
@@ -5066,5 +5069,5 @@ a{
 /** section 页面**/
 .section-article-list-item{
   border-bottom: 1px solid #DDDDDD;
-  padding: 25px 0;
+  padding: 30px 0;
 }

@@ -6,13 +6,14 @@
         <ul class="section-article-list">
           {{#each section.articles}}
             <li class="section-article-list-item">
+            <a href="{{url}}" class="block">
              <div class="row">
                 <div class="col-lg-4 col-sm-12">
                   <div class="article-cover-init" title="{{title}}">{{body}}</div>
                 </div>
                 <div class="col-lg-8 col-sm-12">
                   <h3 class="f-24 color-black">{{excerpt title characters=80}}</h3>
-                  <p class="f-14 color-text-light">{{excerpt body characters=140}}</p>
+                  <p class="f-14 color-text-light">{{excerpt body characters=280}}</p>
                   <div class="fx-start">
                     <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
                   </div>
@@ -29,8 +30,7 @@
                   {{/if}}
                 </div>
              </div>
-
-             
+             </a>
             </li>
           {{/each}}
         </ul>
@@ -42,7 +42,7 @@
 
     {{pagination "section.articles"}}
 </div>
-<div class="container">
+{{!-- <div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
     <div class="search-container">
@@ -112,4 +112,4 @@
 
     </section>
   </div>
-</div>
+</div> --}}

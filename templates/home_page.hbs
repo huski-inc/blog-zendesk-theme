@@ -36,7 +36,7 @@
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="media")}}
-    <h3 class="home-category f-28">{{name}}</h3>
+    <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
     <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
       {{#if promoted}}
@@ -79,7 +79,7 @@
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="customer-stories")}}
-    <h3 class="home-category f-28">{{name}}</h3>
+    <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
     <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
       {{#if promoted}}
