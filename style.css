@@ -5132,7 +5132,7 @@ a{
   font-size: 16px;
   padding: 10px 0;
 }
-.header-nav-list li a.active{
+.header-nav-list li.active a{
   color:#3B7FF8;
   border-bottom: 2px solid #3B7FF8;
 }

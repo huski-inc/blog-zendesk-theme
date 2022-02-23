@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="current-section-key">{{section.description}}</div>
   <h3 class="home-category f-28">{{section.name}}</h3>
 
    {{#if section.articles}}
@@ -42,6 +43,23 @@
     {{pagination "section.articles"}}
 </div>
 <div class="divider mt-30 mb-30"></div>
+<script>
+  const sectionKey=document.querySelector('.current-section-key')
+  if(sectionKey){
+    const key=sectionKey.innerText
+    const currentClassName=`.header-nav-item-${key}`
+    const nav=document.querySelector(currentClassName)
+    if(nav){
+     const navList=  document.querySelectorAll('.header-nav-list li')
+     if(navList){
+       navList.forEach((p)=>{
+         p.setAttribute('class','')
+       })
+       nav..setAttribute('class',currentClassName+' active')
+     }
+    }
+  }
+</script>
 {{!-- <div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
