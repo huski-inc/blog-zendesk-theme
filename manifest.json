@@ -373,9 +373,9 @@
       "label": "huski_group_label",
       "variables": [{
         "identifier": "menu_1",
-        "type": "string",
-        "description": "",
-        "label": "",
+        "type": "text",
+        "description": "menu_1_description",
+        "label": "menu_1_label",
         "value": "/hc/sections/4483660662297"
       }]
     }
