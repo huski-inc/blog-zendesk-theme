@@ -11,19 +11,14 @@
   <h3 class="f-28">What is Huski.ai?</h3>
   <p class="f-12" class="color-text-light">Huski.ai exists to make brand protection & growth easy with cutting-edge AI.  Here is why and how.Huski.ai exists to make brand protection & growth easy with cutting-edge AI.  Here is why and how.</p>
   <div class="divider mt-30 mb-30"></div>
-          {{#each promoted_articles}}
-          <h4>{{id}}</h4>
-            <div class="article-cover-init">{{body}}</div>
-               {{#if attachments}}
-                <div>
-                    {{#each attachments}}
-                      <img src="{{url}}">
-                    {{/each}}
-                </div>
-              {{/if}}
-          {{/each}}
-
-       
+  {{#each promoted_articles}}
+    <h4>{{id}}</h4>
+    <div class="article-cover-init">{{slice body 0 400}}</div>
+  {{/each}}
+  {{#each (filter promoted_articles on="id" equals="4483678577945")}}
+    <h4>{{id}}</h4>
+    <div class="article-cover-init">{{slice body 0 400}}</div>
+  {{/each}}
 </div>
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
