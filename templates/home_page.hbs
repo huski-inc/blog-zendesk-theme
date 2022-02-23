@@ -15,15 +15,13 @@
   {{/each}}
   <hr>
   {{#each (filter categories on="description" equals="blog")}}
-   <b>{{name}}</b>
     {{#each (filter sections on="description" equals="product-introduction")}}
-    <b>{{name}}</b>
       {{#each (filter articles on="promoted" equals=true)}}
          <div class="home-hero">
           <div class="article-cover-init" title="{{title}}">{{ body }}</div>
         </div>
         <div class="fx-between f-14 pt-5">
-          <span class="color-text-light-1">{{section.name}}</span>
+          <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
           <span class="color-text-light">{{date updated_at format='short'}}</span>
         </div>
         <h3 class="f-28"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
