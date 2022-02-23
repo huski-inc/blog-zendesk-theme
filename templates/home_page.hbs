@@ -60,7 +60,7 @@
   {{#each categories}}
   {{#each (filter sections on="description" equals="media")}}
     <ul class="home-article-list">
-    {{#each articles}}
+    {{#each (slice articles 0 8)}}
       {{#unless promoted}}
         <li class="home-article-list-item">
           <a href="{{url}}" class="fx-between">
@@ -104,7 +104,7 @@
   {{#each categories}}
   {{#each (filter sections on="description" equals="customer-stories")}}
     <ul class="home-article-list">
-    {{#each articles}}
+    {{#each (slice articles 0 8)}}
       {{#unless promoted}}
         <li class="home-article-list-item">
           <a href="{{url}}" class="fx-between">

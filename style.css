@@ -5015,9 +5015,11 @@ a{
   display: none;
 }
 .article-cover{
+  text-align: center;
+  height: 100%;
 }
 .article-cover img{
-  width: 100%;
+  height: 100%;
 }
 
 .article-title {
@@ -5051,7 +5053,7 @@ a{
   max-width: 100%;
 }
 .home-article-list-item {
-  padding: 20px 0;
+  padding: 25px 0;
   border-bottom: 1px solid #DDDDDD;
 }
 .home-article-list-item:last-child {
