@@ -4872,6 +4872,28 @@ html[dir="rtl"] .notification-left-aligned {
   text-decoration: none;
 }
 
+.home-category {
+  color: #28B470;
+  font-size: 28px;
+  margin: 15px 0;
+}
+.home-media-image {
+  width: 100%;
+  height: 180px;
+  background: #E8EBF1;
+  position: relative;
+  overflow: hidden;
+}
+.home-media-image::before{
+  content: 'Image';
+  color: #66739F;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100%;
+}
+
 .home-hero {
   width: 100%;
 }

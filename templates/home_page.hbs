@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="{{asset 'bootstrap-grid.min'}}">
+
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
 <div class="container">
@@ -14,7 +16,7 @@
     <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
   {{/each}}
   <hr>
-  {{#each (filter categories on="description" equals="blog")}}
+  {{!-- {{#each (filter categories on="description" equals="blog")}}
     {{#each (filter sections on="description" equals="product-introduction")}}
       {{#each (filter articles on="promoted" equals=true)}}
          <div class="home-hero">
@@ -28,27 +30,29 @@
         <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
       {{/each}}
     {{/each}}
-  {{/each}}
+  {{/each}} --}}
    <div class="divider mt-30 mb-30"></div>
 </div>
 
 
-
+<!-- MEDIA 类别 -->
 {{#each categories}}
-
-    <h2>类别：{{name}}</h2>
-<div>
-  {{#each sections}}
-    <h3>组别：{{name}}</h3>
-
-    <ul>
-    {{#each articles}}
-      <li>文章标题：{{title}}</li>
+  {{#each (filter sections on="description" equals="media")}}
+    <h3 class="home-category">{{name}}</h3>
+    <div class="row">
+    {{#each articles }}
+      <div class="col-lg-4 col-sm-12">
+        <div class="home-media-image">
+          <div class="article-cover-init">{{body}}</div>
+        </div>
+        <h3 class="f-28">{{title}}</h3>
+        <div class="color-text-light f-12">{{date updated_at format='short'}}</div>
+      </div>
     {{/each}}
-    </ul>
+    </div>
   {{/each}}
-  </div>
 {{/each}}
+
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
