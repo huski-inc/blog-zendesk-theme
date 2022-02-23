@@ -139,18 +139,18 @@
      * Source: https://github.com/nicolasbeauvais/vue-social-sharing/issues/143
      */
     if (options.key === 'twitter') {
-      if (!options.hashtags.length) link = link.replace('&hashtags=@h', '')
+      if (!options.hashtags?.length) link = link.replace('&hashtags=@h', '')
       if (!options.twitterUser.length) link = link.replace('@tu', '')
     }
 
     return link
       .replace(/@tu/g, '&via=' + encodeURIComponent(options.twitterUser))
       .replace(/@u/g, encodeURIComponent(options.url))
-      .replace(/@t/g, encodeURIComponent(options.title))
-      .replace(/@d/g, encodeURIComponent(options.description))
-      .replace(/@q/g, encodeURIComponent(options.quote))
+      .replace(/@t/g, encodeURIComponent(options.title || ''))
+      .replace(/@d/g, encodeURIComponent(options.description || ''))
+      .replace(/@q/g, encodeURIComponent(options.quote || ''))
       .replace(/@h/g, encodedHashtags(options))
-      .replace(/@m/g, encodeURIComponent(options.media))
+      .replace(/@m/g, encodeURIComponent(options.media || ''))
   }
   function onShare(options) {
     const link = shareLink(options)
