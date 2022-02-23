@@ -1,5 +1,48 @@
 <div class="container-divider"></div>
 <div class="container">
+  <h3 class="home-category f-28">{{section.name}}</h3>
+
+   {{#if section.articles}}
+        <ul class="section-article-list">
+          {{#each section.articles}}
+            <li class="section-article-list-item">
+             <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                  <div class="article-cover-init" title="{{title}}">{{body}}</div>
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                  <h3 class="f-24 color-black">{{excerpt title characters=80}}</h3>
+                  <p class="f-14 color-text-light">{{excerpt body characters=140}}</p>
+                  <div class="fx-start">
+                    <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+                  </div>
+                  {{#if internal}}
+                    {{#if promoted}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 12 12" class="icon-star" title="{{t 'promoted'}}">
+                      <path fill="currentColor" d="M2.88 11.73c-.19 0-.39-.06-.55-.18a.938.938 0 01-.37-1.01l.8-3L.35 5.57a.938.938 0 01-.3-1.03c.12-.37.45-.63.85-.65L4 3.73 5.12.83c.14-.37.49-.61.88-.61s.74.24.88.6L8 3.73l3.11.17a.946.946 0 01.55 1.68L9.24 7.53l.8 3a.95.95 0 01-1.43 1.04L6 9.88l-2.61 1.69c-.16.1-.34.16-.51.16z"/>
+                    </svg>
+                    {{/if}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
+                      <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
+                      <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
+                    </svg>
+                  {{/if}}
+                </div>
+             </div>
+
+             
+            </li>
+          {{/each}}
+        </ul>
+    {{else}}
+        <i class="section-empty">
+          <a href="{{section.url}}">{{t 'empty'}}</a>
+        </i>
+    {{/if}}
+
+    {{pagination "section.articles"}}
+</div>
+<div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
     <div class="search-container">

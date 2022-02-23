@@ -1,4 +1,25 @@
+const getFirstImage = function(str){
+  let data = '';
+  str.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/, function (match, capture) {
+              data =  capture;
+        });
+  return data
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  // 将文章body第一章图片显示出来
+  const articleBody=document.querySelectorAll('.article-cover-init')
+  for(let i=0;i<articleBody.length;i++){
+    const body=articleBody[i]
+    const bodyHtml= body.innerHTML
+    if(bodyHtml){
+      const imageUrl= getFirstImage(bodyHtml)
+      body.innerHTML=`<img src="${imageUrl}"/>`
+      body.setAttribute("class", "article-cover");
+
+    }
+  }
+
   // Key map
   var ENTER = 13;
   var ESCAPE = 27;

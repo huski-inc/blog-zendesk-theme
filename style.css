@@ -5062,3 +5062,9 @@ a{
 .home-article-list-item a:hover {
   opacity: .8;
 }
+
+/** section 页面**/
+.section-article-list-item{
+  border-bottom: 1px solid #DDDDDD;
+  padding: 25px 0;
+}
