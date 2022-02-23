@@ -14,7 +14,7 @@
     <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
   {{/each}}
   <hr>
-  {{#each filter(categories on="description" equals="blog")}}
+  {{#each categories}}
    <b>{{name}}</b>
     {{#each filter(sections on="description" equals="product-introduction")}}
     <b>{{name}}</b>
