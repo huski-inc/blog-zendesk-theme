@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.13.70",
+  "version": "2.13.71",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -372,12 +372,6 @@
     {
       "label": "Huski Blog Setting",
       "variables": [{
-        "identifier": "first_article_id",
-        "type": "text",
-        "description": "First Article ID",
-        "label": "First Article ID",
-        "value": "4483678577945"
-      }, {
         "identifier": "menu_1",
         "type": "text",
         "description": "Menu 1",
