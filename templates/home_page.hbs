@@ -19,20 +19,15 @@
 
 
 {{#each categories}}
+
+    <h2>类别：{{name}}</h2>
 <div>
   {{#each sections}}
-    <div class="blocks-item">
-                <a href='{{url}}' class="blocks-item-link">
-                  <span class="blocks-item-title">
-                    {{name}}
-                  </span>
-                  <span class="blocks-item-description">{{excerpt description}}</span>
-                </a>
-    </div>
+    <h3>组别：{{name}}</h3>
 
     <ul>
     {{#each articles}}
-      <li>{{title}}</li>
+      <li>文章标题：{{title}}</li>
     {{/each}}
     </ul>
   {{/each}}
