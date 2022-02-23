@@ -4984,10 +4984,12 @@ a{
   font-size: 28px;
 }
 
+.color-black{
+  color: #000000;
+}
 .color-text{
   color: #373459;
 }
-
 .color-text-light{
   color: #5A5875;
 }
