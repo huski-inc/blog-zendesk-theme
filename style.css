@@ -228,9 +228,9 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
+/* a:hover, a:active, a:focus {
   text-decoration: underline;
-}
+} */
 
 input,
 textarea {
@@ -5026,7 +5026,7 @@ a{
 .home-category {
   color: #28B470;
   font-size: 28px;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 .home-media-image {
   width: 100%;
