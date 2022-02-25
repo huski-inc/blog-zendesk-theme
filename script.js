@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const bodyHtml= body.innerHTML
     if(bodyHtml){
       const imageUrl= getFirstImage(bodyHtml)
-      body.innerHTML=imageUrl?`<img src="${imageUrl}"/>`:`<div class="no-image">NO IMAGE</div>`
+      body.innerHTML=imageUrl?`<img src="${imageUrl}"/>`:''//`<div class="no-image">NO IMAGE</div>`
       body.setAttribute("class", "article-cover");
 
     }

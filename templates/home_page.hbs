@@ -38,7 +38,7 @@
 <!-- MEDIA 类别 -->
 <div class="container">
   {{#each categories}}
-  {{#each (filter sections on="description" equals="media")}}
+  {{#each (filter sections on="description" equals="customer-stories")}}
   <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
@@ -61,7 +61,7 @@
 </div>
 <div class="container">
   {{#each categories}}
-  {{#each (filter sections on="description" equals="media")}}
+  {{#each (filter sections on="description" equals="customer-stories")}}
   <ul class="home-article-list">
     {{#each (slice articles 0 8)}}
     {{#unless promoted}}
@@ -81,7 +81,7 @@
 <!-- CUSTOMER STORIES 类别 -->
 <div class="container">
   {{#each categories}}
-  {{#each (filter sections on="description" equals="customer-stories")}}
+  {{#each (filter sections on="description" equals="media")}}
   <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
@@ -105,7 +105,7 @@
 </div>
 <div class="container">
   {{#each categories}}
-  {{#each (filter sections on="description" equals="customer-stories")}}
+  {{#each (filter sections on="description" equals="media")}}
   <ul class="home-article-list">
     {{#each (slice articles 0 8)}}
     {{#unless promoted}}

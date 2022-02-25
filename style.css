@@ -5091,7 +5091,7 @@ a{
 }
 .home-media-image {
   width: 100%;
-  height: 180px;
+  height: 200px;
   background: #E8EBF1;
   position: relative;
   overflow: hidden;
@@ -5099,7 +5099,7 @@ a{
 
 @media screen and (max-width: 1440px) {
   .home-media-image {
-    height: 200px;
+    height: 220px;
   }
 }
 
