@@ -1637,16 +1637,16 @@ ul {
   }
 }
 
-.article-container {
+/* .article-container {
   display: flex;
   flex-direction: column;
-}
-
+} */
+/* 
 @media (min-width: 1024px) {
   .article-container {
     flex-direction: row;
   }
-}
+} */
 
 .article-header {
   align-items: flex-start;

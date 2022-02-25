@@ -3,7 +3,7 @@
   <h3 class="home-category f-28">{{section.name}}</h3>
 
   {{#if section.articles}}
-  <ul class="section-article-list">
+  <ul class="section-article-list mb-30">
     {{#each section.articles}}
     <li class="section-article-list-item">
 
@@ -14,7 +14,7 @@
         <div class="col-lg-8 col-sm-12 section-article-list-item-right">
           <a href="{{url}}" class="block">
             <h3 class="f-24 color-black">{{excerpt title characters=80}}</h3>
-            <p class="f-14 color-text-light">{{excerpt body characters=280}}</p>
+            <p class="f-14 color-text-light">{{excerpt body characters=300}}</p>
           </a>
           <div class="fx-start">
             <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
@@ -83,7 +83,7 @@
   {{/if}}
 
   {{pagination "section.articles"}}
-  <div class="divider mt-30 mb-30"></div>
+  {{!-- <div class="divider mt-30 mb-30"></div> --}}
 </div>
 <script>
   const sectionKey = document.querySelector('.current-section-key')
