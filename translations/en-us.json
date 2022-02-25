@@ -66,5 +66,15 @@
   "follow_topic_label": "Follow",
   "follow_topic_description": "Users can follow a specific topic",
   "show_brand_name_label": "Show Help Center name",
-  "show_brand_name_description": "Display the Help Center name next to the logo"
+  "show_brand_name_description": "Display the Help Center name next to the logo",
+  "solutions": "Solutions",
+  "for_retailer": "For Retailer",
+  "for_ip_lawyer": "For IP Lawyer",
+  "for_brand_owner": "For Brand Owner",
+  "technology": "Technology",
+  "about": "About",
+  "blog": "Blog",
+  "customer_stories": "CUSTOMER STORIES",
+  "product_introduction": "PRODUCT INTRODUCTION",
+  "media": "MEDIA"
 }
