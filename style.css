@@ -5197,7 +5197,19 @@ a{
   padding-left: 25px;
 }
 .huski-nav-bar li a{
-  color: #fff;
+  color: #ffffffd9;
+  font-size: 1.125rem;
+}
+.huski-nav-bar li a:hover{
+  color: #ffffff;
+}
+.huski-nav-bar li button{
+  font-size: 1.125rem;
+  color:#ffffffd9;
+}
+.huski-nav-bar li button:hover{
+  font-size: 1.125rem;
+  color:#ffffff;
 }
 
 .huski-logo img {
