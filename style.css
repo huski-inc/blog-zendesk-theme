@@ -5219,9 +5219,15 @@ a{
 .tablet-show {
   display: none;
 }
+.tablet-hide {
+  display: block;
+}
 
 @media screen and (max-width: 768px) {
 .tablet-show {
   display: block;
+}
+.huski-nav-list{
+  display: none;
 }
 }
