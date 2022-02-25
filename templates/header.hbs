@@ -40,16 +40,60 @@
     <ul class="huski-nav-list fx-start">
       <li>
         <div class="dropdown language-selector">
-          <button style="width: 28px;height: 32px;" class="dropdown-toggle color-white fx-start" aria-haspopup="true">
+          <button style="height: 32px;" class="dropdown-toggle color-white fx-start" aria-haspopup="true">
             {{#is current_locale.name '简体中文'}}解决方案{{else}}Solutions{{/is}}
           </button>
           <span class="dropdown-menu dropdown-menu-end" role="menu">
-            <a href="https://huski.ai/landing-report" rel="nofollow" role="menuitem">{{#is current_locale.name
-              '简体中文'}}零售商{{else}}For Retailer{{/is}}</a>
-            <a href="https://huski.ai/landing-lawyer" rel="nofollow" role="menuitem">{{#is current_locale.name
-              '简体中文'}}知识产权律师{{else}}For IP Lawyer{{/is}}</a>
-            <a href="https://huski.ai/landing-brand" rel="nofollow" role="menuitem">{{#is current_locale.name
-              '简体中文'}}品牌所有者{{else}}For Brand Owner{{/is}}</a>
+            <a href="https://huski.ai/landing-report" rel="nofollow" role="menuitem" class="fx-start">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14.8518 5.93155V5.422C14.8518 3.25594 13.0959 1.5 10.9298 1.5C8.76378 1.5 7.00785 3.25594 7.00785 5.422V5.93155H14.8518ZM16.3518 5.93155V5.422C16.3518 2.42751 13.9243 0 10.9298 0C7.93536 0 5.50785 2.42751 5.50785 5.422V5.93155H2.97146C1.92911 5.93155 1.06153 6.73211 0.977906 7.7711L0.00657591 19.8395C-0.0871143 21.0036 0.832297 22 2.00013 22H19.7718C20.9706 22 21.9001 20.9526 21.7577 19.7623L20.3131 7.69387C20.1928 6.68841 19.34 5.93155 18.3273 5.93155H16.3518ZM10.9298 12.375L10.8967 12.3749H10.963L10.9298 12.375ZM2.97146 7.43155H18.3273C18.5805 7.43155 18.7937 7.62077 18.8238 7.87213L20.2683 19.9406C20.3039 20.2381 20.0715 20.5 19.7718 20.5H2.00013C1.70817 20.5 1.47832 20.2509 1.50174 19.9599L2.47307 7.89144C2.49398 7.63169 2.71087 7.43155 2.97146 7.43155Z"
+                  fill="#5A5875" />
+                <path d="M6.8103 14.6638C8.05938 16.1701 11.4431 18.2789 14.9855 14.6638" stroke="#5A5875"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+                <ellipse cx="7.0604" cy="10.7777" rx="1" ry="1.00159" fill="#5A5875" />
+                <ellipse cx="14.3426" cy="10.7777" rx="1" ry="1.00159" fill="#5A5875" />
+              </svg>
+              &nbsp;&nbsp;
+              {{#is current_locale.name '简体中文'}}零售商{{else}}For Retailer{{/is}}
+            </a>
+            <a href="https://huski.ai/landing-lawyer" rel="nofollow" role="menuitem" class="fx-start">
+              <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.4502 1.45693C6.95819 4.02001 10.9178 1 10.9178 1H13.468C18.3572 3.89495 22.5279 1.45693 22.5279 1.45693"
+                  stroke="#5A5875" stroke-linecap="round" />
+                <path d="M16.9988 11.3853L19.5802 2.42505L22.2335 11.3853H16.9988Z" stroke="#5A5875"
+                  stroke-linejoin="bevel" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M15.2503 10.4167C15.2503 10.4168 15.2503 10.4168 15.2503 10.4169C15.2503 12.6687 17.2048 14.4942 19.6158 14.4942C22.0267 14.4942 23.9812 12.6687 23.9812 10.4169C23.9812 10.4168 23.9812 10.4168 23.9812 10.4167H15.2503Z"
+                  fill="#5A5875" />
+                <path d="M2.7485 11.3853L5.32991 2.42505L7.98317 11.3853H2.7485Z" stroke="#5A5875"
+                  stroke-linejoin="bevel" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1 10.4167C1 10.4168 1 10.4168 1 10.4169C1 12.6687 2.95447 14.4942 5.36544 14.4942C7.7764 14.4942 9.73087 12.6687 9.73087 10.4169C9.73087 10.4168 9.73087 10.4168 9.73087 10.4167H1Z"
+                  fill="#5A5875" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.7244 18.5511H17.1163C18.5647 19.2236 18.4852 21 18.4852 21H5.89648C5.89648 20.3955 5.89655 19.4245 7.02652 18.5511H10.657V1H13.7244V18.5511Z"
+                  fill="#5A5875" />
+              </svg>
+              &nbsp;&nbsp;
+              {{#is current_locale.name '简体中文'}}知识产权律师{{else}}For IP Lawyer{{/is}}
+            </a>
+            <a href="https://huski.ai/landing-brand" rel="nofollow" role="menuitem" class="fx-start">
+              <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.6957 18.729C15.0907 19.9155 12.6921 20.6688 10.0122 20.6688C7.39261 20.6688 5.04191 19.9491 3.43833 18.8086L2.54613 22.6269C2.36207 23.4146 3.14076 24.0835 3.89169 23.7828L9.61818 21.4893C9.85064 21.3962 10.1096 21.3937 10.3438 21.4823L16.462 23.7965C17.2291 24.0867 18.0001 23.3809 17.7787 22.5912L16.6957 18.729Z"
+                  fill="#5A5875" />
+                <path
+                  d="M19.25 9.72656C19.25 14.6647 15.1284 18.7031 10 18.7031C4.87163 18.7031 0.75 14.6647 0.75 9.72656C0.75 4.78841 4.87163 0.75 10 0.75C15.1284 0.75 19.25 4.78841 19.25 9.72656Z"
+                  stroke="#5A5875" stroke-width="1.5" />
+                <path
+                  d="M7.155 4.5H10.53C11.69 4.5 12.555 4.74 13.125 5.22C13.695 5.69 13.98 6.4 13.98 7.35C13.98 8.04 13.815 8.63 13.485 9.12C13.155 9.6 12.69 9.935 12.09 10.125V10.155C12.29 10.285 12.45 10.425 12.57 10.575C12.7 10.725 12.805 10.9 12.885 11.1L14.46 15H12.705L11.415 11.67C11.265 11.27 11.08 11.005 10.86 10.875C10.64 10.735 10.28 10.665 9.78 10.665H8.79V15H7.155V4.5ZM10.41 9.345C11.74 9.345 12.405 8.725 12.405 7.485C12.405 6.925 12.235 6.51 11.895 6.24C11.565 5.97 11.055 5.835 10.365 5.835H8.79V9.345H10.41Z"
+                  fill="#5A5875" />
+              </svg>
+              &nbsp;&nbsp;
+              {{#is current_locale.name '简体中文'}}品牌所有者{{else}}For Brand Owner{{/is}}
+            </a>
           </span>
         </div>
       </li>
