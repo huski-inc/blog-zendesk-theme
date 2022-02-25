@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'GT-Walsheim';
-  src: url($gt-walsheim-regular-webfont_woff2) format('woff2'),
+  src: url($gt-walsheim-regular_woff2) format('woff2'),
   url($gt-walsheim-regular-webfont) format('woff');
   font-weight: normal;
   font-style: normal;
@@ -12,8 +12,8 @@
 
 @font-face {
   font-family: 'GT-Walsheim-Bold';
-  src: url($gt-walsheim-medium-webfont_woff2) format('woff2'),
-  url($gt-walsheim-medium-webfont) format('woff');
+  src: url($gt-walsheim-medium_woff2) format('woff2'),
+  url($gt-walsheim-medium) format('woff');
   font-weight: bolder;
   font-style: normal;
 }

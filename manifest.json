@@ -397,25 +397,25 @@
           "value": "/hc/sections/4485887366169"
         },
         {
-          "identifier": "gt-walsheim-medium-webfont",
+          "identifier": "gt-walsheim-medium",
           "type": "file",
           "description": "gt-walsheim-medium-webfont_description",
           "label": "GT Walsheim Medium Webfont"
         },
         {
-          "identifier": "gt-walsheim-regular-webfont",
+          "identifier": "gt-walsheim-regular",
           "type": "file",
           "description": "gt-walsheim-regular-webfont_description",
           "label": "GT Walsheim Regular Webfont"
         },
         {
-          "identifier": "gt-walsheim-medium-webfont_woff2",
+          "identifier": "gt-walsheim-medium_woff2",
           "type": "file",
           "description": "gt-walsheim-medium-webfont_description",
           "label": "GT Walsheim Medium Webfont Woff2"
         },
         {
-          "identifier": "gt-walsheim-regular-webfont_woff2",
+          "identifier": "gt-walsheim-regular_woff2",
           "type": "file",
           "description": "gt-walsheim-regular-webfont_description",
           "label": "GT Walsheim Regular Webfont Woff2"
