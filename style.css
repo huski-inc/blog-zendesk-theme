@@ -5026,6 +5026,7 @@ a{
   color: #66739F;
 }
 
+
 .fx-between {
   display: flex;
   justify-content: space-between;
@@ -5134,6 +5135,12 @@ a{
   border-bottom: 1px solid #DDDDDD;
   padding: 30px 0;
 }
+.section-article-list-item-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .article-container{
   padding-left: 85px;
   padding-right: 85px;
