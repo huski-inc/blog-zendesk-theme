@@ -89,13 +89,14 @@
   const sectionKey = document.querySelector('.current-section-key')
   if (sectionKey) {
     const key = sectionKey.innerText
-    const currentClassName = `.header-nav-item-${key}`
-    const nav = document.querySelector(currentClassName)
+    const currentClassName = `header-nav-item-${key}`
+    const nav = document.querySelector('.' + currentClassName)
     if (nav) {
       const navList = document.querySelectorAll('.header-nav-list li')
       if (navList) {
         navList.forEach((p) => {
-          p.setAttribute('class', '')
+          const key = p.getAttribute('data-key')
+          p.setAttribute('class', 'header-nav-item-' + key)
         })
         nav.setAttribute('class', currentClassName + ' active')
       }

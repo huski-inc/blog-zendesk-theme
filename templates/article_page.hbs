@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container article-container">
   <div onclick="document.referrer === '' ? window.location.href = '/hc' : window.history.go(-1);" class="pointer"> ←
     Back</div>
   <div class="article-section-name f-16 mt-30">
     <a class="color-text-light-1" href="{{section.url}}">{{section.name}}</a>
   </div>
-  <h3 class="f-24 color-black pt-10">{{article.title}}</h3>
+  <h3 class="f-28 color-black pt-10">{{article.title}}</h3>
   <div class="color-text-light f-14 pt-10">{{date article.updated_at format='short'}}</div>
   <section class="article-info">
     <div class="article-content">
