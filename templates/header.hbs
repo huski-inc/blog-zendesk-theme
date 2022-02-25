@@ -17,33 +17,39 @@
         <div role="menuitem">
           <div class="dropdown language-selector tablet-show">
             <button style="width: 28px;height: 32px;" class="dropdown-toggle color-white fx-start" aria-haspopup="true">
-              {{t 'solutions'}}
+              {{#is current_locale.name '简体中文'}}解决方案{{else}}Solutions{{/is}}
             </button>
             <span class="dropdown-menu dropdown-menu-end" role="menu">
-              <a href="https://huski.ai/landing-report" rel="nofollow" role="menuitem">{{t 'for_retailer'}}</a>
-              <a href="https://huski.ai/landing-lawyer" rel="nofollow" role="menuitem">{{t
-                'for_ip_lawyer'}}</a>
-              <a href="https://huski.ai/landing-brand" rel="nofollow" role="menuitem">{{t
-                'for_brand_owner'}}</a>
+              <a href="https://huski.ai/landing-report" rel="nofollow" role="menuitem">{{#is current_locale.name
+                '简体中文'}}零售商{{else}}For Retailer{{/is}}</a>
+              <a href="https://huski.ai/landing-lawyer" rel="nofollow" role="menuitem">{{#is current_locale.name
+                '简体中文'}}知识产权律师{{else}}For IP Lawyer{{/is}}</a>
+              <a href="https://huski.ai/landing-brand" rel="nofollow" role="menuitem">{{#is current_locale.name
+                '简体中文'}}品牌所有者{{else}}For Brand Owner{{/is}}</a>
             </span>
           </div>
         </div>
-        <a href="https://huski.ai/technology" rel="nofollow" role="menuitem">{{t 'technology'}}</a>
-        <a href="https://huski.ai/about" rel="nofollow" role="menuitem">{{t 'about'}}</a>
-        <a href="/hc" rel="nofollow" role="menuitem">{{t 'blog'}}</a>
+        <a href="https://huski.ai/technology" rel="nofollow" role="menuitem">{{#is current_locale.name
+          '简体中文'}}领先的人工智能技术{{else}}Technology{{/is}}</a>
+        <a href="https://huski.ai/about" rel="nofollow" role="menuitem">
+          {{#is current_locale.name '简体中文'}}关于我们{{else}}About{{/is}}
+        </a>
+        <a href="/hc" rel="nofollow" role="menuitem">{{#is current_locale.name '简体中文'}}博客{{else}}Blog{{/is}}</a>
       </span>
     </div>
     <ul class="huski-nav-list fx-start">
       <li>
         <div class="dropdown language-selector">
           <button style="width: 28px;height: 32px;" class="dropdown-toggle color-white fx-start" aria-haspopup="true">
-            Solutions
+            {{#is current_locale.name '简体中文'}}解决方案{{else}}Solutions{{/is}}
           </button>
           <span class="dropdown-menu dropdown-menu-end" role="menu">
-            <a href="https://huski.ai/landing-report" rel="nofollow" role="menuitem">{{t
-              'for_retailer'}}</a>
-            <a href="https://huski.ai/landing-lawyer" rel="nofollow" role="menuitem">{{t 'for_ip_lawyer'}}</a>
-            <a href="https://huski.ai/landing-brand" rel="nofollow" role="menuitem">{{t 'for_brand_owner'}}</a>
+            <a href="https://huski.ai/landing-report" rel="nofollow" role="menuitem">{{#is current_locale.name
+              '简体中文'}}零售商{{else}}For Retailer{{/is}}</a>
+            <a href="https://huski.ai/landing-lawyer" rel="nofollow" role="menuitem">{{#is current_locale.name
+              '简体中文'}}知识产权律师{{else}}For IP Lawyer{{/is}}</a>
+            <a href="https://huski.ai/landing-brand" rel="nofollow" role="menuitem">{{#is current_locale.name
+              '简体中文'}}品牌所有者{{else}}For Brand Owner{{/is}}</a>
           </span>
         </div>
       </li>
@@ -53,15 +59,11 @@
       </li>
       <li>
         <a href="https://huski.ai/about">
-          {{#is current_locale.name '简体中文'}}
-          关于我们
-          {{else}}
-          About
-          {{/is}}
+          {{#is current_locale.name '简体中文'}}关于我们{{else}}About{{/is}}
         </a>
       </li>
       <li>
-        <a href="/hc">{{t 'blog'}}</a>
+        <a href="/hc">{{#is current_locale.name '简体中文'}}博客{{else}}Blog{{/is}}</a>
       </li>
       <li class="fx-center">
         {{#if alternative_locales}}
@@ -105,13 +107,13 @@
   <h1><a href="/hc" class="color-black">BLOG</a></h1>
   <ul class="header-nav-list fx-start">
     <li class="header-nav-item-customer-stories" data-key="customer-stories">
-      <a href="{{settings.menu_1}}">{{t 'customer_stories'}}</a>
+      <a href="{{settings.menu_1}}">{{#is current_locale.name '简体中文'}}客户案例{{else}}CUSTOMER STORIES{{/is}}</a>
     </li>
     <li class="header-nav-item-product-introduction" data-key="product-introduction">
-      <a href="{{settings.menu_2}}">{{t 'product_introduction'}}</a>
+      <a href="{{settings.menu_2}}">{{#is current_locale.name '简体中文'}}产品介绍{{else}}PRODUCT INTRODUCTION{{/is}}</a>
     </li>
     <li class="header-nav-item-media" data-key="media">
-      <a href="{{settings.menu_3}}">{{t 'media'}}</a>
+      <a href="{{settings.menu_3}}">{{#is current_locale.name '简体中文'}}媒体{{else}}MEDIA{{/is}}</a>
     </li>
   </ul>
 </div>
