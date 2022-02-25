@@ -4953,6 +4953,9 @@ a{
 .pt-15 {
   padding-top: 15px;
 }
+.pb-3 {
+  padding-bottom: 3px;
+}
 .pb-15 {
   padding-bottom: 15px;
 }
@@ -5133,13 +5136,14 @@ a{
 
 /** header **/
 .header-nav-list li{
-  padding-left: 20px;
+  padding-left: 25px;
 }
 .header-nav-list li a{
   color:#373459;
   display:inline-block;
-  font-size: 16px;
+  font-size: 15px;
   padding: 10px 0;
+  font-weight: bold;
 }
 .header-nav-list li.active a{
   color:#3B7FF8;

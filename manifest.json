@@ -382,31 +382,19 @@
         "type": "text",
         "description": "Menu 1",
         "label": "Menu 1",
-        "value": "/hc/sections/4483660662297"
+        "value": "/hc/sections/4485845782297"
       }, {
         "identifier": "menu_2",
         "type": "text",
         "description": "Menu 2",
         "label": "Menu 2",
-        "value": "/hc/sections/4485887366169"
+        "value": "/hc/sections/4483660662297"
       }, {
         "identifier": "menu_3",
         "type": "text",
         "description": "Menu 3",
         "label": "Menu 3",
-        "value": "/hc/sections/4485894795417"
-      }, {
-        "identifier": "menu_4",
-        "type": "text",
-        "description": "Menu 4",
-        "label": "Menu 4",
-        "value": "/hc/sections/4485845782297"
-      }, {
-        "identifier": "menu_5",
-        "type": "text",
-        "description": "Menu 5",
-        "label": "Menu 5",
-        "value": "/hc/sections/4485897208473"
+        "value": "/hc/sections/4485887366169"
       }]
     }
   ]

@@ -3,128 +3,131 @@
 <div class="container">
 
   {{#each (filter promoted_articles on="id" equals=4483678577945)}}
-    <div class="home-hero">
-      <div class="article-cover-init" title="{{title}}">{{ body }}</div>
-    </div>
-    <div class="fx-between f-14 pt-5">
-      <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
-      <span class="color-text-light">{{date updated_at format='short'}}</span>
-    </div>
-    <h3 class="f-28 normal"><a href="{{url}}" class="article-title" target="_blank">{{excerpt title characters=80}}</a></h3>
-    <p class="f-14" class="color-text-light">{{excerpt body characters=140}}</p>
+  <div class="home-hero">
+    <a href="{{url}}" target="_blank"></a>
+    <div class="article-cover-init" title="{{title}}">{{ body }}</a></div>
+  </div>
+  <div class="fx-between f-14 pt-5 pb-3">
+    <a class="color-text-light-1" href="{{settings.menu_2}}">PRODUCT INTRODUCTION</a>
+    <span class="color-text-light">{{date updated_at format='short'}}</span>
+  </div>
+  <h3 class="f-28 normal"><a href="{{url}}" class="article-title" target="_blank">{{excerpt title characters=80}}</a>
+  </h3>
+  <p class="f-14" class="color-text-light">{{excerpt body characters=140}}</p>
   {{/each}}
   {{!-- {{#each (filter categories on="description" equals="blog")}}
-    {{#each (filter sections on="description" equals="product-introduction")}}
-      {{#each (filter articles on="promoted" equals=true)}}
-         <div class="home-hero">
-          <div class="article-cover-init" title="{{title}}">{{ body }}</div>
-        </div>
-        <div class="fx-between f-14 pt-5">
-          <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
-          <span class="color-text-light">{{date updated_at format='short'}}</span>
-        </div>
-        <h3 class="f-28"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
-        <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
-      {{/each}}
-    {{/each}}
+  {{#each (filter sections on="description" equals="product-introduction")}}
+  {{#each (filter articles on="promoted" equals=true)}}
+  <div class="home-hero">
+    <div class="article-cover-init" title="{{title}}">{{ body }}</div>
+  </div>
+  <div class="fx-between f-14 pt-5">
+    <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
+    <span class="color-text-light">{{date updated_at format='short'}}</span>
+  </div>
+  <h3 class="f-28"><a href="{{url}}" class="article-title" target="_blank">{{title}}</a></h3>
+  <p class="f-12" class="color-text-light">{{excerpt body characters=140}}</p>
+  {{/each}}
+  {{/each}}
   {{/each}} --}}
+  <div class="divider mt-30"></div>
 </div>
-<div class="divider mt-30"></div>
 
 
 <!-- MEDIA 类别 -->
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="media")}}
-    <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
-    <div class="row mb-20">
+  <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
+  <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
-      {{#if promoted}}
-      <div class="col-lg-4 col-sm-12">
-        <a href="{{url}}" class="block">
-          <div class="home-media-image">
-            <div class="article-cover-init" title="{{title}}">{{body}}</div>
-          </div>
-          <h3 class="f-24 mt-15 mb-15 normal color-black">{{excerpt title characters=80}}</h3>
-          <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
-        </a>
+        {{#if promoted}}
+        <div class=" col-lg-4 col-sm-12">
+    <a href="{{url}}" class="block">
+      <div class="home-media-image">
+        <div class="article-cover-init" title="{{title}}">{{body}}</div>
       </div>
-      {{/if}}
-    {{/each}}
-    </div>
+      <h3 class="f-24 mt-15 mb-15 normal color-black">{{excerpt title characters=80}}</h3>
+      <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+    </a>
+  </div>
+  {{/if}}
   {{/each}}
-{{/each}}
 </div>
+{{/each}}
+{{/each}}
 <div class="divider mt-30"></div>
+</div>
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="media")}}
-    <ul class="home-article-list">
+  <ul class="home-article-list">
     {{#each (slice articles 0 8)}}
-      {{#unless promoted}}
-        <li class="home-article-list-item">
-          <a href="{{url}}" class="fx-between">
-            <h3 class="f-20 normal color-text">{{excerpt title characters=80}}</h3>
-            <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
-          </a>
-        </li>
-      {{/unless}}
+    {{#unless promoted}}
+    <li class="home-article-list-item">
+      <a href="{{url}}" class="fx-between">
+        <h3 class="f-20 normal color-text">{{excerpt title characters=80}}</h3>
+        <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+      </a>
+    </li>
+    {{/unless}}
     {{/each}}
-    </ul>
+  </ul>
   {{/each}}
-{{/each}}
+  {{/each}}
+  <div class="divider"></div>
 </div>
-<div class="divider"></div>
 <!-- CUSTOMER STORIES 类别 -->
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="customer-stories")}}
-    <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
-    <div class="row mb-20">
+  <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
+  <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
       {{#if promoted}}
-      <div class="col-lg-6 col-sm-12">
-        <a href="{{url}}" class="block">
-          <div class="home-media-image">
-            <div class="article-cover-init" title="{{title}}">{{body}}</div>
-          </div>
-          <h3 class="f-24 mt-15 mb-15 normal color-black">{{excerpt title characters=80}}</h3>
-          <p class="f-14 color-text-light">{{excerpt body characters=140}}</p>
-          <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
-        </a>
+      <div class=" col-lg-6 col-sm-12">
+    <a href="{{url}}" class="block">
+      <div class="home-media-image">
+        <div class="article-cover-init" title="{{title}}">{{body}}</div>
       </div>
-      {{/if}}
-    {{/each}}
-    </div>
+      <h3 class="f-24 mt-15 mb-15 normal color-black">{{excerpt title characters=80}}</h3>
+      <p class="f-14 color-text-light">{{excerpt body characters=140}}</p>
+      <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+    </a>
+  </div>
+  {{/if}}
   {{/each}}
-{{/each}}
 </div>
+{{/each}}
+{{/each}}
 <div class="divider mt-30"></div>
+</div>
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="customer-stories")}}
-    <ul class="home-article-list">
+  <ul class="home-article-list">
     {{#each (slice articles 0 8)}}
-      {{#unless promoted}}
-        <li class="home-article-list-item">
-          <a href="{{url}}" class="fx-between">
-            <h3 class="f-20 normal color-text">{{excerpt title characters=80}}</h3>
-            <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
-          </a>
-        </li>
-      {{/unless}}
+    {{#unless promoted}}
+    <li class="home-article-list-item">
+      <a href="{{url}}" class="fx-between">
+        <h3 class="f-20 normal color-text">{{excerpt title characters=80}}</h3>
+        <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
+      </a>
+    </li>
+    {{/unless}}
     {{/each}}
-    </ul>
+  </ul>
   {{/each}}
-{{/each}}
+  {{/each}}
+  <div class="divider mb-30"></div>
 </div>
-<div class="divider mb-30"></div>
 {{!-- <section id="main-content" class="section hero">
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+      class="search-icon" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
     </svg>
     {{search submit=false instant=settings.instant_search class='search search-full'}}
   </div>
@@ -136,87 +139,88 @@
     <section class="categories blocks">
       <ul class="blocks-list">
         {{#each categories}}
-          {{#if ../has_multiple_categories}}
-            <li class="blocks-item">
-              <a href='{{url}}' class="blocks-item-link">
-                <span class="blocks-item-title">{{name}}</span>
-                <span class="blocks-item-description">{{excerpt description}}</span>
-              </a>
-            </li>
-          {{else}}
-            {{#each sections}}
-              <li class="blocks-item">
-                <a href='{{url}}' class="blocks-item-link">
-                  <span class="blocks-item-title">
-                    {{name}}
-                  </span>
-                  <span class="blocks-item-description">{{excerpt description}}</span>
-                </a>
-              </li>
-            {{/each}}
-          {{/if}}
+        {{#if ../has_multiple_categories}}
+        <li class="blocks-item">
+          <a href='{{url}}' class="blocks-item-link">
+            <span class="blocks-item-title">{{name}}</span>
+            <span class="blocks-item-description">{{excerpt description}}</span>
+          </a>
+        </li>
+        {{else}}
+        {{#each sections}}
+        <li class="blocks-item">
+          <a href='{{url}}' class="blocks-item-link">
+            <span class="blocks-item-title">
+              {{name}}
+            </span>
+            <span class="blocks-item-description">{{excerpt description}}</span>
+          </a>
+        </li>
+        {{/each}}
+        {{/if}}
         {{/each}}
       </ul>
       {{pagination}}
     </section>
 
     {{#if promoted_articles}}
-      <section class="articles">
-        <h2>{{t 'promoted_articles'}}</h2>
-        <ul class="article-list promoted-articles">
-          {{#each promoted_articles}}
-            <li class="promoted-articles-item">
-                <a href="{{url}}">
-                  {{title}}
+    <section class="articles">
+      <h2>{{t 'promoted_articles'}}</h2>
+      <ul class="article-list promoted-articles">
+        {{#each promoted_articles}}
+        <li class="promoted-articles-item">
+          <a href="{{url}}">
+            {{title}}
 
-                  {{#if internal}}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
-                      <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
-                      <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
-                    </svg>
-                  {{/if}}
-                </a>
-            </li>
-          {{/each}}
-        </ul>
-      </section>
+            {{#if internal}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16"
+              class="icon-lock" title="{{t 'internal'}}">
+              <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1" />
+              <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5" />
+            </svg>
+            {{/if}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
     {{/if}}
   </section>
 
   {{#if help_center.community_enabled}}
-    <section class="section home-section community">
-      <h2>{{t 'community'}}</h2>
-      {{#link 'community' class='community-link'}}
-        {{t 'join_conversation'}}
-      {{/link}}
+  <section class="section home-section community">
+    <h2>{{t 'community'}}</h2>
+    {{#link 'community' class='community-link'}}
+    {{t 'join_conversation'}}
+    {{/link}}
 
-      <div class="community-image"></div>
-    </section>
+    <div class="community-image"></div>
+  </section>
   {{/if}}
 
   <section class="section home-section activity">
     {{#if settings.show_recent_activity}}
-      {{recent_activity}}
+    {{recent_activity}}
     {{/if}}
   </section>
 </div> --}}
-{{!-- 
+{{!--
 <script>
-  const getFirstImage = function(str){
-      let data = '';
-      str.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/, function (match, capture) {
-                  data =  capture;
-            });
-      return data
+  const getFirstImage = function (str) {
+    let data = '';
+    str.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/, function (match, capture) {
+      data = capture;
+    });
+    return data
   }
   // 将文章body第一章图片显示出来
-  const articleBody=document.querySelectorAll('.article-cover-init')
-  for(let i=0;i<articleBody.length;i++){
-    const body=articleBody[i]
-    const bodyHtml= body.innerHTML
-    if(bodyHtml){
-      const imageUrl= getFirstImage(bodyHtml)
-      body.innerHTML=`<img src="${imageUrl}"/>`
+  const articleBody = document.querySelectorAll('.article-cover-init')
+  for (let i = 0; i < articleBody.length; i++) {
+    const body = articleBody[i]
+    const bodyHtml = body.innerHTML
+    if (bodyHtml) {
+      const imageUrl = getFirstImage(bodyHtml)
+      body.innerHTML = `<img src="${imageUrl}"/>`
       body.setAttribute("class", "article-cover");
 
     }
