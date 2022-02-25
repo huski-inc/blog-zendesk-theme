@@ -5183,6 +5183,13 @@ a{
   padding: 15px 0;
   background: #232555;
   box-shadow: 0px 2px 2px rgba(55, 52, 89, 0.2);
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  height: 71.25px;
+}
+.huski-blog-header{
+  margin-top: 71.25px;
 }
 .huski-nav-bar li{
   padding-left: 25px;
