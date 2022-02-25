@@ -5192,3 +5192,14 @@ a{
 .huski-blog-header{
   margin-top: 71.25px;
 }
+
+.huski-nav-bar li{
+  padding-left: 25px;
+}
+.huski-nav-bar li a{
+  color: #fff;
+}
+
+.huski-logo img {
+  width: 120px;
+}
