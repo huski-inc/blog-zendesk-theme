@@ -5215,3 +5215,13 @@ a{
 .huski-logo img {
   width: 120px;
 }
+
+.tablet-show {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+.tablet-show {
+  display: block;
+}
+}
