@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: 'GT-Walsheim';
-  src: url('//theme.zdassets.com/theme_assets/12526817/gt-walsheim-regular-webfont.woff2') format('woff2'),
-  url('//theme.zdassets.com/theme_assets/12526817/gt-walsheim-regular-webfont.woff') format('woff');
+  src: url($gt-walsheim-regular-webfont) format('woff2'),
+  url($gt-walsheim-regular-webfont) format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -12,8 +12,8 @@
 
 @font-face {
   font-family: 'GT-Walsheim-Bold';
-  src: url('//theme.zdassets.com/theme_assets/12526817/gt-walsheim-medium-webfont.woff2') format('woff2'),
-  url('//theme.zdassets.com/theme_assets/12526817/gt-walsheim-medium-webfont.woff') format('woff');
+  src: url($gt-walsheim-medium-webfont) format('woff2'),
+  url($gt-walsheim-medium-webfont) format('woff');
   font-weight: bolder;
   font-style: normal;
 }
