@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+
+@font-face {
+  font-family: 'GT-Walsheim';
+  src: url("{{asset 'gt-walsheim-regular-webfont.woff2'}}") format('woff2'),
+  url("{{asset 'gt-walsheim-regular-webfont.woff'}}") format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'GT-Walsheim-Bold';
+  src: url("{{asset 'gt-walsheim-medium-webfont.woff2'}}") format('woff2'),
+  url("{{asset 'gt-walsheim-medium-webfont.woff'}}") format('woff');
+  font-weight: bolder;
+  font-style: normal;
+}
+
 /***** Normalize.css *****/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
