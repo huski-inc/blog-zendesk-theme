@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.14.12",
+  "version": "2.14.13",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -132,7 +132,7 @@
           "value": "GT-Walsheim, Trebuchet-MS, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
           "options": [{
               "label": "System",
-              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              "value": "GT-Walsheim, Trebuchet-MS, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
             },
             {
               "label": "Arial",
