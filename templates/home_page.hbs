@@ -4,8 +4,9 @@
 
   {{#each (filter promoted_articles on="id" equals=4483678577945)}}
   <div class="home-hero">
-    <a href="{{url}}" target="_blank"></a>
-    <div class="article-cover-init" title="{{title}}">{{ body }}</a></div>
+    <a href="{{url}}" target="_blank">
+      <div class="article-cover-init" title="{{title}}">{{ body }}</div>
+    </a>
   </div>
   <div class="fx-between f-14 pt-5 pb-3">
     <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
