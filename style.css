@@ -1,4 +1,23 @@
 @charset "UTF-8";
+
+
+@font-face {
+  font-family: 'GT-Walsheim';
+  src: url('$assets-gt-walsheim-regular-webfont-woff2') format('woff2'),
+       url('$assets-gt-walsheim-regular-webfont-woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'GT-Walsheim-Bold';
+  src: url('$assets-gt-walsheim-medium-webfont-woff2') format('woff2'),
+       url('$assets-gt-walsheim-medium-webfont-woff') format('woff');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+
 /***** Normalize.css *****/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -5184,7 +5203,7 @@ a{
   box-shadow: 0px 2px 2px rgba(55, 52, 89, 0.2);
 }
 .huski-nav-bar li{
-  padding-left: 20px;
+  padding-left: 25px;
 }
 .huski-nav-bar li a{
   color: #fff;
