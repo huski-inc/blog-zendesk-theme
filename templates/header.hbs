@@ -48,7 +48,8 @@
         </div>
       </li>
       <li>
-        <a href="https://huski.ai/technology">{{ current_locale.name=='简体中文'?'Technology':'领先的人工智能技术'}}</a>
+        <a href="https://huski.ai/technology">
+          {{#if current_locale.name=='简体中文'}}领先的人工智能技术{{#else}}Technology{{/if}}</a>
       </li>
       <li>
         <a href="https://huski.ai/about">
