@@ -5172,7 +5172,7 @@ a{
 .header-nav-list li a{
   color:#373459;
   display:inline-block;
-  font-size: 15px;
+  font-size: 0.9rem;
   padding: 10px 0;
   font-weight: bold;
 }
