@@ -3,16 +3,16 @@
 
 @font-face {
   font-family: 'GT-Walsheim';
-  src: url('gt-walsheim-regular-webfont.woff2') format('woff2'),
-       url('gt-walsheim-regular-webfont.woff') format('woff');
+  src: url('assets/gt-walsheim-regular-webfont.woff2') format('woff2'),
+       url('assets/gt-walsheim-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 @font-face {
   font-family: 'GT-Walsheim-Bold';
-  src: url('gt-walsheim-medium-webfont.woff2') format('woff2'),
-       url('gt-walsheim-medium-webfont.woff') format('woff');
+  src: url('assets/gt-walsheim-medium-webfont.woff2') format('woff2'),
+       url('assets/gt-walsheim-medium-webfont.woff') format('woff');
   font-weight: bolder;
   font-style: normal;
 }
