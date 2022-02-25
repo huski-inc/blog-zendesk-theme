@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.14.23",
+  "version": "2.14.24",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -395,8 +395,31 @@
           "description": "Menu 3",
           "label": "Menu 3",
           "value": "/hc/sections/4485887366169"
+        },
+        {
+          "identifier": "gt-walsheim-medium",
+          "type": "file",
+          "description": "gt-walsheim-medium-webfont_description",
+          "label": "gt-walsheim-medium"
+        },
+        {
+          "identifier": "gt-walsheim-regular",
+          "type": "file",
+          "description": "gt-walsheim-regular-webfont_description",
+          "label": "gt-walsheim-regular"
+        },
+        {
+          "identifier": "gt-walsheim-medium_woff2",
+          "type": "file",
+          "description": "gt-walsheim-medium-webfont_description",
+          "label": "gt-walsheim-medium_woff2"
+        },
+        {
+          "identifier": "gt-walsheim-regular_woff2",
+          "type": "file",
+          "description": "gt-walsheim-regular-webfont_description",
+          "label": "gt-walsheim-medium_woff2"
         }
-
       ]
     }
   ]
