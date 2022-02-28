@@ -5192,9 +5192,10 @@ a{
   z-index: 99999;
   height: 71.25px;
   transition: all 0.25s linear;
+  top: 0;
 }
 .huski-blog-header{
-  margin-top: 71.25px;
+  padding-top: 86.25px;
 }
 
 .huski-nav-bar li{
