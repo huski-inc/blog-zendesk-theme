@@ -5092,6 +5092,7 @@ a{
 }
 .article-image-box .article-cover{
   height: 250px;
+  border: 1px solid #ddd;
 }
 @media screen and (min-width: 1440px) {
   .article-image-box .article-cover{
