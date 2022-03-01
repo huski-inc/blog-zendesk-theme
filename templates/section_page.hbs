@@ -13,7 +13,7 @@
         </div>
         <div class="col-lg-8 col-sm-12 section-article-list-item-right">
           <a href="{{url}}" class="block">
-            <h3 class="f-24 color-black">{{excerpt title characters=80}}</h3>
+            <h3 class="f-24 color-black normal">{{excerpt title characters=80}}</h3>
             <p class="f-14 color-text-light">{{excerpt body characters=300}}</p>
           </a>
           <div class="fx-start">
@@ -105,84 +105,6 @@
     }
   }
 
-  const networks = {
-    baidu: 'http://cang.baidu.com/do/add?iu=@u&it=@t',
-    buffer: 'https://bufferapp.com/add?text=@t&url=@u',
-    email: 'mailto:?subject=@t&body=@u%0D%0A@d',
-    evernote: 'https://www.evernote.com/clip.action?url=@u&title=@t',
-    facebook: 'https://www.facebook.com/sharer/sharer.php?u=@u&title=@t&description=@d&quote=@q&hashtag=@h',
-    flipboard: 'https://share.flipboard.com/bookmarklet/popout?v=2&url=@u&title=@t',
-    hackernews: 'https://news.ycombinator.com/submitlink?u=@u&t=@t',
-    instapaper: 'http://www.instapaper.com/edit?url=@u&title=@t&description=@d',
-    line: 'http://line.me/R/msg/text/?@t%0D%0A@u%0D%0A@d',
-    linkedin: 'https://www.linkedin.com/shareArticle?url=@u',
-    messenger: 'fb-messenger://share/?link=@u',
-    odnoklassniki: 'https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=@u&st.comments=@t',
-    pinterest: 'https://pinterest.com/pin/create/button/?url=@u&media=@m&description=@t',
-    pocket: 'https://getpocket.com/save?url=@u&title=@t',
-    quora: 'https://www.quora.com/share?url=@u&title=@t',
-    reddit: 'https://www.reddit.com/submit?url=@u&title=@t',
-    skype: 'https://web.skype.com/share?url=@t%0D%0A@u%0D%0A@d',
-    telegram: 'https://t.me/share/url?url=@u&text=@t%0D%0A@d',
-    tumblr: 'https://www.tumblr.com/share/link?url=@u&name=@t&description=@d',
-    twitter: 'https://twitter.com/intent/tweet?text=@t&url=@u&hashtags=@h@tu',
-    weibo: 'http://service.weibo.com/share/share.php?url=@u&title=@t&pic=@m',
-    whatsapp: 'https://api.whatsapp.com/send?text=@t%0D%0A@u%0D%0A@d',
-  }
-
-  function encodedHashtags(options) {
-    if (options.key === 'facebook' && options.hashtags?.length) {
-      return '%23' + options.hashtags.split(',')[0]
-    }
-
-    return options.hashtags || ''
-  }
-
-  function shareLink(options) {
-    let link = networks[options.key]
-
-    /**
-     * Twitter sharing shouldn't include empty parameter
-     * Source: https://github.com/nicolasbeauvais/vue-social-sharing/issues/143
-     */
-    if (options.key === 'twitter') {
-      if (!options.hashtags?.length) link = link.replace('&hashtags=@h', '')
-      if (!options.twitterUser.length) link = link.replace('@tu', '')
-    }
-
-    return link
-      .replace(/@tu/g, '&via=' + encodeURIComponent(options.twitterUser))
-      .replace(/@u/g, encodeURIComponent('{{settings.domain}}' + options.url))
-      .replace(/@t/g, encodeURIComponent(options.title || ''))
-      .replace(/@d/g, encodeURIComponent(options.description || ''))
-      .replace(/@q/g, encodeURIComponent(options.quote || ''))
-      .replace(/@h/g, encodedHashtags(options))
-      .replace(/@m/g, encodeURIComponent(options.media || ''))
-  }
-  function onShare(options) {
-    const link = shareLink(options)
-    window.open(link, '_blank')
-  }
-
-
-  function copyText(text, callback) {
-    const input = document.createElement('input')
-    input.setAttribute('readonly', 'readonly')
-    input.setAttribute('value', text)
-    document.body.appendChild(input)
-    input.setSelectionRange(0, 9999)
-    input.select()
-    if (document.execCommand('copy')) {
-      document.execCommand('copy')
-      if (callback) {
-        callback()
-      }
-    }
-    document.body.removeChild(input)
-  }
-  function onCopy(url) {
-    copyText('{{settings.domain}}' + url)
-  }
 </script>
 {{!-- <div class="container">
   <nav class="sub-nav">

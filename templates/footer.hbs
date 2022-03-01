@@ -1,7 +1,22 @@
+<div class="container">
+  <h3 class="f-28 normal">HUSKI WEBSITE</h3>
+  <ul class="fx-start footer-huski-websites">
+    <li>
+      <a href="https://huski.ai/" class="color-text-light-1">Home page</a>
+    </li>
+    <li><a href="https://huski.ai/landing-report" class="color-text-light-1">Retailer</a></li>
+    <li><a href="https://huski.ai/landing-lawyer" class="color-text-light-1">IP Lawyer</a></li>
+    <li><a href="https://huski.ai/landing-brand" class="color-text-light-1">Brand Owner</a></li>
+    <li><a href="https://huski.ai/login" class="color-text-light-1">Login</a></li>
+    <li><a href="https://huski.ai/register" class="color-text-light-1">Register</a></li>
+    <li><a href="https://huski.ai/forget" class="color-text-light-1">Forget password</a></li>
+  </ul>
+</div>
 
 <footer class="huski-footer f-14">
-  <a href="https://huski.ai/term" class="color-white under-line">Terms of use</a> 
-  <span class="color-text-o8">© <a href="https://huski.ai" class="color-text-o8"> Huski.ai</a> All rights reserved. 2022</span>
+  <a href="https://huski.ai/term" class="color-white under-line">Terms of use</a>
+  <span class="color-text-o8">© <a href="https://huski.ai" class="color-text-o8"> Huski.ai</a> All rights reserved.
+    2022</span>
 </footer>
 {{!-- <footer class="footer">
   <div class="footer-inner">
@@ -9,21 +24,22 @@
 
     <div class="footer-language-selector">
       {{#if alternative_locales}}
-        <div class="dropdown language-selector">
-          <button class="dropdown-toggle" aria-haspopup="true">
-            {{current_locale.name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </button>
-          <span class="dropdown-menu dropdown-menu-end" role="menu">
-            {{#each alternative_locales}}
-              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                {{name}}
-              </a>
-            {{/each}}
-          </span>
-        </div>
+      <div class="dropdown language-selector">
+        <button class="dropdown-toggle" aria-haspopup="true">
+          {{current_locale.name}}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+            class="dropdown-chevron-icon">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5" />
+          </svg>
+        </button>
+        <span class="dropdown-menu dropdown-menu-end" role="menu">
+          {{#each alternative_locales}}
+          <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+            {{name}}
+          </a>
+          {{/each}}
+        </span>
+      </div>
       {{/if}}
     </div>
   </div>
