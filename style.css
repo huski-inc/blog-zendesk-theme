@@ -4958,6 +4958,9 @@ a{
 .pt-15 {
   padding-top: 15px;
 }
+.pt-30 {
+  padding-top: 30px;
+}
 .pb-3 {
   padding-bottom: 3px;
 }
@@ -5195,7 +5198,7 @@ a{
 }
 
 .footer-huski-websites{
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
 }
 .footer-huski-websites li{
