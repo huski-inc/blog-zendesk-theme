@@ -5077,6 +5077,9 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 400px;
+  overflow: hidden;
+  align-items: flex-start;
 }
 .article-cover img{
   width: 100%;
@@ -5138,12 +5141,15 @@ a{
 /** section 页面**/
 .section-article-list-item{
   border-bottom: 1px solid #DDDDDD;
-  padding: 30px 0;
+  padding: 45px 0;
 }
 .section-article-list-item-right{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+}
+.section-article-list-item-right p{
+  line-height: 2;
 }
 
 .article-container{
@@ -5167,7 +5173,13 @@ a{
 
 /** header **/
 .header-nav-list li{
-  padding-left: 25px;
+  padding-left: 36px;
+}
+@media screen and (max-width: 768px) {
+
+  .header-nav-list li{
+    padding-left: 20px;
+  }
 }
 .header-nav-list li a{
   color:#373459;

@@ -17,7 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
       const imageUrl= getFirstImage(bodyHtml)
       body.innerHTML=imageUrl?`<img src="${imageUrl}"/>`:''//`<div class="no-image">NO IMAGE</div>`
       body.setAttribute("class", "article-cover");
-
+      if(!imageUrl) {
+        const parent=body.parentElement||body.parentNode
+        const className=parent.getAttribute('class')
+        if(className.indexOf('col-lg-4')>-1){
+          parent.nextElementSibling?.setAttribute("class", "col-lg-12 col-sm-12")
+          parent.remove()
+          // parent.setAttribute("class", className+" no-image-box")
+        }
+      }
     }
   }
   }
