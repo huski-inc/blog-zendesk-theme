@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const parent=body.parentElement||body.parentNode
         const className=parent.getAttribute('class')
         if(className.indexOf('article-image-box')>-1){
-          parent.nextElementSibling?.setAttribute("class", "col-lg-12 col-sm-12")
+          parent.nextElementSibling?.setAttribute("class", "col-lg-12 col-sm-12 section-article-list-item-right")
           parent.remove()
           // parent.setAttribute("class", className+" no-image-box")
         }
