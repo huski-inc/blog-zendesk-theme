@@ -42,9 +42,9 @@
   <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
-        {{#if promoted}}
-        <div class=" col-lg-4 col-sm-12">
-    <a href="{{url}}" class="block">
+  {{#if promoted}}
+  <div class=" col-lg-4 col-sm-12">
+    <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">{{body}}</div>
       </div>
@@ -87,7 +87,7 @@
     {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
       {{#if promoted}}
       <div class=" col-lg-6 col-sm-12">
-    <a href="{{url}}" class="block">
+    <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">{{body}}</div>
       </div>
@@ -110,7 +110,7 @@
     {{#each (slice articles 0 8)}}
     {{#unless promoted}}
     <li class="home-article-list-item">
-      <a href="{{url}}" class="fx-between">
+      <a href="{{url}}" class="fx-between" title="{{excerpt title characters=80}}">
         <h3 class="f-20 normal color-text">{{excerpt title characters=80}}</h3>
         <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
       </a>
