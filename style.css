@@ -5133,6 +5133,7 @@ a{
   background: #E8EBF1;
   position: relative;
   overflow: hidden;
+  border: 1px solid #ddd;
 }
 
 @media screen and (min-width: 1440px) {
