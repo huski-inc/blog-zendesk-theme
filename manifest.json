@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.14.61",
+  "version": "2.14.62",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -376,25 +376,25 @@
         "type": "text",
         "description": "Domain",
         "label": "Domain",
-        "value": "https://service5839.zendesk.com"
+        "value": "https://huski.zendesk.com"
       }, {
         "identifier": "menu_1",
         "type": "text",
         "description": "Menu 1",
         "label": "Menu 1",
-        "value": "/hc/sections/4485845782297"
+        "value": "/hc/sections/4570046521625"
       }, {
         "identifier": "menu_2",
         "type": "text",
         "description": "Menu 2",
         "label": "Menu 2",
-        "value": "/hc/sections/4483660662297"
+        "value": "/hc/sections/4570132183193"
       }, {
         "identifier": "menu_3",
         "type": "text",
         "description": "Menu 3",
         "label": "Menu 3",
-        "value": "/hc/sections/4485887366169"
+        "value": "/hc/sections/4570132183193"
       }]
     }
   ]
