@@ -402,6 +402,12 @@
         "label": "Logo Text",
         "value": "BLOG"
       }, {
+        "identifier": "home_top_text",
+        "type": "text",
+        "description": "Hero Category Name",
+        "label": "Hero Category Name",
+        "value": "PRODUCT INTRODUCTION"
+      }, {
         "identifier": "header_1",
         "type": "text",
         "description": "Menu Text 1",
