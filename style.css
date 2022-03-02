@@ -5249,21 +5249,29 @@ a{
 }
 
 .huski-nav-bar li{
-  padding-left: 35px;
+  padding-left: 50px;
+}
+
+@media screen and (max-width: 1440px) {
+  .huski-nav-bar li{
+    padding-left: 35px;
+  }
 }
 .huski-nav-bar li a{
   color: #ffffffd9;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 .huski-nav-bar li a:hover{
   color: #ffffff;
 }
 .huski-nav-bar li button{
-  font-size: 1rem;
+  font-size: 1.125rem;
   color:#ffffffd9;
 }
-.huski-nav-bar li button:hover{
+.dropdown-menu a{
   font-size: 1rem;
+}
+.huski-nav-bar li button:hover{
   color:#ffffff;
 }
 
