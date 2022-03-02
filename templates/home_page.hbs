@@ -5,7 +5,7 @@
   {{#each (filter promoted_articles on="id" equals=4570272505241)}}
   <div class="home-hero">
     <a href="{{url}}" target="_blank">
-      <div class="article-cover-init" title="{{title}}">{{ body }}</div>
+      <div class="article-cover-init" title="{{title}}">{{json_stringify body }}</div>
     </a>
   </div>
   <div class="fx-between f-14 pt-5 pb-3">
@@ -46,7 +46,7 @@
   <div class=" col-lg-4 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
-        <div class="article-cover-init" title="{{title}}">{{body}}</div>
+        <div class="article-cover-init" title="{{title}}">{{json_stringify body}}</div>
       </div>
       <h3 class="f-24 mt-15 mb-15 normal color-black">{{excerpt title characters=80}}</h3>
       <div class="color-text-light f-14">{{date updated_at format='short'}}</div>
