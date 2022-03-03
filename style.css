@@ -1771,7 +1771,7 @@ ul {
   margin: 40px 0;
   word-wrap: break-word;
   color: #5A5875;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .article-footer {
@@ -5019,8 +5019,8 @@ a{
 .f-30 {
   font-size: 30px;
 }
-.f-34 {
-  font-size: 34px;
+.f-36 {
+  font-size: 36px;
 }
 
 .color-text-o8{
