@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if(articleDescription){
     for(let i=0;i<articleDescription.length;i++){
       const descElement=articleDescription[i]
-      const desc= body.innerText
+      const desc= descElement.innerText
       if(desc&&descElement){
         descElement.innerHTML=desc.trim()
       }
