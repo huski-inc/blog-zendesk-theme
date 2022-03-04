@@ -5212,6 +5212,7 @@ a{
 }
 .footer-huski-websites li{
   padding-right: 60px;
+  padding-bottom: 5px;
 }
 .footer-huski-websites li:last-child{
   padding-right: 0;
