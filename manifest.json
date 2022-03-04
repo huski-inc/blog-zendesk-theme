@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.14.78",
+  "version": "2.14.80",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -382,19 +382,19 @@
         "type": "text",
         "description": "Menu 1",
         "label": "Menu Link 1",
-        "value": "/hc/sections/4570046521625"
+        "value": "/hc/sections/4570132183193"
       }, {
         "identifier": "menu_2",
         "type": "text",
         "description": "Menu 2",
         "label": "Menu Link 2",
-        "value": "/hc/sections/4570132183193"
+        "value": "/hc/sections/4570133379737"
       }, {
         "identifier": "menu_3",
         "type": "text",
         "description": "Menu 3",
         "label": "Menu Link 3",
-        "value": "/hc/sections/4570133379737"
+        "value": "/hc/sections/4570046521625"
       }, {
         "identifier": "logo_text",
         "type": "text",
@@ -406,37 +406,37 @@
         "type": "text",
         "description": "Menu Text 1",
         "label": "Menu Text 1 (中文)",
-        "value": "客户案例"
+        "value": "产品介绍"
       }, {
         "identifier": "header_1_en",
         "type": "text",
         "description": "Menu Text 1",
         "label": "Menu Text 1 (英文)",
-        "value": "CUSTOMER STORIES"
+        "value": "PRODUCT INTRODUCTION"
       }, {
         "identifier": "header_2",
         "type": "text",
         "description": "Menu Text 2",
         "label": "Menu Text 2 (中文)",
-        "value": "产品介绍"
+        "value": "技术"
       }, {
         "identifier": "header_2_en",
         "type": "text",
         "description": "Menu Text 2",
         "label": "Menu Text 2 (英文)",
-        "value": "PRODUCT INTRODUCTION"
+        "value": "ENGINEERING"
       }, {
         "identifier": "header_3",
         "type": "text",
         "description": "Menu Text 3",
         "label": "Menu Text 3 (中文)",
-        "value": "动态"
+        "value": "客户案例"
       }, {
         "identifier": "header_3_en",
         "type": "text",
         "description": "Menu Text 3",
         "label": "Menu Text 3 (英文)",
-        "value": "MEDIA"
+        "value": "CUSTOMER STORIES"
       }]
     }
   ]
