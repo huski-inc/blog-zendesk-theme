@@ -90,24 +90,35 @@ document.addEventListener('DOMContentLoaded', function() {
   // 将文章body第一章图片显示出来
   const articleBody=document.querySelectorAll('.article-cover-init')
   if(articleBody){
-  for(let i=0;i<articleBody.length;i++){
-    const body=articleBody[i]
-    const bodyHtml= body.innerHTML
-    if(bodyHtml){
-      const imageUrl= getFirstImage(bodyHtml)
-      body.innerHTML=imageUrl?`<img src="${imageUrl}"/>`:''//`<div class="no-image">NO IMAGE</div>`
-      body.setAttribute("class", "article-cover");
-      if(!imageUrl) {
-        const parent=body.parentElement||body.parentNode
-        const className=parent.getAttribute('class')
-        if(className.indexOf('article-image-box')>-1){
-          parent.nextElementSibling?.setAttribute("class", "col-lg-12 col-sm-12 section-article-list-item-right")
-          parent.remove()
-          // parent.setAttribute("class", className+" no-image-box")
+    for(let i=0;i<articleBody.length;i++){
+      const body=articleBody[i]
+      const bodyHtml= body.innerHTML
+      if(bodyHtml){
+        const imageUrl= getFirstImage(bodyHtml)
+        body.innerHTML=imageUrl?`<img src="${imageUrl}"/>`:''//`<div class="no-image">NO IMAGE</div>`
+        body.setAttribute("class", "article-cover");
+        if(!imageUrl) {
+          const parent=body.parentElement||body.parentNode
+          const className=parent.getAttribute('class')
+          if(className.indexOf('article-image-box')>-1){
+            parent.nextElementSibling?.setAttribute("class", "col-lg-12 col-sm-12 section-article-list-item-right")
+            parent.remove()
+            // parent.setAttribute("class", className+" no-image-box")
+          }
         }
       }
     }
   }
+
+  const articleDescription=document.querySelectorAll('.article-description')
+  if(articleDescription){
+    for(let i=0;i<articleDescription.length;i++){
+      const descElement=articleDescription[i]
+      const desc= body.innerText
+      if(desc&&descElement){
+        descElement.innerHTML=desc.trim()
+      }
+    }
   }
 
   const iframe = document.querySelector('iframe')
