@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.14.86",
+  "version": "2.14.87",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -380,19 +380,19 @@
       }, {
         "identifier": "menu_1",
         "type": "text",
-        "description": "Menu 1",
+        "description": "menu-1001",
         "label": "Menu Link 1",
         "value": "/hc/sections/4570132183193"
       }, {
         "identifier": "menu_2",
         "type": "text",
-        "description": "Menu 2",
+        "description": "menu-1002",
         "label": "Menu Link 2",
         "value": "/hc/sections/4570133379737"
       }, {
         "identifier": "menu_3",
         "type": "text",
-        "description": "Menu 3",
+        "description": "menu-1003",
         "label": "Menu Link 3",
         "value": "/hc/sections/4570046521625"
       }, {
@@ -404,39 +404,39 @@
       }, {
         "identifier": "header_1",
         "type": "text",
-        "description": "Menu Text 1",
+        "description": "menu-1001 text",
         "label": "Menu Text 1 (中文)",
         "value": "产品介绍"
       }, {
         "identifier": "header_1_en",
         "type": "text",
-        "description": "Menu Text 1",
+        "description": "menu-1001 text",
         "label": "Menu Text 1 (英文)",
         "value": "PRODUCT INTRODUCTION"
       }, {
         "identifier": "header_2",
         "type": "text",
-        "description": "Menu Text 2",
+        "description": "menu-1002 text",
         "label": "Menu Text 2 (中文)",
         "value": "技术"
       }, {
         "identifier": "header_2_en",
         "type": "text",
-        "description": "Menu Text 2",
+        "description": "menu-1002 text",
         "label": "Menu Text 2 (英文)",
         "value": "ENGINEERING"
       }, {
         "identifier": "header_3",
         "type": "text",
-        "description": "Menu Text 3",
+        "description": "menu-1003 text",
         "label": "Menu Text 3 (中文)",
-        "value": "客户案例"
+        "value": "展望"
       }, {
         "identifier": "header_3_en",
         "type": "text",
-        "description": "Menu Text 3",
+        "description": "menu-1003 text",
         "label": "Menu Text 3 (英文)",
-        "value": "CUSTOMER STORIES"
+        "value": "PERSPECTIVES"
       }]
     }
   ]
