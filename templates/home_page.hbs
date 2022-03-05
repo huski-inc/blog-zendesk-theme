@@ -67,11 +67,56 @@
   <div class="divider"></div>
 </div>
 
-
 <!-- menu-1003 类别 -->
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="menu-1003")}}
+  <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
+  <div class="row mb-20">
+    {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
+  {{#if promoted}}
+  <div class=" col-lg-4 col-sm-12">
+    <a href="{{url}}" class="block" title="{{title}}">
+      <div class="home-media-image">
+        <div class="article-cover-init" title="{{title}}">
+          <xmp>{{body}}</xmp>
+        </div>
+      </div>
+      <h3 class="f-24 mt-15 mb-15 bold color-text">{{excerpt title characters=80}}</h3>
+      <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+    </a>
+  </div>
+  {{/if}}
+  {{/each}}
+</div>
+{{/each}}
+{{/each}}
+<div class="divider mt-30"></div>
+</div>
+<div class="container">
+  {{#each categories}}
+  {{#each (filter sections on="description" equals="menu-1003")}}
+  <ul class="home-article-list">
+    {{#each (slice articles 0 8)}}
+    {{#unless promoted}}
+    <li class="home-article-list-item">
+      <a href="{{url}}" class="fx-between">
+        <h3 class="f-20 bold color-text">{{excerpt title characters=80}}</h3>
+        <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+      </a>
+    </li>
+    {{/unless}}
+    {{/each}}
+  </ul>
+  {{/each}}
+  {{/each}}
+  <div class="divider"></div>
+</div>
+
+<!-- menu-1002 类别 -->
+<div class="container">
+  {{#each categories}}
+  {{#each (filter sections on="description" equals="menu-1002")}}
   <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
@@ -97,58 +142,12 @@
 </div>
 <div class="container">
   {{#each categories}}
-  {{#each (filter sections on="description" equals="menu-1003")}}
+  {{#each (filter sections on="description" equals="menu-1002")}}
   <ul class="home-article-list">
     {{#each (slice articles 0 8)}}
     {{#unless promoted}}
     <li class="home-article-list-item">
       <a href="{{url}}" class="fx-between" title="{{excerpt title characters=80}}">
-        <h3 class="f-20 bold color-text">{{excerpt title characters=80}}</h3>
-        <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
-      </a>
-    </li>
-    {{/unless}}
-    {{/each}}
-  </ul>
-  {{/each}}
-  {{/each}}
-  <div class="divider"></div>
-</div>
-
-<!-- menu-1002 类别 -->
-<div class="container">
-  {{#each categories}}
-  {{#each (filter sections on="description" equals="menu-1002")}}
-  <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
-  <div class="row mb-20">
-    {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
-  {{#if promoted}}
-  <div class=" col-lg-4 col-sm-12">
-    <a href="{{url}}" class="block" title="{{title}}">
-      <div class="home-media-image">
-        <div class="article-cover-init" title="{{title}}">
-          <xmp>{{body}}</xmp>
-        </div>
-      </div>
-      <h3 class="f-24 mt-15 mb-15 bold color-text">{{excerpt title characters=80}}</h3>
-      <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
-    </a>
-  </div>
-  {{/if}}
-  {{/each}}
-</div>
-{{/each}}
-{{/each}}
-<div class="divider mt-30"></div>
-</div>
-<div class="container">
-  {{#each categories}}
-  {{#each (filter sections on="description" equals="menu-1002")}}
-  <ul class="home-article-list">
-    {{#each (slice articles 0 8)}}
-    {{#unless promoted}}
-    <li class="home-article-list-item">
-      <a href="{{url}}" class="fx-between">
         <h3 class="f-20 bold color-text">{{excerpt title characters=80}}</h3>
         <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
       </a>
