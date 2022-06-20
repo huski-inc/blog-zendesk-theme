@@ -5218,6 +5218,44 @@ a{
   padding-right: 0;
 }
 
+.footer-title{
+  margin-bottom: 0.625rem;
+  font-weight: 500;
+  color: #232555;
+  font-size: 20px;
+}
+.footer-links li {
+  line-height: 2.2;
+  white-space: nowrap;
+}
+.footer-links li a{
+  color: #8d98be;
+}
+.footer-icon-links {
+  display: flex;
+  margin-bottom: 30px;
+}
+.footer-icon-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-right: 0.9375rem;
+}
+.footer-icon-links svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  overflow: hidden;
+  outline: 0;
+  flex-shrink: 0;
+  color: #8d98be;
+}
+.footer-container {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 /** header **/
 .header-nav-list li{
   padding-left: 36px;
