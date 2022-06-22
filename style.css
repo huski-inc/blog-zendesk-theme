@@ -5287,7 +5287,7 @@ a{
   width: 100%;
   position: fixed;
   z-index: 99999;
-  height: 71.25px;
+  height: 60px;
   transition: all 0.25s linear;
   top: 0;
 }
@@ -5306,13 +5306,13 @@ a{
 }
 .huski-nav-bar li a{
   color: #ffffffd9;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .huski-nav-bar li a:hover{
   color: #ffffff;
 }
 .huski-nav-bar li button{
-  font-size: 1.125rem;
+  font-size: 1rem;
   color:#ffffffd9;
 }
 .dropdown-menu a{
