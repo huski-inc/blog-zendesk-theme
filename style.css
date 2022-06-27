@@ -5402,4 +5402,5 @@ a{
   right: 0;
   top: 0;
   transform: translateY(-28%);
+  z-index: -1;
 }
