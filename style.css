@@ -1766,7 +1766,15 @@ ul {
 .article-body > p:last-child {
   margin-bottom: 0;
 }
+.article-content-box{
+  padding-right: 50px;
+}
 
+@media (min-width: 1024px) {
+  .article-content-box{
+    padding-right: 0;
+  }
+}
 .article-content {
   line-height: 1.6;
   margin: 40px 0;
@@ -5280,6 +5288,11 @@ a{
   color: #fff;
   font-size: 20px;
 }
+@media screen and (max-width: 768px) {
+  .footer-links{
+    margin-bottom: 20px;
+  }
+}
 .footer-links li {
   line-height: 2.2;
   white-space: nowrap;
@@ -5328,7 +5341,7 @@ a{
 @media screen and (max-width: 768px) {
 
   .header-nav-list li{
-    padding-left: 20px;
+    font-size: 12px;
   }
 }
 .header-nav-list li a{
