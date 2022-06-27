@@ -32,11 +32,11 @@
     </div>
   </div>
 
-  <div class="row mb-20">
+  <div class="row mb-20 justify-content-between">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
   {{#if promoted}}
   {{#if @first}}
-    <div class=" col-lg-6 col-sm-12">
+    <div class=" col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
@@ -45,15 +45,15 @@
       </div>
     </a>
   </div>
-  <div class="col-lg-6 col-sm-12">
+  <div class="col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=240}}</p>
+      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=280}}</p>
     </a>
   </div>
   <div class="col-12 mb-50"></div>
   {{else}}
-  <div class=" col-lg-6 col-sm-12">
+  <div class=" col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       {{!-- <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
@@ -105,17 +105,17 @@
       <a href="{{url}}" class="color-white">All Articles →</a>
     </div>
   </div>
-  <div class="row mb-20">
+  <div class="row mb-20 justify-content-between">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
     {{#if promoted}}
       {{#if @first}}
-  <div class=" col-lg-6 col-sm-12">
+  <div class=" col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=240}}</p>
+      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=280}}</p>
     </a>
   </div>
-  <div class=" col-lg-6 col-sm-12">
+  <div class="col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
@@ -126,7 +126,7 @@
   </div>
   <div class="col-12 mb-50"></div>
   {{else}}
-  <div class=" col-lg-6 col-sm-12">
+  <div class=" col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       {{!-- <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
@@ -178,11 +178,11 @@
       <a href="{{url}}" class="color-white">All Articles →</a>
     </div>
   </div>
-  <div class="row mb-20">
+  <div class="row mb-20 justify-content-between">
     {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
       {{#if promoted}}
-{{#if @first}}
-    <div class=" col-lg-6 col-sm-12">
+      {{#if @first}}
+    <div class=" col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
@@ -191,15 +191,15 @@
       </div>
     </a>
   </div>
-  <div class="col-lg-6 col-sm-12">
+  <div class="col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=240}}</p>
+      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=280}}</p>
     </a>
   </div>
   <div class="col-12 mb-50"></div>
   {{else}}
-  <div class=" col-lg-6 col-sm-12">
+  <div class="col-lg-5 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       {{!-- <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
@@ -217,7 +217,7 @@
 </div>
 {{/each}}
 {{/each}}
-<div class="divider mt-120 mb-50"></div>
+{{!-- <div class="divider mt-120 mb-50"></div> --}}
 </div>
 {{!-- <div class="container">
   {{#each categories}}
