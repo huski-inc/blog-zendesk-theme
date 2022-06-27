@@ -43,7 +43,7 @@
 
     </div>
     <div class="col-lg-3 col-12">
-      <div>
+      <div style="position: sticky;top: 90px;">
 
         {{#if section.articles}}
         <div class="fx-between">
@@ -54,7 +54,7 @@
             </span>
             {{/each}}
           </div>
-          <a href="/hc" class="color-white">All Blogs</a>
+          {{!-- <a href="/hc" class="color-white">All Blogs</a> --}}
           <div class="article-next">
             {{#each section.articles}}
             <span class="{{#is id ../article.id}}current-article{{/is}} hide">
