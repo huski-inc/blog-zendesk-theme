@@ -49,30 +49,31 @@
     <div class=" col-lg-6 col-sm-12">
       <a href="{{url}}" class="block" title="{{title}}">
         <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-        <p class="f-16 color-white">{{excerpt body characters=180}}</p>
+        <p class="f-16 color-white">{{excerpt body characters=240}}</p>
       </a>
     </div>
-    {{else}}
-    <div class=" col-lg-6 col-sm-12">
-      <a href="{{url}}" class="block" title="{{title}}">
-        {{!-- <div class="home-media-image">
-          <div class="article-cover-init" title="{{title}}">
-            <xmp>{{body}}</xmp>
-          </div>
-        </div> --}}
-        <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-        {{!-- <div class="color-white f-16">{{date updated_at format='short'}}</div> --}}
-        <p class="f-16 color-white">{{excerpt body characters=160}}</p>
-      </a>
-    </div>
-    {{/if}}
-
-    {{/if}}
-    {{/each}}
   </div>
+  {{else}}
+  <div class=" col-lg-6 col-sm-12">
+    <a href="{{url}}" class="block" title="{{title}}">
+      {{!-- <div class="home-media-image">
+        <div class="article-cover-init" title="{{title}}">
+          <xmp>{{body}}</xmp>
+        </div>
+      </div> --}}
+      <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
+      {{!-- <div class="color-white f-16">{{date updated_at format='short'}}</div> --}}
+      <p class="f-16 color-white">{{excerpt body characters=160}}</p>
+    </a>
+  </div>
+  {{/if}}
+
+  {{/if}}
   {{/each}}
-  {{/each}}
-  <div class="divider mt-100 mb-50"></div>
+</div>
+{{/each}}
+{{/each}}
+<div class="divider mt-100 mb-50"></div>
 </div>
 <!-- 列表 -->
 {{!-- <div class="container">
