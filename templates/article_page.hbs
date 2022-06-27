@@ -2,15 +2,15 @@
   <div onclick="document.referrer === '' ? window.location.href = '/hc' : window.history.go(-1);"
     class="pointer article-back"> ←
     Back</div>
+
+  <div class="article-section-name f-16">
+    <a class="color-green font-medium" href="{{section.url}}">{{section.name}}</a>
+  </div>
   <div class="row mt-40">
 
     <div class="col-lg-9 col-12" style="padding-right: 50px;">
       <div class="article-container">
 
-
-        <div class="article-section-name f-16">
-          <a class="color-green font-medium" href="{{section.url}}">{{section.name}}</a>
-        </div>
         <h3 class="f-38 pt-10 bold">{{article.title}}</h3>
         <div class="color-white f-14 pt-10">{{date article.updated_at format='short'}}</div>
         <section class="article-info">
