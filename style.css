@@ -5388,6 +5388,9 @@ a{
   display: none;
 }
 }.
+.all-articles-label{
+  position: relative;
+}
 .all-articles-label::after {
   content: '';
   position: absolute;
