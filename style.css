@@ -5119,9 +5119,9 @@ a{
   border-radius: 6px;
 }
 .article-cover img{
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
-  /* max-height: 100%; */
+  max-height: 100%;
   object-fit: cover;
 }
 .article-image-box .article-cover{
@@ -5131,7 +5131,7 @@ a{
 /* home-media-image */
 @media screen and (max-width: 1440px) {
   .home-media-image .article-cover{
-    height: 200px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5141,7 +5141,7 @@ a{
 }
 @media screen and (min-width: 1440px) {
   .home-media-image .article-cover{
-    height: 250px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 9200px) {
