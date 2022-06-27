@@ -5381,13 +5381,14 @@ a{
 }
 
 @media screen and (max-width: 768px) {
-.tablet-show {
-  display: block;
+  .tablet-show {
+    display: block;
+  }
+  .huski-nav-list{
+    display: none;
+  }
 }
-.huski-nav-list{
-  display: none;
-}
-}.
+
 .all-articles-label{
   position: relative;
 }
