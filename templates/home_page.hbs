@@ -11,12 +11,12 @@
     </a>
   </div>
   <div class="fx-between f-14 pt-5 pb-3">
-    <span class="color-text-light-1">PRODUCT INTRODUCTION</span>
-    <span class="color-text-light">{{date updated_at format='short'}}</span>
+    <span class="color-green">PRODUCT INTRODUCTION</span>
+    <span class="color-white">{{date updated_at format='short'}}</span>
   </div>
   <h3 class="f-28 bold"><a href="{{url}}" class="article-title" target="_blank">{{excerpt title characters=80}}</a>
   </h3>
-  <p class="f-16" class="color-text-light">{{excerpt body characters=140}}</p>
+  <p class="f-16" class="color-white">{{excerpt body characters=140}}</p>
   {{/each}}
   <div class="divider mt-30"></div>
 </div>
@@ -25,7 +25,13 @@
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="menu-1001")}}
-  <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
+  <div class="fx-between">
+    <h3 class="home-category f-28"><a href="{{url}}" class="font-black">{{name}}</a></h3>
+    <div>
+      <a href="{{url}}" class="color-white all-articles-label">All Articles →</a>
+    </div>
+  </div>
+
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
   {{#if promoted}}
@@ -36,8 +42,8 @@
           <xmp>{{body}}</xmp>
         </div>
       </div>
-      <h3 class="f-24 mt-15 mb-15 bold color-text">{{excerpt title characters=80}}</h3>
-      <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+      <h3 class="f-24 mt-15 mb-15 bold color-white">{{excerpt title characters=80}}</h3>
+      <div class="color-white f-16">{{date updated_at format='short'}}</div>
     </a>
   </div>
   {{/if}}
@@ -45,7 +51,7 @@
 </div>
 {{/each}}
 {{/each}}
-<div class="divider mt-30"></div>
+<div class="divider mt-100 mb-50"></div>
 </div>
 <div class="container">
   {{#each categories}}
@@ -55,8 +61,8 @@
     {{#unless promoted}}
     <li class="home-article-list-item">
       <a href="{{url}}" class="fx-between">
-        <h3 class="f-20 bold color-text">{{excerpt title characters=80}}</h3>
-        <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+        <h3 class="f-20 bold color-white">{{excerpt title characters=80}}</h3>
+        <div class="color-white f-16">{{date updated_at format='short'}}</div>
       </a>
     </li>
     {{/unless}}
@@ -71,7 +77,12 @@
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="menu-1003")}}
-  <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
+  <div class="fx-between">
+    <h3 class="home-category f-28"><a href="{{url}}" class="font-black">{{name}}</a></h3>
+    <div>
+      <a href="{{url}}" class="color-white all-articles-label">All Articles →</a>
+    </div>
+  </div>
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
   {{#if promoted}}
@@ -82,8 +93,8 @@
           <xmp>{{body}}</xmp>
         </div>
       </div>
-      <h3 class="f-24 mt-15 mb-15 bold color-text">{{excerpt title characters=80}}</h3>
-      <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+      <h3 class="f-24 mt-15 mb-15 bold color-white">{{excerpt title characters=80}}</h3>
+      <div class="color-white f-16">{{date updated_at format='short'}}</div>
     </a>
   </div>
   {{/if}}
@@ -101,8 +112,8 @@
     {{#unless promoted}}
     <li class="home-article-list-item">
       <a href="{{url}}" class="fx-between">
-        <h3 class="f-20 bold color-text">{{excerpt title characters=80}}</h3>
-        <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+        <h3 class="f-20 bold color-white">{{excerpt title characters=80}}</h3>
+        <div class="color-white f-16">{{date updated_at format='short'}}</div>
       </a>
     </li>
     {{/unless}}
@@ -117,7 +128,12 @@
 <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="menu-1002")}}
-  <h3 class="home-category f-28"><a href="{{url}}">{{name}}</a></h3>
+  <div class="fx-between">
+    <h3 class="home-category f-28"><a href="{{url}}" class="font-black">{{name}}</a></h3>
+    <div>
+      <a href="{{url}}" class="color-white all-articles-label">All Articles →</a>
+    </div>
+  </div>
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 2)}}
       {{#if promoted}}
@@ -128,9 +144,9 @@
           <xmp>{{body }}</xmp>
         </div>
       </div>
-      <h3 class="f-24 mt-15 mb-15 bold color-text">{{excerpt title characters=80}}</h3>
-      <p class="f-16 color-text-light article-description">{{excerpt body characters=140}}</p>
-      <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+      <h3 class="f-24 mt-15 mb-15 bold color-white">{{excerpt title characters=80}}</h3>
+      <p class="f-16 color-white article-description">{{excerpt body characters=140}}</p>
+      <div class="color-white f-16">{{date updated_at format='short'}}</div>
     </a>
   </div>
   {{/if}}
@@ -148,8 +164,8 @@
     {{#unless promoted}}
     <li class="home-article-list-item">
       <a href="{{url}}" class="fx-between" title="{{excerpt title characters=80}}">
-        <h3 class="f-20 bold color-text">{{excerpt title characters=80}}</h3>
-        <div class="color-text-light f-16">{{date updated_at format='short'}}</div>
+        <h3 class="f-20 bold color-white">{{excerpt title characters=80}}</h3>
+        <div class="color-white f-16">{{date updated_at format='short'}}</div>
       </a>
     </li>
     {{/unless}}

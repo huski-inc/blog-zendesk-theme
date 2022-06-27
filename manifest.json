@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "2.14.100",
+  "version": "2.14.101",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [{
@@ -25,7 +25,7 @@
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "#373459"
+          "value": "#ffffff"
         },
         {
           "identifier": "link_color",
@@ -46,7 +46,7 @@
           "type": "color",
           "description": "background_color_description",
           "label": "background_color_label",
-          "value": "#FFFFFF"
+          "value": "#232555"
         }
       ]
     },
@@ -400,7 +400,7 @@
         "type": "text",
         "description": "Logo Text",
         "label": "Logo Text",
-        "value": "BLOG"
+        "value": "Huski Blog"
       }, {
         "identifier": "header_1",
         "type": "text",
