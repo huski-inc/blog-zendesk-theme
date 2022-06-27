@@ -35,17 +35,38 @@
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
   {{#if promoted}}
-  <div class=" col-lg-4 col-sm-12">
+  {{#if @index==0}}
+    <div class=" col-lg-6 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
           <xmp>{{body}}</xmp>
         </div>
       </div>
-      <h3 class="f-24 mt-15 mb-15 bold color-white">{{excerpt title characters=80}}</h3>
-      <div class="color-white f-16">{{date updated_at format='short'}}</div>
     </a>
   </div>
+  <div class=" col-lg-6 col-sm-12">
+    <a href="{{url}}" class="block" title="{{title}}">
+      <h3 class="f-24 mt-15 mb-15 bold color-white">{{excerpt title characters=80}}</h3>
+      <p class="f-14" class="color-white">{{excerpt body characters=140}}</p>
+    </a>
+  </div>
+  {{/if}}
+  {{#if @index>0}}
+  <div class=" col-lg-6 col-sm-12">
+    <a href="{{url}}" class="block" title="{{title}}">
+      {{!-- <div class="home-media-image">
+        <div class="article-cover-init" title="{{title}}">
+          <xmp>{{body}}</xmp>
+        </div>
+      </div> --}}
+      <h3 class="f-24 mt-15 mb-15 bold color-white">{{excerpt title characters=80}}</h3>
+      {{!-- <div class="color-white f-16">{{date updated_at format='short'}}</div> --}}
+      <p class="f-14" class="color-white">{{excerpt body characters=140}}</p>
+    </a>
+  </div>
+  {{/if}}
+
   {{/if}}
   {{/each}}
 </div>
@@ -53,7 +74,8 @@
 {{/each}}
 <div class="divider mt-100 mb-50"></div>
 </div>
-<div class="container">
+<!-- 列表 -->
+{{!-- <div class="container">
   {{#each categories}}
   {{#each (filter sections on="description" equals="menu-1001")}}
   <ul class="home-article-list">
@@ -71,7 +93,7 @@
   {{/each}}
   {{/each}}
   <div class="divider"></div>
-</div>
+</div> --}}
 
 <!-- menu-1003 类别 -->
 <div class="container">
@@ -85,8 +107,8 @@
   </div>
   <div class="row mb-20">
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
-  {{#if promoted}}
-  <div class=" col-lg-4 col-sm-12">
+    {{#if promoted}}
+    <div class=" col-lg-4 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <div class="home-media-image">
         <div class="article-cover-init" title="{{title}}">
