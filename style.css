@@ -5113,7 +5113,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* max-height: 400px; */
+  max-height: 400px;
   overflow: hidden;
   align-items: flex-start;
   border-radius: 6px;
