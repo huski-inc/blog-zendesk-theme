@@ -5234,7 +5234,7 @@ a{
   line-height: 1.6;
 }
 
-.article-container{
+/* .article-container{
   padding-left: 85px;
   padding-right: 85px;
 }
@@ -5243,7 +5243,7 @@ a{
     padding-left: 0;
     padding-right: 0;
   }
-}
+} */
 
 /** footer **/
 .huski-footer-top{
@@ -5422,6 +5422,23 @@ a{
   border-radius: 50%;
   background: #24CE85CC;
   right: 0;
+  top: 0;
+  transform: translateY(-30%);
+  z-index: -1;
+}
+
+.article-back{
+ position: relative; 
+ font-size: 18px;
+}
+.article-back::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #24CE85CC;
+  left: 0;
   top: 0;
   transform: translateY(-30%);
   z-index: -1;
