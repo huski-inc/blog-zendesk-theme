@@ -5304,9 +5304,15 @@ a{
   color:#fff;
   display:inline-block;
   font-size: 0.9rem;
-  font-weight: bold;
-  display: block;
+  display: flex;
   padding: 30px 20px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav-list li a span{
+  padding-top: 10px;
 }
 .header-nav-list li.active{
   box-shadow: 0 0 0 3px #24ce85;
