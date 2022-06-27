@@ -5135,7 +5135,8 @@ a{
   }
 }
 @media screen and (max-width: 768px) {
-  .home-media-image{
+  .home-media-image .article-cover{
+    height: 200px;
     margin-bottom: 20px;
   }
 }
@@ -5144,7 +5145,7 @@ a{
     height: 300px;
   }
 }
-@media screen and (min-width: 9200px) {
+@media screen and (min-width: 1920px) {
   .home-media-image .article-cover{
     height: 400px;
   }
