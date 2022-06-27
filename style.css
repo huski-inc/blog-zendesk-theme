@@ -1771,7 +1771,7 @@ ul {
   line-height: 1.6;
   margin: 40px 0;
   word-wrap: break-word;
-  color: #5A5875;
+  /* color: #5A5875; */
   font-size: 1.125rem;
 }
 

@@ -2,10 +2,10 @@
   <div onclick="document.referrer === '' ? window.location.href = '/hc' : window.history.go(-1);" class="pointer"> ←
     Back</div>
   <div class="article-section-name f-16 mt-30">
-    <a class="color-text-light-1" href="{{section.url}}">{{section.name}}</a>
+    <a class="color-green" href="{{section.url}}">{{section.name}}</a>
   </div>
   <h3 class="f-38 pt-10 bold">{{article.title}}</h3>
-  <div class="color-text-light f-14 pt-10">{{date article.updated_at format='short'}}</div>
+  <div class="color-white f-14 pt-10">{{date article.updated_at format='short'}}</div>
   <section class="article-info">
     <div class="article-content">
       <div class="article-body">{{article.body}}</div>
@@ -75,15 +75,15 @@
     <div class="article-previous">
       {{#each section.articles}}
       <span class="{{#is id ../article.id}}current-article{{/is}} hide">
-        <a href="{{url}}" class="color-black">← Previous</a>
+        <a href="{{url}}" class="color-white">← Previous</a>
       </span>
       {{/each}}
     </div>
-    <a href="/hc" class="color-black">All Blogs</a>
+    <a href="/hc" class="color-white">All Blogs</a>
     <div class="article-next">
       {{#each section.articles}}
       <span class="{{#is id ../article.id}}current-article{{/is}} hide">
-        <a href="{{url}}" class="color-black">Next →</a>
+        <a href="{{url}}" class="color-white">Next →</a>
       </span>
       {{/each}}
     </div>
