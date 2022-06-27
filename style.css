@@ -5219,11 +5219,17 @@ a{
 }
 
 /** footer **/
+.huski-footer-top{
+  padding-top: 30px;
+  margin-top: 100px;
+  border-top: 1px solid rgba(207, 211, 225, 0.2);
+}
 .huski-footer{
   text-align: center;
   height: 60px;
   line-height: 60px;
   background: #232555;
+  border-top: 1px solid rgba(207, 211, 225, 0.2);
 }
 
 .footer-huski-websites{
