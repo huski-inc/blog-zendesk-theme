@@ -36,23 +36,23 @@
     {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
   {{#if promoted}}
   {{#if @first}}
-   <div class=" row mb-50">
+
     <div class=" col-lg-6 col-sm-12">
-      <a href="{{url}}" class="block" title="{{title}}">
-        <div class="home-media-image">
-          <div class="article-cover-init" title="{{title}}">
-            <xmp>{{body}}</xmp>
-          </div>
+    <a href="{{url}}" class="block" title="{{title}}">
+      <div class="home-media-image">
+        <div class="article-cover-init" title="{{title}}">
+          <xmp>{{body}}</xmp>
         </div>
-      </a>
-    </div>
-    <div class=" col-lg-6 col-sm-12">
-      <a href="{{url}}" class="block" title="{{title}}">
-        <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-        <p class="f-16 color-white">{{excerpt body characters=240}}</p>
-      </a>
-    </div>
+      </div>
+    </a>
   </div>
+  <div class=" col-lg-6 col-sm-12">
+    <a href="{{url}}" class="block" title="{{title}}">
+      <h3 class="f-24 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
+      <p class="f-16 color-white">{{excerpt body characters=240}}</p>
+    </a>
+  </div>
+  <div class="mb-50"></div>
   {{else}}
   <div class=" col-lg-6 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
