@@ -5170,7 +5170,7 @@ a{
   /* border: 1px solid #ddd; */
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .home-media-image {
     height: 220px;
   }
@@ -5180,7 +5180,7 @@ a{
   .home-media-image {
     height: 280px;
   }
-}
+} */
 
 .home-hero {
   width: 100%;
