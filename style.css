@@ -5401,13 +5401,15 @@ a{
 }
 .huski-nav-bar li a:hover{
   color: #24CE85;
+}
+.huski-nav-bar li>a:hover{
   background: rgba(255, 255, 255, 0.1490196078);
   border-radius: 6.25rem;
-  padding: 0 10px;
 }
 .huski-nav-bar li button{
   font-size: 1rem;
   color:#ffffffd9;
+  padding:  0 10px;
 }
 .dropdown-menu a{
   font-size: 1rem;
