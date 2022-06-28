@@ -428,7 +428,7 @@ function onSubscribe(){
       return false
     }
       const url = location.href||'';
-      ajaxPost('https://test-api.huski.ai/api/v2/blog/subscription', 'email='+email+'&url='+url, function (data) {
+      ajaxPost('https://api.huski.ai/api/v2/blog/subscription', 'email='+email+'&url='+url, function (data) {
         // 后台返回的数据就是 字符串类型。要转成json，必须自己手动转换。
         var res = JSON.parse(data);
         if(res.code===0){
