@@ -86,6 +86,38 @@ function onCopy(url) {
   copyText('{{settings.domain}}' + url)
 }
 
+
+function ajaxPost(url, data, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', url, true);
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.send(data);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      callback(xhr.responseText);
+    }
+  }
+}
+
+
+function onSubscribe(){
+  const emailInput=document.querySelector('#subscribeEmail')
+  if(emailInput){
+   const email = emailInput.value
+   if(email){
+      ajaxPost('/api/user', 'email='+email, function (data) {
+        // 后台返回的数据就是 字符串类型。要转成json，必须自己手动转换。
+        var res = JSON.parse(data);
+        console.log('res', res);
+        if(res.code===0){
+          alert('Subscribe successfully!')
+        }
+      });
+   }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // 将文章body第一章图片显示出来
   const articleBody=document.querySelectorAll('.article-cover-init')

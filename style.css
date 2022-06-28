@@ -5056,6 +5056,9 @@ a{
   font-size: 38px;
 }
 
+.color-white-o6{
+  color: #FFFFFF99;
+}
 .color-text-o8{
   color: #FAFBFF80;
 }
@@ -5466,4 +5469,8 @@ a{
 }
 .line-height-18{
   line-height: 1.8;
+}
+
+.h-input::placeholder {
+  color: #FFFFFF80;
 }
