@@ -89,7 +89,7 @@ function appendHTML(
 function transferLang(text) {
   switch (text?.toLowerCase()) {
     case 'ok':
-      return 'Ok' //bus.$t('word.ok')
+      return 'OK' //bus.$t('word.ok')
     case 'cancel':
       return 'Cancel' //bus.$t('word.cancel')
     default:
