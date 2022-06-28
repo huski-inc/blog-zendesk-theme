@@ -5474,3 +5474,9 @@ a{
 .h-input::placeholder {
   color: #FFFFFF80;
 }
+.h-button{
+  background: #204FA9;border: 0;color: #fff;padding: 15px 30px;border-radius: 4px;margin-top: 15px;cursor:pointer
+}
+.h-button:active{
+  opacity: 0.7;
+}
