@@ -5391,15 +5391,18 @@ a{
 
 @media screen and (max-width: 1440px) {
   .huski-nav-bar li{
-    padding-left: 35px;
+    padding-left: 25px;
   }
 }
 .huski-nav-bar li a{
   color: #ffffffd9;
   font-size: 1rem;
+  padding: 0 10px;
 }
 .huski-nav-bar li a:hover{
-  color: #ffffff;
+  color: #24CE85;
+  background: rgba(255, 255, 255, 0.1490196078);
+  border-radius: 6.25rem;
 }
 .huski-nav-bar li button{
   font-size: 1rem;
@@ -5409,7 +5412,9 @@ a{
   font-size: 1rem;
 }
 .huski-nav-bar li button:hover{
-  color:#ffffff;
+  color: #24CE85;
+  background: rgba(255, 255, 255, 0.1490196078);
+  border-radius: 6.25rem;
 }
 
 .huski-logo img {
