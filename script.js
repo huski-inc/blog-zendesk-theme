@@ -106,7 +106,7 @@ function onSubscribe(){
   if(emailInput){
    const email = emailInput.value
    if(email){
-      ajaxPost('/api/user', 'email='+email, function (data) {
+      ajaxPost('https://test-api.huski.ai/api/v2/blog/subscription', 'email='+email, function (data) {
         // 后台返回的数据就是 字符串类型。要转成json，必须自己手动转换。
         var res = JSON.parse(data);
         console.log('res', res);
