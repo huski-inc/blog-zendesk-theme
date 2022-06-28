@@ -1,147 +1,312 @@
-var poplayer = {
-	prependHTML:function(el, html){
-		var divTemp = document.createElement("div"),nodes = null,fragment = document.createDocumentFragment();
-		divTemp.innerHTML = html;
-		nodes = divTemp.childNodes;
-		for (var i=0, length=nodes.length; i<length; i+=1) {
-			fragment.appendChild(nodes[i].cloneNode(true));
-		}
-		// 鎻掑叆鍒板鍣ㄧ殑鍓嶉潰 - 宸紓鎵€鍦�
-		el.insertBefore(fragment, el.firstChild);
-		// 鍐呭瓨鍥炴敹锛�
-		nodes = null;
-		fragment = null;
-	},
-	ahref:function(href,inputVal){
-		if(!href){
-			document.body.removeChild(document.getElementById("pop_tip"));
-		}else if(parseInt(href) < 0){
-			window.history.go(-1);
-		}else if(parseInt(href) == 1){
-			window.location.href = document.referrer;
-		}else if(href){
-			if(inputVal){
-				if(href.indexOf("?") != -1){
-					window.location.href=href+'&pop_val='+inputVal;
-				}else{
-					window.location.href=href+'?pop_val='+inputVal;
-				}
-			}else{
-				window.location.href=href;
-			}
-		}
-	},
-	html:function(text,btn1,btn2,inputflag){
-		let pop_tip_html = '<style>';
-		pop_tip_html += '*{margin:0;padding:0;}';
-		pop_tip_html += '.pop_tip{position: fixed;top: 0;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,0.5);}';
-		pop_tip_html += '.pop_tip .pop_tip_box{position: absolute;top: 34%;width: 300px;left: 50%;margin-left:-150px;background: #242753;color:#fff;z-index: 1000;text-align: center;border-radius: 4px;}';
-		pop_tip_html += '.pop_tip .pop_tip_box .pop_tip_text{font-size: 16px;font-size: 16px;line-height: 25px;padding: 20px;text-align: center;}';
-		pop_tip_html += '.pop_tip .pop_tip_box .popbtm .left{display:inline-block;width: 50%;text-align: center;line-height: 35px;font-size: 16px;background: #ccc;color: #fff;border-radius: 0 0 0 10px;}';
-		pop_tip_html += '.pop_tip .pop_tip_box .popbtm .right{display:inline-block;width: 50%;text-align: center;line-height: 35px;font-size: 16px;background: #3dc6da;color: #fff;border-radius: 0 0 10px 0;}';
-		pop_tip_html += '.pop_tip .pop_tip_btn_box{margin:10px 0 20px 0;color:#fff;font-size:14px;}';
-		pop_tip_html += '.pop_tip .pop_tip_btn_box #pop_tip_btn{display:inline-block;width:200px;background:#24CE85;text-align:center;line-height:30px;border-radius: 4px;cursor: pointer;}';
-		pop_tip_html += '.pop_tip .pop_tip_btn_box #pop_tip_btn1,.pop_tip .pop_tip_btn_box #pop_tip_btn2{margin:0 2px;display:inline-block;width:calc(50% - 20px);background:#999;text-align:center;line-height:30px;border-radius:10px;cursor: pointer;}';
-		pop_tip_html += '.pop_tip .pop_tip_btn_box #pop_tip_btn1{background:#70b4fd;}';
-		pop_tip_html += '.pop_tip .pop_tip_box .pop_tip_input_box{text-align:center;margin-bottom: 20px;}';
-		pop_tip_html += '.pop_tip .pop_tip_box .pop_tip_input_box input{width:(80% - 10px);height:30px;padding:0 10px;border:1px solid #ccc;}';
-		pop_tip_html += '</style>';
-		pop_tip_html += '<div class="pop_tip" id="pop_tip">';
-		pop_tip_html += '<div class="pop_tip_box"><div class="pop_tip_text">'+text+'</div>';
-		if(inputflag){
-			pop_tip_html += '<div class="pop_tip_input_box" ><input type="text" id="pop_tip_input" placeholder="'+inputflag+'"/></div>';
-		}
-		if(btn1 && btn2){
-			pop_tip_html += '<div class="pop_tip_btn_box"><span id="pop_tip_btn1">'+btn1+'</span><span id="pop_tip_btn2">'+btn2+'</span></div>';
-		}else if(btn1){
-			pop_tip_html += '<div class="pop_tip_btn_box"><span id="pop_tip_btn">'+btn1+'</span></div>';
-		}
-		pop_tip_html += '</div></div>';
-		return pop_tip_html;
-	},
-	msg:function(text,time,href){
-		var _this = this;
-		_this.prependHTML(document.body,_this.html(text));
-		time = time ? parseInt(time)*1000 : 3000;
-		setTimeout(function(){
-			_this.ahref(href);
-		},time);
-	},
-	alert:function(text,btn,href){
-		var _this = this;
-		btn = btn ? btn : 'OK';
-		_this.prependHTML(document.body,_this.html(text,btn));
-		document.getElementById("pop_tip_btn").onclick = function(){
-			_this.ahref(href);
-		};
-	},
-	confirm:function(text,btn1,btn2,href){
-		var _this = this;
-		btn1 = btn1 ? btn1 : 'OK';
-		btn2 = btn2 ? btn2 : 'Cancel';
-		_this.prependHTML(document.body,_this.html(text,btn1,btn2));
+var _INFO_SVG = `<svg width="19" height="19" viewBox="0 0 19 19" fill="none" >
+<circle cx="9.53516" cy="9.40479" r="9" fill="#8BA3F2"/>
+<path d="M10.9014 8.84443C10.9014 9.29243 10.7574 10.0658 10.4694 11.1644C10.1814 12.2524 10.0374 12.9671 10.0374 13.3084C10.0374 13.6391 10.0854 13.8044 10.1814 13.8044C10.2454 13.8044 10.4907 13.7031 10.9174 13.5004L11.1094 13.4044L11.3814 13.9644C11.2854 14.0498 11.1574 14.1564 10.9974 14.2844C10.8374 14.4124 10.5387 14.5884 10.1014 14.8124C9.66404 15.0258 9.25871 15.1324 8.88538 15.1324C8.51204 15.1324 8.21871 15.0204 8.00538 14.7964C7.79204 14.5618 7.68538 14.2524 7.68538 13.8684C7.68538 13.4738 7.81871 12.7804 8.08538 11.7884C8.35204 10.7858 8.48538 10.1351 8.48538 9.83643C8.48538 9.38843 8.34671 8.9671 8.06938 8.57243L7.92538 8.38043L7.94138 8.17243C8.50671 8.01243 9.42404 7.93243 10.6934 7.93243C10.832 8.09243 10.9014 8.39643 10.9014 8.84443ZM9.07738 6.18843C8.86404 5.9751 8.75738 5.69243 8.75738 5.34043C8.75738 4.98843 8.90138 4.6791 9.18938 4.41243C9.48804 4.14576 9.82938 4.01243 10.2134 4.01243C10.5974 4.01243 10.896 4.1191 11.1094 4.33243C11.3227 4.54576 11.4294 4.82843 11.4294 5.18043C11.4294 5.52176 11.2747 5.82576 10.9654 6.09243C10.6667 6.3591 10.3307 6.49243 9.95738 6.49243C9.58404 6.49243 9.29071 6.3911 9.07738 6.18843Z" fill="white"/>
+</svg>
+`
+var _WARNING_SVG = `<svg width="19" height="19" viewBox="0 0 19 19" fill="none" >
+<circle cx="9.53516" cy="9.80664" r="9" fill="#FFBF19"/>
+<path d="M10.6808 4.11205V8.40205C10.6808 8.86205 10.6533 9.31955 10.5983 9.77455C10.5433 10.2246 10.4708 10.6846 10.3808 11.1546H8.80575C8.71575 10.6846 8.64325 10.2246 8.58825 9.77455C8.53325 9.31955 8.50575 8.86205 8.50575 8.40205V4.11205H10.6808ZM8.25075 13.8621C8.25075 13.6821 8.28325 13.5146 8.34825 13.3596C8.41825 13.2046 8.51075 13.0696 8.62575 12.9546C8.74575 12.8396 8.88575 12.7496 9.04575 12.6846C9.20575 12.6146 9.38075 12.5796 9.57075 12.5796C9.75575 12.5796 9.92825 12.6146 10.0883 12.6846C10.2483 12.7496 10.3883 12.8396 10.5083 12.9546C10.6283 13.0696 10.7208 13.2046 10.7858 13.3596C10.8558 13.5146 10.8908 13.6821 10.8908 13.8621C10.8908 14.0421 10.8558 14.2121 10.7858 14.3721C10.7208 14.5271 10.6283 14.6621 10.5083 14.7771C10.3883 14.8921 10.2483 14.9821 10.0883 15.0471C9.92825 15.1121 9.75575 15.1446 9.57075 15.1446C9.38075 15.1446 9.20575 15.1121 9.04575 15.0471C8.88575 14.9821 8.74575 14.8921 8.62575 14.7771C8.51075 14.6621 8.41825 14.5271 8.34825 14.3721C8.28325 14.2121 8.25075 14.0421 8.25075 13.8621Z" fill="white"/>
+</svg>
+`
+var _SUCCESS_SVG = `<svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+<circle cx="9.32227" cy="9.2085" r="9" fill="#24CE85"/>
+<path d="M5.14398 8.54973L8.26214 11.7801L13.5011 6.63721" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
+`
+var _ERROR_SVG = `<svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+<circle cx="9.53516" cy="9.00293" r="9" fill="#FD696D"/>
+<path d="M6.68921 6.15723L12.3808 11.8491" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M12.3804 6.15771L6.68851 11.8493" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
+`
+var _UPGRADE_SVG = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+<circle cx="14" cy="14" r="14" fill="#24CE85"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.99484 13.8289C8.93478 13.1793 8.50267 6.89398 13.9324 4.02283C13.9862 3.99439 14.0525 3.9923 14.1077 4.0178C18.6542 6.11642 19.3369 11.3897 19.1056 13.8311C19.1023 13.8663 19.1078 13.8995 19.1218 13.932C19.3092 14.3663 20.6449 17.6256 19.6122 20.0221C19.5534 20.1586 19.3695 20.173 19.2787 20.0554C18.9265 19.5989 18.1302 18.6263 17.1958 17.8714C17.1515 17.8355 17.0953 17.8208 17.039 17.8294C16.5527 17.9042 14.0729 18.2378 10.8237 17.8337C10.7681 17.8268 10.711 17.8436 10.6683 17.8799C9.75539 18.6559 9.42265 19.0296 8.58573 20.0549C8.4903 20.1718 8.31136 20.1445 8.26888 19.9997C8.02847 19.1802 7.56648 16.8373 8.97408 13.9371C8.99089 13.9025 8.99838 13.8672 8.99484 13.8289ZM16 11.2143C16 12.3189 15.1046 13.2143 14 13.2143C12.8954 13.2143 12 12.3189 12 11.2143C12 10.1098 12.8954 9.21434 14 9.21434C15.1046 9.21434 16 10.1098 16 11.2143ZM13.9146 18.6802C13.3571 18.7249 12.2245 19.0091 12.154 19.7879C12.0658 20.7614 13.0461 23.9839 13.9146 23.9839C14.5311 23.9839 15.8519 21.3656 15.8519 19.7879C15.793 19.4187 15.3231 18.6802 13.9146 18.6802Z" fill="white"/>
+</svg>`
 
-		document.getElementById("pop_tip_btn1").onclick = function(){
-			_this.ahref(href);
-		};
-		document.getElementById("pop_tip_btn2").onclick = function(){
-			document.body.removeChild(document.getElementById("pop_tip"));
-		};
-	},
-	prompt:function(text,btn1,btn2,href,inputFlag,mustFlag){
-		var _this = this;
-		btn1 = btn1 ? btn1 : 'OK';
-		_this.prependHTML(document.body,_this.html(text,btn1,btn2,inputFlag));
-		let domBtn1= document.getElementById("pop_tip_btn");
-		if(btn1 && btn2){
-			domBtn1= document.getElementById("pop_tip_btn1");
-		}
-		domBtn1.onclick = function(){
-			let inputVal = inputFlag ? document.getElementById("pop_tip_input").value : '';
-			if(mustFlag && !inputVal){
-				document.body.removeChild(document.getElementById("pop_tip"));
-				_this.msg(inputFlag,3);
-				setTimeout(function(){
-					_this.prompt(text,btn1,btn2,href,inputFlag,mustFlag);
-				},3000);
-			}else{
-				_this.ahref(href,inputVal);
-			}
-		};
-		if(btn2){
-			document.getElementById("pop_tip_btn2").onclick = function(){
-				document.body.removeChild(document.getElementById("pop_tip"));
-			};
-		}
-	},
-	prompt1:function(text,btn1,btn2,inputFlag,mustFlag,f){
-		var _this = this;
-		btn1 = btn1 ? btn1 : 'OK';
-		_this.prependHTML(document.body,_this.html(text,btn1,btn2,inputFlag));
-		let domBtn1= document.getElementById("pop_tip_btn");
-		if(btn1 && btn2){
-			domBtn1= document.getElementById("pop_tip_btn1");
-		}
-		domBtn1.onclick = function(){
-			let inputVal = inputFlag ? document.getElementById("pop_tip_input").value : '';
-			if(mustFlag && !inputVal){
-				document.body.removeChild(document.getElementById("pop_tip"));
-				_this.msg(inputFlag,3);
-				setTimeout(function(){
-					_this.prompt(text,btn1,btn2,href,inputFlag,mustFlag);
-				},3000);
-			}else{
-				f(inputVal)
-				//_this.ahref(href,inputVal);
-			}
-		};
-		if(btn2){
-			document.getElementById("pop_tip_btn2").onclick = function(){
-				document.body.removeChild(document.getElementById("pop_tip"));
-			};
-		}
-	}
+var _INFO_CURRENT_SVG = `<svg width="19" height="19" viewBox="0 0 19 19" fill="none" >
+<circle cx="9.53516" cy="9.40479" r="9" fill="currentColor"/>
+<path d="M10.9014 8.84443C10.9014 9.29243 10.7574 10.0658 10.4694 11.1644C10.1814 12.2524 10.0374 12.9671 10.0374 13.3084C10.0374 13.6391 10.0854 13.8044 10.1814 13.8044C10.2454 13.8044 10.4907 13.7031 10.9174 13.5004L11.1094 13.4044L11.3814 13.9644C11.2854 14.0498 11.1574 14.1564 10.9974 14.2844C10.8374 14.4124 10.5387 14.5884 10.1014 14.8124C9.66404 15.0258 9.25871 15.1324 8.88538 15.1324C8.51204 15.1324 8.21871 15.0204 8.00538 14.7964C7.79204 14.5618 7.68538 14.2524 7.68538 13.8684C7.68538 13.4738 7.81871 12.7804 8.08538 11.7884C8.35204 10.7858 8.48538 10.1351 8.48538 9.83643C8.48538 9.38843 8.34671 8.9671 8.06938 8.57243L7.92538 8.38043L7.94138 8.17243C8.50671 8.01243 9.42404 7.93243 10.6934 7.93243C10.832 8.09243 10.9014 8.39643 10.9014 8.84443ZM9.07738 6.18843C8.86404 5.9751 8.75738 5.69243 8.75738 5.34043C8.75738 4.98843 8.90138 4.6791 9.18938 4.41243C9.48804 4.14576 9.82938 4.01243 10.2134 4.01243C10.5974 4.01243 10.896 4.1191 11.1094 4.33243C11.3227 4.54576 11.4294 4.82843 11.4294 5.18043C11.4294 5.52176 11.2747 5.82576 10.9654 6.09243C10.6667 6.3591 10.3307 6.49243 9.95738 6.49243C9.58404 6.49243 9.29071 6.3911 9.07738 6.18843Z" fill="white"/>
+</svg>
+`
+var svgIcons = {
+  info_current: _INFO_CURRENT_SVG,
+  info: _INFO_SVG,
+  warning: _WARNING_SVG,
+  success: _SUCCESS_SVG,
+  error: _ERROR_SVG,
+  upgrade: _UPGRADE_SVG,
 }
+
+
+function appendHTML(
+  type,
+  title,
+  message,
+  btnTemplate,
+  dangerouslyUseHTMLString,
+) {
+  // 图标
+  const iconHTML = type ? svgIcons[type] : ''
+
+  const noTitle = title ? '' : 'no-title'
+  if (!dangerouslyUseHTMLString) {
+    title = title.replace(/<[^<>]+>/g, '')
+    message = message.replace(/<[^<>]+>/g, '')
+  }
+
+  // 窗体HTML
+  const template = `
+    <div class="huski-alert alert-wrapper">
+      <div class="alert-frame">
+        <div class="alert-header">
+          <span class="alert-close"></span>
+        </div>
+        <div class="alert-body">
+          <div class="alert-body__main">
+            ${iconHTML}
+            <div ${iconHTML ? '' : 'style="margin-left:0"'}>
+              <div class="alert-title">${title}</div>
+              <div class="alert-message ${noTitle}">${message}</div>
+            </div>
+          </div>
+          <div class="alert-body__button">
+            ${btnTemplate}
+          </div>
+        </div>
+      </div>
+    </div>
+    `
+  const body = document.querySelector('body')
+  body?.insertAdjacentHTML('beforeend', template)
+}
+
+/**
+ * 根据国际化转化默认文字
+ * @param text
+ * @returns {*}
+ */
+function transferLang(text) {
+  switch (text?.toLowerCase()) {
+    case 'ok':
+      return 'Ok' //bus.$t('word.ok')
+    case 'cancel':
+      return 'Cancel' //bus.$t('word.cancel')
+    default:
+      return text
+  }
+}
+
+/**
+ * Confirm 弹窗
+ * @param {*} type success\error\warning\info\question
+ * @param {*} title 标题
+ * @param {*} message 消息
+ * @param {*} checkText 复选框后文字
+ * @param {*} isChecked 是否选中复选框
+ * @param {*} okText 确定按钮文字
+ * @param {*} cancelText 取消按钮文字
+ * @param {*} dangerouslyUseHTMLString 是否允许HTML
+ * @returns
+ */
+function huskiConfirm({
+  type = 'info', // success\error\warning\info\question
+  title = '',
+  message = '',
+  checkText = '',
+  isChecked = false,
+  okText = 'OK',
+  cancelText = 'Cancel',
+  thirdButtonText = '',
+  dangerouslyUseHTMLString = false,
+}) {
+  const huskiAlert = document.querySelectorAll('.huski-alert')
+
+  if (huskiAlert.length > 0) {
+    return Promise.reject('Up to one Confirm exists at a time.')
+  }
+  return new Promise((resolve, reject) => {
+    let checkBoxTemplate = '',
+      checked = ''
+
+    if (isChecked) {
+      checked = 'checked'
+    }
+    if (checkText !== '') {
+      checkBoxTemplate = `<div class="confirm-check"><input type="checkbox" ${checked} id="confirm_check"/><label for="confirm_check">&nbsp;${checkText}</label></div>`
+    }
+
+    // 第三个按钮
+    let thirdButtonHtml = ''
+    if (thirdButtonText) {
+      thirdButtonHtml = `<button type="button" plain class="alert-button third-button">${thirdButtonText}</button>`
+    }
+    // 按钮HTML
+    let btnTemplate = `
+    <div class="confirm-buttons">
+     ${checkBoxTemplate}
+      <div>
+      <button type="button" plain class="alert-button cancel-button">${transferLang(
+        cancelText,
+      )}</button>&nbsp;&nbsp;${thirdButtonHtml}&nbsp;&nbsp;<button type="button" class="alert-button confirm-button">${transferLang(
+      okText,
+    )}</button></div>
+    </div>
+    `
+    appendHTML(type, title, message, btnTemplate, dangerouslyUseHTMLString)
+
+    const alertWrapper = document.querySelector('.alert-wrapper')
+    const alertFrame = document.querySelector('.alert-frame')
+    const alertClose = document.querySelector(`.alert-close`)
+
+    // 处理confirm
+
+    const confirmButton = document.querySelector('.confirm-button')
+    const cancelButton = document.querySelector('.cancel-button')
+    const thirdButtonDom = document.querySelector('.third-button')
+
+    confirmButton?.addEventListener('click', () => {
+      let checked = ''
+      const ele = document.querySelector('#confirm_check')
+      if (ele) {
+        console.log('confirm_check', ele)
+        // @ts-ignore
+        checked = ele.checked
+      }
+      alertWrapper?.remove()
+      resolve({ type: 'ok', checked: !!checked })
+    })
+    cancelButton?.addEventListener('click', () => {
+      if (cancelText === 'Refresh' || cancelText === '刷新') {
+        window.location.reload()
+        // if (typeof window === 'undefined') {
+        //   // @ts-ignore
+        //   window.location.reload()
+        // } else {
+        //   bus.$router?.go(0)
+        // }
+      } else {
+        alertWrapper?.remove()
+        resolve({ type: 'cancel' })
+      }
+    })
+    thirdButtonDom?.addEventListener('click', () => {
+      alertWrapper?.remove()
+      resolve({ type: 'cancel' })
+    })
+
+    const handleClose = () => {
+      alertWrapper?.remove()
+      resolve({ type: 'third' })
+    }
+    // 关闭按钮事件
+    alertClose?.addEventListener('click', handleClose)
+    // 窗体外的事件
+    alertWrapper?.addEventListener('click', handleClose)
+    // 点击窗体的事件 阻止冒泡
+    alertFrame?.addEventListener('click', (e) => {
+      e.stopPropagation()
+    })
+  })
+}
+/**
+ * Alert 弹窗
+ * @param {*}  type success\error\warning\info\question
+ * @param {*} title 标题
+ * @param {*}  message 消息
+ * @param {*}  okText 确定按钮文字
+ * @param {*}  cancelText 取消按钮文字
+ * @param {*}  dangerouslyUseHTMLString 是否允许HTML
+ * @returns
+ */
+function huskiAlert({
+  type = 'info', // success\error\warning\info\question
+  title = '',
+  message = '',
+  okText = 'OK',
+  dangerouslyUseHTMLString = false,
+}) {
+  const huskiAlert = document.querySelectorAll('.huski-alert')
+  if (huskiAlert.length > 0) {
+    return Promise.reject('Up to one Alert exists at a time.')
+  }
+  return new Promise((resolve) => {
+    // 按钮HTML
+    let btnTemplate = `
+    <button type="button" class="alert-button">${transferLang(okText)}</button>
+    `
+    appendHTML(type, title, message, btnTemplate, dangerouslyUseHTMLString)
+
+    const alertWrapper = document.querySelector('.alert-wrapper')
+    const alertFrame = document.querySelector('.alert-frame')
+    const alertClose = document.querySelector(`.alert-close`)
+    const alertButton = document.querySelector('.alert-button')
+
+    const handleOK = () => {
+      alertWrapper?.remove()
+      resolve({ type: 'ok' })
+    }
+    const handleClose = () => {
+      alertWrapper?.remove()
+      resolve({ type: 'close' })
+    }
+
+    alertButton?.addEventListener('click', handleOK)
+    // 关闭按钮事件
+    alertClose?.addEventListener('click', handleClose)
+    // 窗体外的事件
+    alertWrapper?.addEventListener('click', handleClose)
+    // 点击窗体的事件 阻止冒泡
+    alertFrame?.addEventListener('click', (e) => {
+      e.stopPropagation()
+    })
+  })
+}
+
+function huskiNotify({ type, title, message, timer = 5000 }) {
+  return new Promise((resolve) => {
+    if (document.querySelector('.toast-container')) {
+      document.querySelector('.toast-container')?.remove()
+    }
+    const body = document.querySelector('body')
+    // 图标
+    const iconHTML = type ? svgIcons[type] : ''
+    const template = `
+    <div class="toast-container">
+      <div>
+        <div class="toast-frame">
+           <div class="toast-close"></div>
+           ${iconHTML}
+           <div class="toast-body">
+              <div class="toast-title">${title}</div>
+              <div class="toast-message">${message}</div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+    `
+    // <div class="toast-timer" style="animation: timer ${timer}ms linear;"/>
+
+    body?.insertAdjacentHTML('afterend', template)
+
+    const toastContainer = document.querySelector('.toast-container')
+
+    setTimeout(() => {
+      toastContainer?.remove()
+      resolve({ type: 'ok' })
+    }, timer)
+
+    const toastClose = document.querySelector('.toast-close')
+
+    toastClose?.addEventListener('click', () => {
+      toastContainer?.remove()
+      resolve({ type: 'ok' })
+    })
+  })
+}
+
+//--------------------------- 分割线 ------------------------//
 
 const getFirstImage = function(str){
   let data = '';
@@ -259,7 +424,7 @@ function onSubscribe(){
    const email = emailInput.value
    if(email){
     if(!isEmail(email)){
-      poplayer.msg('The email must be a valid email address.');
+      huskiAlert({ type: 'info', title: 'Tips', message: 'The email must be a valid email address.'})
       return false
     }
       ajaxPost('https://test-api.huski.ai/api/v2/blog/subscription', 'email='+email, function (data) {
@@ -267,9 +432,9 @@ function onSubscribe(){
         var res = JSON.parse(data);
         if(res.code===0){
           emailInput.value=''
-          poplayer.alert('Subscribe successfully!');
+          huskiAlert({ type: 'success', title: 'Successfully', message: 'Subscribe successfully!'})
         } else {
-          poplayer.msg(res.msg.text);
+          huskiAlert({ type: 'warning', title: 'Warning', message: res.msg.text})
         }
       });
    }
