@@ -489,6 +489,8 @@ document.addEventListener('DOMContentLoaded', function() {
    const articleBoxes = document.querySelector('.home-article-boxes')
    if(articleBoxes){
      const articleBox = articleBoxes.querySelectorAll('.home-article-box')
+     var lastDom
+     var maxOrder=0
      for (let i = 0; i < articleBox.length; i++) {
       const articleBoxItem = articleBox[i];
       const articleDate = articleBoxItem.querySelector('.home-article-date')
@@ -496,8 +498,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const dateStr = articleDate.innerText
         const timespan = (new Date(dateStr)).getTime()
         const currentTimeSpan = (new Date()).getTime()
-        articleBoxItem.setAttribute('style','order:'+ (currentTimeSpan-timespan))
+        const order=(currentTimeSpan-timespan)
+        if(order > maxOrder){
+          maxOrder = order
+          lastDom = articleDate
+        }
+        articleBoxItem.setAttribute('style','order:' + order)
       }
+     }
+     const lastDivider = lastDom.querySelector('.divider')
+     if(lastDivider){
+      lastDivider.remove()
      }
    }
 
