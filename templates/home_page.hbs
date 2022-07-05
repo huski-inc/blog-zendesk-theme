@@ -21,59 +21,61 @@
   <div class="divider mt-120 mb-30"></div>
 </div>
 
-<!-- menu-1001 类别 -->
-<div class="container">
-  {{#each categories}}
-  {{#each (filter sections on="description" equals="menu-1001")}}
-  <div class="fx-between">
-    <h3 class="home-category">{{name}}</h3>
-    <div class="all-articles-label">
-      <a href="{{url}}" class="color-white">All Articles →</a>
-    </div>
-  </div>
 
-  <div class="row mb-20 justify-content-between">
-    {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
+<div class="home-article-boxes">
+  <!-- menu-1001 类别 -->
+  <div class="container home-article-box">
+    {{#each categories}}
+    {{#each (filter sections on="description" equals="menu-1001")}}
+    <div class="fx-between">
+      <h3 class="home-category">{{name}}</h3>
+      <div class="all-articles-label">
+        <a href="{{url}}" class="color-white">All Articles →</a>
+      </div>
+    </div>
+
+    <div class="row mb-20 justify-content-between">
+      {{#each (slice (filter articles on="body" contains="<img ") 0 3)}}
   {{#if promoted}}
   {{#if @first}}
     <div class=" col-lg-6 col-sm-12">
-    <a href="{{url}}" class="block" title="{{title}}">
-      <div class="home-media-image">
-        <div class="article-cover-init" title="{{title}}">
-          <xmp>{{body}}</xmp>
+      <a href="{{url}}" class="block" title="{{title}}">
+        <div class="home-media-image">
+          <div class="article-cover-init" title="{{title}}">
+            <xmp>{{body}}</xmp>
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6 col-sm-12">
-    <a href="{{url}}" class="block" title="{{title}}">
-      <h3 class="mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <div class="color-white f-16">{{date updated_at format='short'}}</div>
-      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=280}}</p>
-    </a>
-  </div>
-  <div class="col-12 mb-50"></div>
-  {{else}}
-  <div class=" col-lg-6 col-sm-12">
-    <a href="{{url}}" class="block" title="{{title}}">
-      {{!-- <div class="home-media-image">
-        <div class="article-cover-init" title="{{title}}">
-          <xmp>{{body}}</xmp>
-        </div>
-      </div> --}}
-      <h3 class="mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <div class="color-white f-16">{{date updated_at format='short'}}</div>
-      <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=160}}</p>
-    </a>
-  </div>
-  {{/if}}
+      </a>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <a href="{{url}}" class="block" title="{{title}}">
+        <h3 class="mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
+        <div class="color-white f-16 home-article-date">{{date updated_at format='short'}}</div>
+        <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=280}}</p>
+      </a>
+    </div>
+    <div class="col-12 mb-50"></div>
+    {{else}}
+    <div class=" col-lg-6 col-sm-12">
+      <a href="{{url}}" class="block" title="{{title}}">
+        {{!-- <div class="home-media-image">
+          <div class="article-cover-init" title="{{title}}">
+            <xmp>{{body}}</xmp>
+          </div>
+        </div> --}}
+        <h3 class="mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
+        <div class="color-white f-16 home-article-date">{{date updated_at format='short'}}</div>
+        <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=160}}</p>
+      </a>
+    </div>
+    {{/if}}
 
-  {{/if}}
+    {{/if}}
+    {{/each}}
+  </div>
   {{/each}}
-</div>
-{{/each}}
-{{/each}}
-<div class="divider mt-120 mb-50"></div>
+  {{/each}}
+  <div class="divider mt-120 mb-50"></div>
 </div>
 <!-- 列表 -->
 {{!-- <div class="container">
@@ -97,7 +99,7 @@
 </div> --}}
 
 <!-- menu-1003 类别 -->
-<div class="container">
+<div class="container home-article-box">
   {{#each categories}}
   {{#each (filter sections on="description" equals="menu-1003")}}
   <div class="fx-between">
@@ -113,7 +115,7 @@
   <div class=" col-lg-6 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <h3 class="mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <div class="color-white f-16">{{date updated_at format='short'}}</div>
+      <div class="color-white f-16 home-article-date">{{date updated_at format='short'}}</div>
       <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=280}}</p>
     </a>
   </div>
@@ -136,7 +138,7 @@
         </div>
       </div> --}}
       <h3 class="mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <div class="color-white f-16">{{date updated_at format='short'}}</div>
+      <div class="color-white f-16 home-article-date">{{date updated_at format='short'}}</div>
       <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=160}}</p>
     </a>
   </div>
@@ -171,7 +173,7 @@
 </div> --}}
 
 <!-- menu-1002 类别 -->
-<div class="container">
+<div class="container home-article-box">
   {{#each categories}}
   {{#each (filter sections on="description" equals="menu-1002")}}
   <div class="fx-between">
@@ -196,7 +198,7 @@
   <div class="col-lg-6 col-sm-12">
     <a href="{{url}}" class="block" title="{{title}}">
       <h3 class="f-28 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <div class="color-white f-16">{{date updated_at format='short'}}</div>
+      <div class="color-white f-16 home-article-date">{{date updated_at format='short'}}</div>
       <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=280}}</p>
     </a>
   </div>
@@ -210,7 +212,7 @@
         </div>
       </div> --}}
       <h3 class="f-28 mt-15 mb-15 bold color-white home-article-title">{{excerpt title characters=40}}</h3>
-      <div class="color-white f-16">{{date updated_at format='short'}}</div>
+      <div class="color-white f-16 home-article-date">{{date updated_at format='short'}}</div>
       <p class="f-16 color-white line-height-18 font-light">{{excerpt body characters=160}}</p>
     </a>
   </div>
@@ -241,3 +243,4 @@
   {{/each}}
   <div class="divider mb-30"></div>
 </div> --}}
+</div>
