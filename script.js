@@ -493,7 +493,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const articleBoxItem = articleBox[i];
       const articleDate = articleBoxItem.querySelector('.home-article-date')
       if(articleDate){
-        const dateStr = articleDate.innerText()
+        const dateStr = articleDate.innerText
         const timespan = (new Date(dateStr)).getTime()
         const currentTimeSpan = (new Date()).getTime()
         articleBoxItem.setAttribute('style','order:'+ (currentTimeSpan-timespan))
