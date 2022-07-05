@@ -482,6 +482,24 @@ document.addEventListener('DOMContentLoaded', function() {
     iframe.remove();
   }
 
+  /**
+   * 首页文章根据时间倒序
+   */
+
+   const articleBoxes = document.querySelector('.home-article-boxes')
+   if(articleBoxes){
+     const articleBox = articleBoxes.querySelectorAll('.home-article-box')
+     for (let i = 0; i < articleBox.length; i++) {
+      const articleBoxItem = articleBox[i];
+      const articleDate = articleBoxItem.querySelector('.home-article-date')
+      if(articleDate){
+        const dateStr = articleDate.innerText()
+        const timespan = (new Date(dateStr)).getTime()
+        const currentTimeSpan = (new Date()).getTime()
+        articleBoxItem.setAttribute('style','order:'+ (currentTimeSpan-timespan))
+      }
+     }
+   }
 
   /**
    * 文章详情页上下切换文章
