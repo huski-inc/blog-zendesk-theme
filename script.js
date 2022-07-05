@@ -499,9 +499,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const timespan = (new Date(dateStr)).getTime()
         const currentTimeSpan = (new Date()).getTime()
         const order=(currentTimeSpan-timespan)
-        if(order > maxOrder){
+        if(order >= maxOrder){
           maxOrder = order
-          lastDom = articleDate
+          lastDom = articleBoxItem
         }
         articleBoxItem.setAttribute('style','order:' + order)
       }
