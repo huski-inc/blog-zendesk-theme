@@ -506,9 +506,11 @@ document.addEventListener('DOMContentLoaded', function() {
         articleBoxItem.setAttribute('style','order:' + order)
       }
      }
-     const lastDivider = lastDom.querySelector('.divider')
-     if(lastDivider){
-      lastDivider.remove()
+     if(lastDom){
+      const lastDivider = lastDom.querySelector('.divider')
+      if(lastDivider){
+       lastDivider.remove()
+      }
      }
    }
 
