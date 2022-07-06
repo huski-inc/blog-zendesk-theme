@@ -5810,7 +5810,11 @@ div {
   left: 0;
   top: 0;
   text-align: center;
+  height: 600px;
+  overflow: hidden;
+  width: 100%;
 }
 .huski-blog-header-bg img {
   object-fit: fill;
+  max-height: 100%;
 }
