@@ -5338,7 +5338,7 @@ a{
 .header-nav-list li{
   width: 30%;
   border-radius: 8px;
-  background: linear-gradient(21deg, rgb(104 83 205 / 11%) 19%, rgb(59 127 248 / 22%) 95%);
+  background: linear-gradient(21deg, rgb(104 83 205 / 75%) 19%, rgb(59 127 248 / 75%) 95%);
   align-self: stretch;
 }
 .header-nav-list li:hover{
