@@ -5813,6 +5813,7 @@ div {
   height: 600px;
   overflow: hidden;
   width: 100%;
+  z-index: -1;
 }
 .huski-blog-header-bg img {
   object-fit: fill;
