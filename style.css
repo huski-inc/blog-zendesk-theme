@@ -5816,5 +5816,5 @@ div {
 }
 .huski-blog-header-bg img {
   object-fit: fill;
-  max-height: 100%;
+  width: 100%;
 }
