@@ -5800,3 +5800,17 @@ div {
   display: flex;
   flex-direction: column;
 }
+
+.huski-blog-header-box{
+  position: relative;
+  width: 100%;
+}
+.huski-blog-header-bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+.huski-blog-header-bg img {
+  object-fit: fill;
+}
