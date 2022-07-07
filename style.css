@@ -5679,7 +5679,7 @@ div {
   border-radius: 4px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   animation: open-toast 0.3s linear;
-  z-index: 9999;
+  z-index: 999999;
   background-color: white;
 }
 .toast-body {
