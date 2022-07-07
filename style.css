@@ -5361,8 +5361,12 @@ a{
   justify-content: center;
   align-items: center;
 }
+.header-nav-list li a svg {
+  height: 40px;
+}
 .header-nav-list li a span{
   padding-top: 20px;
+  font-size: 16px;
 }
 .header-nav-list li.active{
   box-shadow: 0 0 0 3px #24ce85;
