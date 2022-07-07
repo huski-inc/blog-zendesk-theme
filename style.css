@@ -5829,3 +5829,9 @@ div {
   bottom: -20px;
   background: linear-gradient(180deg, rgb(0 0 0 / 0%) 19%, rgb(35 37 85) 95%);
 }
+
+
+.article-icons svg{
+  width: 40px;
+  height: 18px;
+}

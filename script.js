@@ -394,6 +394,7 @@ function copyText(text, callback) {
 }
 function onCopy(url) {
   copyText('{{settings.domain}}' + url)
+  huskiNotify({type: 'success',title: 'Copy Link',message: 'Link copied to your clipboard!',timer: 3000})
 }
 
 
