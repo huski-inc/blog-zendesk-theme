@@ -5831,7 +5831,10 @@ div {
 }
 
 
+.article-icons{
+  margin-top: 15px;
+}
 .article-icons svg{
-  width: 40px;
+  width: 24px;
   height: 18px;
 }
