@@ -4921,7 +4921,7 @@ html[dir="rtl"] .notification-left-aligned {
     max-width:12.5%
   }
 } */
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
       max-width: 1536px;
   }
