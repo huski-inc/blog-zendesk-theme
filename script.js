@@ -451,7 +451,9 @@ document.addEventListener('DOMContentLoaded', function() {
   tippy('#nav-product', {
     content: template.innerHTML,
     allowHTML: true,
-    interactive: true
+    interactive: true,
+    trigger: 'mouseover click',
+    theme: 'light-nav'
   });
 
 
