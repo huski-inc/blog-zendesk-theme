@@ -5428,6 +5428,7 @@ a{
   color: #ffffffd9;
   font-size: 1rem;
   padding: 0 10px;
+  padding-left: 50px;
 }
 .huski-nav-item:hover{
   background: rgba(255, 255, 255, 0.1490196078);
