@@ -494,6 +494,19 @@ document.addEventListener('DOMContentLoaded', function() {
       popperOptions: popperOptions
     });
   }
+  const navAboutTemplate = document.getElementById('nav-about-template');
+  if(navProductTemplate){
+    tippy('#nav-about', {
+      content: navAboutTemplate.innerHTML,
+      allowHTML: true,
+      interactive: true,
+      trigger: 'mouseover click',
+      theme: 'light-nav',
+      placement:'bottom',
+      maxWidth:'100%',
+      popperOptions: popperOptions
+    });
+  }
 
 
 

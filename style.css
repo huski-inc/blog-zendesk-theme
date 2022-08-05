@@ -6188,5 +6188,45 @@ li,ul{list-style:none;margin:0;padding:0;}
 @media only screen and (max-width:991.98px){
 .header ul li{padding:0;}
 }
-/*! CSS Used fontfaces */
-@font-face{font-display:swap;font-family:Inter-Bold;font-style:normal;font-weight:400;src:url(//d16l2kpcu8vmp6.cloudfront.net/front_cdn/v145/resources/fonts/inter-bold-webfont-6d005771.ttf);}
+
+/***
+** Header About
+**/
+/*! CSS Used from: https://d16l2kpcu8vmp6.cloudfront.net/front_cdn/v145/css/mini-extract.92a13ee0.css */
+.svg-icon[data-v-13188737]{fill:currentColor;flex-shrink:0;height:1em;outline:0;overflow:hidden;width:1em;}
+.huski-btn{background-color:#fff;border:.0625rem solid #3b7ff8;box-shadow:0 0 .0625rem transparent;color:#3b7ff8;cursor:pointer;display:inline-block;height:2.5rem;line-height:1;line-height:2.5rem;outline:none;overflow:hidden;vertical-align:middle;}
+.huski-btn{border-radius:.25rem;padding:0 1.25rem;}
+.huski-btn.small{border-radius:.1875rem;font-size:.75rem;height:2rem;line-height:2rem;padding:0 .9375rem;}
+.huski-btn.huski-btn-success{background:#17a96a;border:.0625rem solid #17a96a;color:#fff;}
+.huski-btn.huski-btn-success:hover{background:#14935c;border-color:#14935c;box-shadow:inset 0 0 0 .0625rem #14935c;color:#fff;}
+.huski-btn:disabled{box-shadow:none;cursor:not-allowed;opacity:.5;}
+.fx-center{align-items:center;}
+.fx-center{display:flex;justify-content:center;}
+.mb-15{margin-bottom:.9375rem;}
+.mt-20{margin-top:1.25rem;}
+.bold{font-weight:700;}
+.f-14{font-size:.875rem;}
+.f-18{font-size:1.125rem;}
+*,:after,:before{box-sizing:inherit;}
+a:active,a:focus{outline:none;}
+a,a:focus,a:hover{color:inherit;cursor:pointer;text-decoration:none;}
+h6{font-weight:600;line-height:1.5;margin:0;}
+h6{font-size:1.5rem;}
+@media (max-width:768px){
+h6{font-size:1.125rem;}
+}
+p{line-height:1.6;margin:0;}
+div:focus{outline:none;}
+::-moz-selection{background:#3b7ff8;color:#fff;}
+::selection{background:#3b7ff8;color:#fff;}
+*{scrollbar-color:#e5e5e5 #f7f7f9;scrollbar-width:thin;}
+@media (min-width:992px){
+::-webkit-scrollbar{height:.5rem;width:.5rem;}
+::-webkit-scrollbar-track{background-color:transparent;border-radius:0;}
+::-webkit-scrollbar-thumb{background-color:rgba(170,168,190,.51);border-radius:0;}
+}
+.font-bold{font-family:Inter-Bold;}
+.nav-popover-box[data-v-7c00183e]{max-width:100%;min-height:12.5rem;width:50rem;}
+.nav-popover-box h6[data-v-7c00183e]{align-items:center;color:#24ce85;display:flex;font-family:Inter-Bold;font-size:1rem;margin-bottom:1.25rem;}
+.nav-popover-box .our-company[data-v-7c00183e]{background:#232555;border-radius:.75rem;color:#fff;height:100%;padding:1.875rem;}
+.nav-popover-box .our-technology[data-v-7c00183e]{height:100%;padding:1.875rem;}
