@@ -455,6 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
     trigger: 'mouseover click',
     theme: 'light-nav',
     placement:'bottom',
+    maxWidth:'100%',
     popperOptions:{ modifiers: [
       {
         name: 'computeStyles',
