@@ -453,7 +453,29 @@ document.addEventListener('DOMContentLoaded', function() {
     allowHTML: true,
     interactive: true,
     trigger: 'mouseover click',
-    theme: 'light-nav'
+    theme: 'light-nav',
+    placement:'bottom',
+    popperOptions:{ modifiers: [
+      {
+        name: 'computeStyles',
+        enabled: true,
+        fn({ state }) {
+          console.log('state', state)
+          state.styles.arrow = {
+            position: 'fixed',
+            left: state.rects.reference.x + state.rects.reference.width / 2 - 20 + 'px',
+            top: '4.375rem',
+          }
+          state.styles.popper = {
+            ...state.styles.popper,
+            position: 'fixed',
+            left: `${(window.innerWidth - state.rects.popper.width) / 2}px`,
+            top: '4.375rem',
+          }
+          return state
+        },
+      },
+    ],}
   });
 
 
