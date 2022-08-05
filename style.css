@@ -5453,7 +5453,7 @@ a{
     display: block;
   }
   .huski-nav-list{
-    display: none;
+    display: none!important;
   }
 }
 
@@ -5960,6 +5960,9 @@ div {
 }
 .tippy-box[data-theme~='light'] .tippy-arrow {
   color: #fff;
+}
+.tippy-box[data-theme~='light-nav'] .tippy-content {
+  max-height: 600px; overflow-y: auto;
 }
 
 .tippy-box[data-theme~='light-nav'] {
