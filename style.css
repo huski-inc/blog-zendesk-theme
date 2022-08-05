@@ -5388,7 +5388,7 @@ a{
   text-align: center;
   margin-bottom: 60px;
 }
-
+/* 
 .huski-nav-bar li{
   padding-left: 50px;
 }
@@ -5420,6 +5420,16 @@ a{
 }
 .huski-nav-bar li button:hover{
   color: #24CE85;
+  background: rgba(255, 255, 255, 0.1490196078);
+  border-radius: 6.25rem;
+} */
+
+.huski-nav-item{
+  color: #ffffffd9;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+.huski-nav-item:hover{
   background: rgba(255, 255, 255, 0.1490196078);
   border-radius: 6.25rem;
 }
