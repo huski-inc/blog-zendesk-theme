@@ -443,16 +443,19 @@ function onSubscribe(){
   }
 }
 
-function toggleNavProduct(){
+document.addEventListener('DOMContentLoaded', function() {
+  /**
+   * Header tiipy
+   */
   const template = document.getElementById('nav-product-template');
-  tippy('button', {
+  tippy('#nav-product', {
     content: template.innerHTML,
     allowHTML: true,
     interactive: true
   });
-}
 
-document.addEventListener('DOMContentLoaded', function() {
+
+
   // 将文章body第一章图片显示出来
   const articleBody=document.querySelectorAll('.article-cover-init')
   if(articleBody){
