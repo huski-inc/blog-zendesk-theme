@@ -447,37 +447,53 @@ document.addEventListener('DOMContentLoaded', function() {
   /**
    * Header tiipy
    */
-  const template = document.getElementById('nav-product-template');
-  tippy('#nav-product', {
-    content: template.innerHTML,
-    allowHTML: true,
-    interactive: true,
-    trigger: 'mouseover click',
-    theme: 'light-nav',
-    placement:'bottom',
-    maxWidth:'100%',
-    popperOptions:{ modifiers: [
-      {
-        name: 'computeStyles',
-        enabled: true,
-        fn({ state }) {
-          console.log('state', state)
-          state.styles.arrow = {
-            position: 'fixed',
-            left: state.rects.reference.x + state.rects.reference.width / 2 - 20 + 'px',
-            top: '4.375rem',
-          }
-          state.styles.popper = {
-            ...state.styles.popper,
-            position: 'fixed',
-            left: `${(window.innerWidth - state.rects.popper.width) / 2}px`,
-            top: '4.375rem',
-          }
-          return state
-        },
+  const popperOptions = { modifiers: [
+    {
+      name: 'computeStyles',
+      enabled: true,
+      fn({ state }) {
+        console.log('state', state)
+        state.styles.arrow = {
+          position: 'fixed',
+          left: state.rects.reference.x + state.rects.reference.width / 2 - 20 + 'px',
+          top: '4.375rem',
+        }
+        state.styles.popper = {
+          ...state.styles.popper,
+          position: 'fixed',
+          left: `${(window.innerWidth - state.rects.popper.width) / 2}px`,
+          top: '4.375rem',
+        }
+        return state
       },
-    ],}
-  });
+    },
+  ],}
+  const navProductTemplate = document.getElementById('nav-product-template');
+  if(navProductTemplate){
+    tippy('#nav-product', {
+      content: navProductTemplate.innerHTML,
+      allowHTML: true,
+      interactive: true,
+      trigger: 'mouseover click',
+      theme: 'light-nav',
+      placement:'bottom',
+      maxWidth:'100%',
+      popperOptions: popperOptions
+    });
+  }
+  const navInsightsTemplate = document.getElementById('nav-insights-template');
+  if(navProductTemplate){
+    tippy('#nav-insights', {
+      content: navInsightsTemplate.innerHTML,
+      allowHTML: true,
+      interactive: true,
+      trigger: 'mouseover click',
+      theme: 'light-nav',
+      placement:'bottom',
+      maxWidth:'100%',
+      popperOptions: popperOptions
+    });
+  }
 
 
 
