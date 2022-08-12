@@ -645,7 +645,7 @@ document.addEventListener('DOMContentLoaded', function() {
      var maxOrder=0
      for (let i = 0; i < articleBox.length; i++) {
       const articleBoxItem = articleBox[i];
-      const articleDate = articleBoxItem.querySelector('.home-article-date')
+      const articleDate = articleBoxItem.querySelector('.article-date-init')
       if(articleDate){
         const dateStr = articleDate.innerText
         const timespan = (new Date(dateStr)).getTime()
