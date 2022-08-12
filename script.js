@@ -306,6 +306,55 @@ function huskiNotify({ type, title, message, timer = 5000 }) {
   })
 }
 
+function dateFormat(_date, fmt = 'm/d/Y', isUTC = false) {
+  let ret
+  let date = null
+  if (typeof _date === 'string' || typeof _date === 'number') {
+    date = new Date(_date)
+  } else if (typeof date === 'object') {
+    date = _date
+  }
+
+  if (!date) {
+    return _date
+  }
+  if (date?.toString()?.indexOf('Invalid Date') > -1) {
+    return _date
+  }
+  let opt
+  if (isUTC) {
+    opt = {
+      'Y+': date.getUTCFullYear().toString(), // 年
+      'm+': (date.getUTCMonth() + 1).toString().padStart(2, '0'), // 月
+      'd+': date.getUTCDate().toString().padStart(2, '0'), // 日
+      'H+': date.getUTCHours().toString().padStart(2, '0'), // 时
+      'M+': date.getUTCMinutes().toString().padStart(2, '0'), // 分
+      'S+': date.getUTCSeconds().toString().padStart(2, '0'), // 秒
+      // 有其他格式化字符需求可以继续添加，必须转化成字符串
+    }
+  } else {
+    opt = {
+      'Y+': date.getFullYear().toString(), // 年
+      'm+': (date.getMonth() + 1).toString().padStart(2, '0'), // 月
+      'd+': date.getDate().toString().padStart(2, '0'), // 日
+      'H+': date.getHours().toString().padStart(2, '0'), // 时
+      'M+': date.getMinutes().toString().padStart(2, '0'), // 分
+      'S+': date.getSeconds().toString().padStart(2, '0'), // 秒
+      // 有其他格式化字符需求可以继续添加，必须转化成字符串
+    }
+  }
+  for (const k in opt) {
+    ret = new RegExp('(' + k + ')').exec(fmt)
+    if (ret) {
+      fmt = fmt.replace(ret[1], ret[1].length === 1 ? opt[k] : opt[k].padStart(ret[1].length, '0'))
+    }
+  }
+  if (fmt.includes('NaN')) {
+    return ''
+  }
+  return fmt
+}
+
 //--------------------------- 分割线 ------------------------//
 
 const getFirstImage = function(str){
@@ -539,14 +588,17 @@ document.addEventListener('DOMContentLoaded', function() {
     for(let i=0;i<articleBodyForDate.length;i++){
       const body=articleBodyForDate[i]
       const originDate = body.getAttribute('title')
+
+      const _date1 = dateFormat(originDate)
+
       const bodyHtml= body.innerHTML
       if(bodyHtml){
         const _matches= bodyHtml.match(/##(\d.*|\-.*)##/)
         if(_matches){
           const _date = _matches[1]
-          body.innerHTML=_date?_date:originDate
+          body.innerHTML=_date?_date:_date1
         } else {
-          body.innerHTML=originDate
+          body.innerHTML=_date1
         }
       }
     }
