@@ -538,12 +538,29 @@ document.addEventListener('DOMContentLoaded', function() {
   if(articleBodyForDate){
     for(let i=0;i<articleBodyForDate.length;i++){
       const body=articleBodyForDate[i]
+      const originDate = body.getAttribute('title')
       const bodyHtml= body.innerHTML
       if(bodyHtml){
         const _matches= bodyHtml.match(/##(\d.*|\-.*)##/)
         if(_matches){
           const _date = _matches[1]
-          body.innerHTML=_date?_date:''
+          body.innerHTML=_date?_date:originDate
+        } else {
+          body.innerHTML=originDate
+        }
+      }
+    }
+  }
+  // 去掉文章中的自定义日期
+  const articleBodyForBody=document.querySelectorAll('.article-body-init')
+  if(articleBodyForBody){
+    for(let i=0;i<articleBodyForBody.length;i++){
+      const body=articleBodyForBody[i]
+      const bodyHtml= body.innerHTML
+      if(bodyHtml){
+        const _html= bodyHtml.replace(/##(\d.*|-.*)##/,'')
+        if(_html!==bodyHtml){
+          body.innerHTML=_html
         }
       }
     }
