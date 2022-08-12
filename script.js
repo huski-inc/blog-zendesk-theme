@@ -589,7 +589,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const body=articleBodyForDate[i]
       const originDate = body.getAttribute('title')
       const _date1 = dateFormat(originDate)
-      body.setAttribute('title',_date1)
 
       const bodyHtml= body.innerHTML
       if(bodyHtml){
@@ -601,6 +600,9 @@ document.addEventListener('DOMContentLoaded', function() {
           body.innerHTML=_date1
         }
       }
+
+      body.setAttribute('title',_date1)
+      body.setAttribute('style','')
     }
   }
   // 去掉文章中的自定义日期
@@ -648,6 +650,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const articleDate = articleBoxItem.querySelector('.article-date-init')
       if(articleDate){
         const dateStr = articleDate.getAttribute('title')
+        console.log('dateStr', dateStr)
         const timespan = (new Date(dateStr)).getTime()
         const currentTimeSpan = (new Date()).getTime()
         const order=(currentTimeSpan-timespan)
