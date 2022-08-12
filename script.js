@@ -588,8 +588,8 @@ document.addEventListener('DOMContentLoaded', function() {
     for(let i=0;i<articleBodyForDate.length;i++){
       const body=articleBodyForDate[i]
       const originDate = body.getAttribute('title')
-
       const _date1 = dateFormat(originDate)
+      body.setAttribute('title',_date1)
 
       const bodyHtml= body.innerHTML
       if(bodyHtml){
@@ -647,7 +647,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const articleBoxItem = articleBox[i];
       const articleDate = articleBoxItem.querySelector('.article-date-init')
       if(articleDate){
-        const dateStr = articleDate.innerText
+        const dateStr = articleDate.getAttribute('title')
         const timespan = (new Date(dateStr)).getTime()
         const currentTimeSpan = (new Date()).getTime()
         const order=(currentTimeSpan-timespan)
