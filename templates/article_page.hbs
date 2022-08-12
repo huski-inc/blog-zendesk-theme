@@ -17,7 +17,12 @@
       <div class="article-container">
 
         <h3 class="f-38 pt-10 bold">{{article.title}}</h3>
-        <div class="color-white f-14 pt-10">{{date article.updated_at format='short'}}</div>
+        <div class="color-white f-14 pt-10">
+          <span class="article-date-init" style="display: none;">
+            <xmp>{{body}}</xmp>
+          </span>
+          {{date article.updated_at format='short'}}
+        </div>
         <section class="article-info">
           <div class="article-content">
             <div class="article-body">{{article.body}}</div>

@@ -533,6 +533,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // 初始化文章中的日期
+  const articleBodyForDate=document.querySelectorAll('.article-date-init')
+  if(articleBodyForDate){
+    for(let i=0;i<articleBodyForDate.length;i++){
+      const body=articleBodyForDate[i]
+      const bodyHtml= body.innerHTML
+      if(bodyHtml){
+        const _matches= bodyHtml.match(/##(\d.*|\-.*)##/)
+        if(_matches){
+          const _date = _matches[1]
+          body.innerHTML=_date?_date:''
+        }
+      }
+    }
+  }
+
   const articleDescription=document.querySelectorAll('.article-description')
   if(articleDescription){
     for(let i=0;i<articleDescription.length;i++){
