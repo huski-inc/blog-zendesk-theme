@@ -632,7 +632,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const iframe = document.querySelector('iframe')
-  if(iframe){
+ 
+  if(iframe.src.indexOf('youtube')==-1){
     iframe.remove();
   }
 
