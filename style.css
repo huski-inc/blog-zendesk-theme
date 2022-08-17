@@ -5518,6 +5518,13 @@ a{
   width: 100%;
   min-height: 400px;
 }
+.article-body a {
+  color: #fff;
+  text-decoration: underline;
+}
+.article-body a:visited {
+  color: #fff;
+}
 
 /****************************************** 弹出提示框 ****************************************/
 .alert-wrapper {
