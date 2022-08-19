@@ -6116,6 +6116,7 @@ li,ul{list-style:none;margin:0;padding:0;}
 .product-faq-card ul li[data-v-8dab9aac]:hover{text-decoration:underline;}
 .product-faq-card .more-link[data-v-8dab9aac]{font-size:.875rem;font-weight:700;margin-top:.625rem;}
 .product-faq-card .more-link[data-v-8dab9aac]:hover{text-decoration:underline;}
+.nav-popover-box[data-v-6936d930]{max-width:100%;min-height:12.5rem;width:87.5rem;}
 .nav-popover-box h6[data-v-6936d930]{align-items:center;background:#232555;border-radius:6.25rem;color:#24ce85;display:inline-flex;font-family:Inter-Bold;font-size:.875rem;margin-bottom:1.25rem;padding:.375rem .9375rem;}
 .nav-popover-products li[data-v-6936d930]{align-items:center;margin-bottom:.625rem;}
 .nav-popover-products li[data-v-6936d930]:last-child{margin-bottom:0;}
